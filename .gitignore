@@ -3,6 +3,7 @@
 ## 파일무시
 source_dev/css/*.map
 source_dev/css/vendors/*.map
+package-lock.json
 
 
 ## 폴더무시
