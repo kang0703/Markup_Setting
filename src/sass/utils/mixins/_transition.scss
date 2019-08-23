@@ -1,0 +1,16 @@
+// transition
+//
+// transition 속성 vendor-prefix 쉽게 추가
+
+// easing
+// https://matthewlein.com/ceaser/
+
+$easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+@mixin transition($prop, $sec, $ease:$easeInOutCubic) {
+	-webkit-transition: $prop $sec $ease;
+	-moz-transition: $prop $sec $ease;
+	-ms-transition: $prop $sec $ease;
+	-o-transition: $prop $sec $ease;
+	transition: $prop $sec $ease;
+}

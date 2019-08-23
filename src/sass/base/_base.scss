@@ -1,0 +1,71 @@
+// normalize 추가사항
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-size: $base-font-size;
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button,
+input {
+    margin: 0;
+    padding: 0;
+    color: #111;
+}
+
+.svg {
+    display: block;
+}
+
+hr {
+	display: none;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+// * ----------------
+// * 가독성을 위해 선택 영역(마우스 드래그등)의 하이라이트 부분에서 `text-shadow` 효과를 제거:
+// * https://twitter.com/miketaylr/status/12228805301
+// *
+
+$selection-background-color : #b3d4fc;
+
+::-moz-selection {
+	background: $selection-background-color;
+	text-shadow: none;
+}
+
+::selection {
+	background: $selection-background-color;
+	text-shadow: none;
+}
+
+// * ----------------
+// * audio, canvas, iframe, image와 video의 컨테이너 하단의 간격을 제거.
+// * https://github.com/h5bp/html5-boilerplate/issues/440
+// *
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+div.uploader input{
+	padding-right:145px;
+	// right:-100%;
+}

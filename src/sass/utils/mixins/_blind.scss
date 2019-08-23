@@ -1,0 +1,37 @@
+// blind
+//
+// 시각적으로 숨기고, 스크린리더에서는 이용가능:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+//
+// .focusable 클래스가 지정된 요소에 키보드로 포커스시 화면에 표시:
+// https://www.drupal.org/node/897638
+
+@mixin blind () {
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+@mixin blind-old () {
+	margin: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	line-height: 0;
+	font-size: 0;
+	visibility: hidden;
+}

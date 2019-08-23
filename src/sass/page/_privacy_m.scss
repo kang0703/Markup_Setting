@@ -1,0 +1,170 @@
+@include mq($mobile) {
+
+	/* module */
+	.privacy-tt-h3{
+		font-size:rem(40px);
+		color:#000;
+		text-align:center;
+		padding:25px 0;
+		line-height: 1;
+		letter-spacing:-3px;
+		font-family: 'Interstate','thebodyshop_jung_170', $body-font-family;
+		@include mq($tablet) {
+			padding:50px 0;
+		}
+	}
+
+	.privacy-select-choice-box{
+		@include cf;
+		.selectric-wrapper{
+			width:100%;
+			@include mq($tablet) {
+				width:130px;
+				float:right;
+			}
+		}
+	}
+
+	.privacy-contents-wrap{
+		font-size:(14px);
+		color:#2d2d2d;
+		.gr{
+			color:#58ad25;
+		}
+		.small-guide-txt{
+			font-size:rem(12px);
+			color:#908989;
+		}
+		.mg-pri-box{
+			margin-top:35px;
+		}
+
+		.pri-gray-box{
+			background:#f7f7f7;
+			padding:15px;
+			.gray-strong-tt{
+				display:block;
+				margin-bottom:5px;
+			}
+		}
+
+		.pri-bold-tt{
+			display:block;
+			margin-bottom:5px;
+		}
+		.number-ol{
+			list-style:decimal;
+			padding-left:16px;
+			li{
+				margin-bottom:10px;
+				&:last-child{
+					margin-bottom:0;
+				}
+			}
+			&.mgb-li-x{
+				li{
+					margin-bottom:0;
+				}
+			}
+		}
+		.data-table.medium{
+			&.pri-board{
+				colgroup{
+					col{
+						&.pri-col-01{
+							width:16%;
+						}
+						&.pri-col-02{
+							width:auto;
+						}
+						&.pri-col-03{
+							width:auto;
+						}
+					}
+				}
+				thead{
+					th{
+						text-align:center;
+					}
+				}
+				tbody{
+					th, td{
+						text-align:center;
+						padding:15px;
+						color:#2b2b2b;
+					}
+				}
+			}
+		}
+		.pri-dash-list{
+			li{
+				position:relative;
+				padding-left:10px;
+				text-align:left;
+				margin-bottom:3px;
+				&:after{
+					position:absolute;
+					top:10px;
+					left:0;
+					content:"";
+					display:block;
+					width:5px;
+					height:1px;
+					background:#2d2d2d;
+				}
+				&:last-child{
+					margin-bottom:0;
+				}
+			}
+		}
+		.pri-dash-green-color-list{
+			li{
+				position:relative;
+				padding-left:10px;
+				text-align:left;
+				margin-bottom:5px;
+				&:after{
+					position:absolute;
+					top:10px;
+					left:0;
+					content:"";
+					display:block;
+					width:5px;
+					height:1px;
+					background:#2d2d2d;
+				}
+				&:last-child{
+					margin-bottom:0;
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+	/* product-detail */
+	.privacy-page-wrap{
+		padding:0 10px;
+		.privacy-contents-wrap{
+			margin-top:20px;
+		}
+	}
+
+
+
+
+
+
+
+
+}

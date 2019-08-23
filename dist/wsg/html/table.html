@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<title>WSG :: table</title>
+
+	<link type="text/css" rel="stylesheet" href="../../assets/css/style.css">
+	<link type="text/css" rel="stylesheet" href="../source_wsg/css/wsg.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/wsg.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui/common-ui.js"></script>
+</head>
+<body>
+	<div id="wrap" class="wsg-wrap">
+		<!-- header -->
+		<header class="wsg-header">
+			<div class="wsg-header-in">
+				<h1><strong>T</strong>able</h1>
+				<div class="wsg-h-aside-menu-btn-box">
+					<a href="#lnb" class="aside-menu-btn">
+						<span class="blind">메뉴</span>
+						<div class="stick-bar bar1"></div>
+						<div class="stick-bar bar2"></div>
+						<div class="stick-bar bar3"></div>
+					</a>
+				</div>
+				<div class="wsg-h-list-quick-btn"><a href="markup.html">markup list 바로가기</a></div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<nav class="wsg-all-sitemap-wrap">
+			<div class="wsg-all-sitemap-in">
+				<a href="#" class="wsg-sitemap-close"><span class="blind">닫기</span></a>
+				<div class="wsg-all-sitemap-part">
+					<h2 class="sitemap-title">STYLE GUIDE</h2>
+					<ul class="sitemap-list">
+						<li><a href="button.html">button</a></li>
+						<li><a href="form.html">form</a></li>
+						<li><a href="table.html">table</a></li>
+						<li><a href="tab.html">tab</a></li>
+						<li><a href="pagination.html">pagination</a></li>
+						<li><a href="#none">none</a></li>
+
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+					</ul>
+				</div>
+				<div class="wsg-all-sitemap-part">
+					<h2 class="sitemap-title">STYLE GUIDE</h2>
+					<ul class="sitemap-list">
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<hr>
+
+		<!-- container -->
+		<div class="wsg-contents-wrap">
+			<section class="wsg-contents-in">
+				<!-- part_check -->
+				<div class="wsg-con-part-wrap">
+					<h3>My Table Check</h3>
+					<div class="real-code-box">
+						<h4>사용 01</h4>
+						<div class="table-style data-layout small line-none-side line-impact-top">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<td>thead-td</td>
+										<td>thead-td</td>
+										<td>thead-td</td>
+										<td>thead-td</td>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th scope="row">tfoot-th</th>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="wsg-blank-line"></div>
+
+					<div class="real-code-box">
+						<h4>사용 02</h4>
+						<div class="table-style">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<td>thead-td</td>
+										<td>thead-td</td>
+										<td>thead-td</td>
+										<td>thead-td</td>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th scope="row">tfoot-th</th>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //part_check -->
+
+				<!-- part_type -->
+				<div class="wsg-con-part-wrap">
+					<h3>type</h3>
+					<div class="real-code-box">
+						<h4>nomal</h4>
+						<div class="table-style">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<td>thead-td</td>
+										<td>thead-td</td>
+										<td>thead-td</td>
+										<td>thead-td</td>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th scope="row">tfoot-th</th>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="wsg-blank-line"></div>
+
+					<div class="real-code-box">
+						<h4>data</h4>
+						<div class="table-style data">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="wsg-blank-line"></div>
+
+					<div class="real-code-box">
+						<h4>layout</h4>
+						<div class="table-style layout">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="wsg-blank-line"></div>
+
+					<div class="real-code-box">
+						<h4>data-layout</h4>
+						<div class="table-style data-layout">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th scope="row">tfoot-th</th>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //part_type -->
+
+				<!-- part_size -->
+				<div class="wsg-con-part-wrap">
+					<h3>size</h3>
+					<div class="real-code-box">
+						<h4>small</h4>
+						<div class="table-style small">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="wsg-blank-line"></div>
+
+					<div class="real-code-box">
+						<h4>medium</h4>
+						<div class="table-style medium">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="wsg-blank-line"></div>
+
+					<div class="real-code-box">
+						<h4>large</h4>
+						<div class="table-style large">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //part_size -->
+
+				<!-- part_version(design) -->
+				<div class="wsg-con-part-wrap">
+					<h3>version</h3>
+					<div class="real-code-box">
+						<h4>line-none-side</h4>
+						<div class="table-style line-none-side">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th scope="row">tfoot-th</th>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="wsg-blank-line"></div>
+
+					<div class="real-code-box">
+						<h4>line-impact-top</h4>
+						<div class="table-style line-impact-top">
+							<table class="table" border="0">
+								<caption>SAMPLE</caption>
+								<colgroup>
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+									<col style="width:auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+										<th scope="col">thead-th</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th scope="row">tfoot-th</th>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+										<td>tfoot-td</td>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+									<tr>
+										<th scope="row">tbody-th</th>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+										<td>tbody-td</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //part_version(design) -->
+			</section>
+		</div>
+		<!-- //container -->
+
+		<hr>
+
+		<!-- footer -->
+		<footer class="wsg-footer">
+			<p>ⓒ 2018. <strong><a href="http://kcmschool.com/" target="_blank" title="새창으로 열림">kcmschool</a></strong> all rights reserved.</p>
+		</footer>
+		<!-- //footer -->
+	</div>
+</body>
+</html>

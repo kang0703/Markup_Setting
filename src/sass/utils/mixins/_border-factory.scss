@@ -1,0 +1,15 @@
+// border-factory
+//
+// border- 개별적으로 쉽게 생성
+
+@mixin border-factory($type, $spec) {
+	@if $type == all {
+		border : unquote($spec);
+	} @else {
+		$leng : length($type);
+		@for $i from 1 through $leng {
+			border-#{nth($type, $i)} : nth($spec, $i);
+		}
+
+	}
+}

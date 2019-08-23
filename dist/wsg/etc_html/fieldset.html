@@ -1,0 +1,654 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="ko" class="explorer v6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="explorer v7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="explorer v8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Web Standard Guide</title>
+<link type="text/css" rel="stylesheet" href="../res/css/common.css" />
+<link type="text/css" rel="stylesheet" href="../wsg/res/css/wsg.css" />
+<script type="text/javascript" src="../res/js/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../res/js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/codemirror/codemirror.css" />
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/jqueryFileTree/jqueryFileTree.css" media="screen" />
+<script type="text/javascript" src="../wsg/plugin/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="../wsg/plugin/codemirror/xml.js"></script>
+<script type="text/javascript" src="../wsg/res/js/wsg.js"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="../res/js/libs/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrap">
+<!-- header -->
+<header id="header">
+	<h1><a href="index.html">PROJECT</a></h1>
+	<p class="skip-lnb"><a href="#lnb">메뉴</a></p>
+	<p class="history-back"><a href="index.html">BACK</a></p>
+</header>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container">
+	<!-- contentAside -->
+	<div id="contentAside" class="content-aside">
+		<!-- lnb -->
+		<nav id="lnb" class="lnb">
+			<h2>주요메뉴</h2>
+			<ul>
+			<li><strong>GUIDELINE</strong>
+				<ul>
+				<li><a href="information.html">PROJECT 기본정보</a></li>
+				<li><a href="naming.html">네이밍</a></li>
+				<li><a href="rule_html_code.html">HTML 코드 규칙</a></li>
+				<!--<li><a href="rule_html_mark.html">HTML 요소 작성 규칙</a></li>-->
+				<li><a href="rule_css_code.html">CSS 코드 규칙</a></li>
+				<li><a href="validation.html">테스트 및 검수</a></li>
+				</ul>
+			</li>
+			<li><strong>PROGRESS</strong>
+				<ul>
+				<li><a href="checklist.html">issue &amp; check list</a></li>
+				<li><a href="markup.html">markup</a></li>
+				</ul>
+			</li>
+			<li><strong><abbr title="User Interface">UI</abbr> LIBRARY</strong>
+				<ul>
+				<li><a href="typography.html">typography</a></li>
+				<li><a href="form.html">form</a></li>
+				<li><a href="table.html">table</a></li>
+				<li><a href="tab.html">tab</a></li>
+				<li><a href="button.html">button</a></li>
+				<li><a href="panel.html">panel</a></li>
+				<li><a href="fieldset.html">fieldset</a></li>
+				<li><a href="list.html">list</a></li>
+				<li><a href="images.html">images</a></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+		<!-- //lnb -->
+	</div>
+	<!-- //contentAside -->
+	<!-- contentPrimary -->
+	<section id="contentPrimary" class="content-primary">
+		<h1>fieldset</h1>
+		<!-- section -->
+		<section>
+			<h1>fieldset medium</h1>
+			<section>
+			<form>
+			<!-- fieldset -->
+			<fieldset class="fieldset medium">
+				<legend class="blind">항목입력</legend>
+				<div class="field">
+				<label class="label" for="userName"><img src="../img/mem/label_medium_04.gif" alt="이름" /><img src="../img/mem/ico_star.gif" alt="필수" /></label>
+				<div class="insert">
+					<input type="text" class="input_text small" id="userName" title="사용자 이름 입력" value="홍길동" style="width: 234px;" />
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="email"><img src="../img/mem/label_medium_05.gif" alt="이메일 주소" /><img src="../img/mem/ico_star.gif" alt="필수" /></label>
+				<div class="insert">
+					<input type="text" class="input_text small" id="email" title="이메일 아이디 입력" value="brave0513" style="width: 108px;" />
+					<span>@</span>
+					<input type="text" class="input_text small" title="이메일 도메인 입력" value="hanmail.net" style="width: 108px;" />
+					<select class="select" title="도메인 선택">
+					<option>직접 입력</option>
+					<option>naver.com</option>
+					<option>hanmail.net</option>
+					</select>
+					<a class="btn" href="#"><img src="../img/mem/btn_small_01.gif" alt="인증메일 받기" /></a>
+					<a class="btn x_small help" href="#">도움말</a>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="password"><img src="../img/mem/label_medium_06.gif" alt="비밀번호" /><img src="../img/mem/ico_star.gif" alt="필수" /></label>
+				<div class="insert">
+					<input type="password" class="input_text small" id="password" title="비밀번호 입력" value="*********" style="width: 234px;" />
+					<span class="text">(6자~20자 영문과 숫자, 문자 가능)</span>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="passwordConfirm"><img src="../img/mem/label_medium_07.gif" alt="비밀번호확인" /><img src="../img/mem/ico_star.gif" alt="필수" /></label>
+				<div class="insert">
+					<input type="password" class="input_text small" id="passwordConfirm" title="비밀번호 재 입력" value="*********" style="width: 234px;" />
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="address"><img src="../img/mem/label_medium_03.gif" alt="자택주소" /><img src="../img/mem/ico_star.gif" alt="필수" /></label>
+				<div class="insert">
+					<div>
+						<input type="text" class="input_text small" id="address" title="우편번호 앞자리 입력" value="450" style="width: 110px;" />
+						<span class="text">-</span>
+						<input type="text" class="input_text small" title="우편번호 뒷자리 입력" value="105" style="width: 110px;" />
+						<a href="#"><img src="../img/mem/btn_small_03.gif" alt="우편번호 찾기" /></a>
+					</div>
+					<div>
+						<input type="text" class="input_text small" title="기본 주소 입력" value="서울특별시 강남구 역삼동" style="width: 234px;" />
+						<input type="text" class="input_text small" title="상세 주소 입력" value="102-03 브레이브 빌딩 201호" style="width: 285px;" />
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<span class="label"><img src="../img/mem/label_medium_08.gif" alt="성별" /></span>
+				<div class="insert">
+					<span class="option_select small">
+						<label for="genderState01"><input type="radio" class="radio" id="genderState01" name="gender" title="남자 선택" checked="checked" /> 남자</label>
+						<label for="genderState02"><input type="radio" class="radio" id="genderState02" name="gender" title="여자 선택" /> 여자</label>
+					</span>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="birth"><img src="../img/mem/label_medium_09.gif" alt="생년월일" /></label>
+				<div class="insert">
+					<select class="select" id="birth" title="태어난 해 선택">
+					<option>1990</option>
+					</select>
+					<span>년</span>
+					<select class="select" title="태어난 달 선택">
+					<option>01</option>
+					</select>
+					<span>월</span>
+					<select class="select" title="태어난 날 선택">
+					<option>20</option>
+					</select>
+					<span class="last">일</span>
+					<span class="option_select small">
+						<label for="solarCalendar"><input type="radio" class="radio" id="solarCalendar" name="birth-calendar" title="양력 선택" checked="checked" /> 양력</label>
+						<label for="lunarCalendar"><input type="radio" class="radio" id="lunarCalendar" name="birth-calendar" title="음력 선택" /> 음력</label>
+					</span>
+				</div>
+			</div>
+			<div class="field">
+				<span class="label"><img src="../img/mem/label_medium_10.gif" alt="이메일 수신여부" /></span>
+				<div class="insert">
+					<div>
+						<span class="text last">이메일 수신에 동의 하십니까?</span>
+						<span class="option_select small">
+							<label for="emailReceive"><input type="radio" class="radio" id="emailReceive" name="email-state" title="수신 선택" checked="checked" /> 수신</label>
+							<label for="emailNotReceived"><input type="radio" class="radio" id="emailNotReceived" name="email-state" title="비수신 선택" /> 비수신</label>
+						</span>
+					</div>
+					<div class="advice medium">
+						<strong class="subject"><img src="../img/mem/txt_medium_slightly_02.gif" alt="뉴스레터 수신 선택" /></strong>
+						<span class="definition"><img src="../img/mem/txt_small_slightly_09.gif" alt="E-mail로 받고자 하는 뉴스레터를 선택하시면, 신세계에서 제공하는 다양한 정보와 각종 서비스 혜택을 받으실 수 있습니다." /></span>
+					</div>
+				</div>
+			</div>
+			<div class="field emart_club">
+				<span class="label"><img src="../img/mem/label_medium_21.gif" alt="클럽선택(이마트)" /></span>
+				<div class="insert">
+					<span class="option_select medium">
+						<label for="clubState01"><input type="checkbox" id="clubState01" name="clubState" class="checkbox" title="빅텐 CLUB 선택" checked="checked" /> 빅텐 CLUB</label>
+						<label for="clubState02"><input type="checkbox" id="clubState02" name="clubState" class="checkbox" title="맘키즈 CLUB 선택" checked="checked" /> 맘키즈 CLUB</label>
+						<label for="clubState03"><input type="checkbox" id="clubState03" name="clubState" class="checkbox" title="와인클럽 선택" checked="checked" /> 와인클럽</label>
+						<label for="clubState04"><input type="checkbox" id="clubState04" name="clubState" class="checkbox" title="몰리스 클럽 선택" checked="checked" /> 몰리스 클럽</label>
+						<label for="clubState05"><input type="checkbox" id="clubState05" name="clubState" class="checkbox" title="BOONS 일반 선택" checked="checked" /> BOONS 일반</label>
+						<label for="clubState06"><input type="checkbox" id="clubState06" name="clubState" class="checkbox" title="BOONS 유료 선택" checked="checked" /> BOONS 유료</label>
+					</span>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="macAddress"><img src="../img/mem/label_medium_22.gif" alt="Wi-Fi MAC 주소" /></label>
+				<div class="insert">
+					<div>백화점/이마트 무료 Wi-Fi접속에 사용하실 기기의 MAC주소를 입력하세요.</div>
+					<div class="mac-address">
+						<input type="text" class="input_text small" id="macAddress" title="MAC 주소 첫째 자리 입력" value="" style="width: 90px;" />
+						<span>:</span>
+						<input type="text" class="input_text small" title="MAC 주소 둘째 자리 입력" value="" style="width: 90px;" />
+						<span>:</span>
+						<input type="text" class="input_text small" title="MAC 주소 셋째 자리 입력" value="" style="width: 90px;" />
+						<span>:</span>
+						<input type="text" class="input_text small" title="MAC 주소 넷째 자리 입력" value="" style="width: 90px;" />
+						<span>:</span>
+						<input type="text" class="input_text small" title="MAC 주소 다섯째 자리 입력" value="" style="width: 90px;" />
+						<span>:</span>
+						<input type="text" class="input_text small" title="MAC 주소 여섯째 자리 입력" value="" style="width: 90px;" />
+					</div>
+					<div>
+						<ul class="data-list small">
+						<li>홈페이지를 통한 등록 및 삭제(월회)는 익월 이후에 반영됩니다.</li>
+						<li>매장 내점 시, 무료 Wi-Fi접속하여 웹페이지 인증을 하시면 즉시 사용 가능합니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="areaCode"><img src="../img/mem/label_medium_23.gif" alt="차량번호 입력" /></label>
+				<div class="insert">
+					<div>
+						<select class="select" id="areaCode" title="지역번호 선택">
+						<option>지역번호없음</option>
+						<option>서울</option>
+						</select>
+						<input type="text" class="input_text small" title="첫째 자리 입력" value="01" style="width: 100px;" />
+						<span>-</span>
+						<input type="text" class="input_text small" title="둘째 자리 입력" value="가" style="width: 100px;" />
+						<span>-</span>
+						<input type="text" class="input_text small" title="셋째 자리 입력" value="1234" style="width: 100px;" />
+						<a href=""><img src="../img/mem/btn_small_02.gif" alt="추가" /></a>
+					</div>
+					<div class="advice small">
+						차량번호 등록시, 구매하신 내역에 따라 해당 차량의 주차비가 자동으로 정산됩니다. 일부 차량번호는 등록이 불가합니다.<br />(임시번호, 외교차량 등) 차량번호를 잘못입력하실 경우, 주차시간이 반영되지 않으므로. 다시 한번 확인 부탁 드립니다.
+					</div>
+				</div>
+			</div>
+			</fieldset>
+			<!-- //fieldset -->
+			</form>
+			</section>
+			<section class="code">
+				<h1>html</h1>
+<pre class="brush: xml">
+&lt;form&gt;
+&lt;!-- fieldset --&gt;
+&lt;fieldset class="fieldset medium"&gt;
+	&lt;legend class="blind"&gt;항목입력&lt;/legend&gt;
+	&lt;div class="field"&gt;
+	&lt;label class="label" for="userName"&gt;&lt;img src="../img/mem/label_medium_04.gif" alt="이름" /&gt;&lt;img src="../img/mem/ico_star.gif" alt="필수" /&gt;&lt;/label&gt;
+	&lt;div class="insert"&gt;
+		&lt;input type="text" class="input_text small" id="userName" title="사용자 이름 입력" value="홍길동" style="width: 234px;" /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;label class="label" for="email"&gt;&lt;img src="../img/mem/label_medium_05.gif" alt="이메일 주소" /&gt;&lt;img src="../img/mem/ico_star.gif" alt="필수" /&gt;&lt;/label&gt;
+	&lt;div class="insert"&gt;
+		&lt;input type="text" class="input_text small" id="email" title="이메일 아이디 입력" value="brave0513" style="width: 108px;" /&gt;
+		&lt;span&gt;@&lt;/span&gt;
+		&lt;input type="text" class="input_text small" title="이메일 도메인 입력" value="hanmail.net" style="width: 108px;" /&gt;
+		&lt;select class="select" title="도메인 선택"&gt;
+		&lt;option&gt;직접 입력&lt;/option&gt;
+		&lt;option&gt;naver.com&lt;/option&gt;
+		&lt;option&gt;hanmail.net&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;a class="btn" href="#"&gt;&lt;img src="../img/mem/btn_small_01.gif" alt="인증메일 받기" /&gt;&lt;/a&gt;
+		&lt;a class="btn x_small help" href="#"&gt;도움말&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;label class="label" for="password"&gt;&lt;img src="../img/mem/label_medium_06.gif" alt="비밀번호" /&gt;&lt;img src="../img/mem/ico_star.gif" alt="필수" /&gt;&lt;/label&gt;
+	&lt;div class="insert"&gt;
+		&lt;input type="password" class="input_text small" id="password" title="비밀번호 입력" value="*********" style="width: 234px;" /&gt;
+		&lt;span class="text"&gt;(6자~20자 영문과 숫자, 문자 가능)&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;label class="label" for="passwordConfirm"&gt;&lt;img src="../img/mem/label_medium_07.gif" alt="비밀번호확인" /&gt;&lt;img src="../img/mem/ico_star.gif" alt="필수" /&gt;&lt;/label&gt;
+	&lt;div class="insert"&gt;
+		&lt;input type="password" class="input_text small" id="passwordConfirm" title="비밀번호 재 입력" value="*********" style="width: 234px;" /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;label class="label" for="address"&gt;&lt;img src="../img/mem/label_medium_03.gif" alt="자택주소" /&gt;&lt;img src="../img/mem/ico_star.gif" alt="필수" /&gt;&lt;/label&gt;
+	&lt;div class="insert"&gt;
+		&lt;div&gt;
+			&lt;input type="text" class="input_text small" id="address" title="우편번호 앞자리 입력" value="450" style="width: 110px;" /&gt;
+			&lt;span class="text"&gt;-&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="우편번호 뒷자리 입력" value="105" style="width: 110px;" /&gt;
+			&lt;a href="#"&gt;&lt;img src="../img/mem/btn_small_03.gif" alt="우편번호 찾기" /&gt;&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;input type="text" class="input_text small" title="기본 주소 입력" value="서울특별시 강남구 역삼동" style="width: 234px;" /&gt;
+			&lt;input type="text" class="input_text small" title="상세 주소 입력" value="102-03 브레이브 빌딩 201호" style="width: 285px;" /&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;span class="label"&gt;&lt;img src="../img/mem/label_medium_08.gif" alt="성별" /&gt;&lt;/span&gt;
+	&lt;div class="insert"&gt;
+		&lt;span class="option_select small"&gt;
+			&lt;label for="genderState01"&gt;&lt;input type="radio" class="radio" id="genderState01" name="gender" title="남자 선택" checked="checked" /&gt; 남자&lt;/label&gt;
+			&lt;label for="genderState02"&gt;&lt;input type="radio" class="radio" id="genderState02" name="gender" title="여자 선택" /&gt; 여자&lt;/label&gt;
+		&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;label class="label" for="birth"&gt;&lt;img src="../img/mem/label_medium_09.gif" alt="생년월일" /&gt;&lt;/label&gt;
+	&lt;div class="insert"&gt;
+		&lt;select class="select" id="birth" title="태어난 해 선택"&gt;
+		&lt;option&gt;1990&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;span&gt;년&lt;/span&gt;
+		&lt;select class="select" title="태어난 달 선택"&gt;
+		&lt;option&gt;01&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;span&gt;월&lt;/span&gt;
+		&lt;select class="select" title="태어난 날 선택"&gt;
+		&lt;option&gt;20&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;span class="last"&gt;일&lt;/span&gt;
+		&lt;span class="option_select small"&gt;
+			&lt;label for="solarCalendar"&gt;&lt;input type="radio" class="radio" id="solarCalendar" name="birth-calendar" title="양력 선택" checked="checked" /&gt; 양력&lt;/label&gt;
+			&lt;label for="lunarCalendar"&gt;&lt;input type="radio" class="radio" id="lunarCalendar" name="birth-calendar" title="음력 선택" /&gt; 음력&lt;/label&gt;
+		&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;span class="label"&gt;&lt;img src="../img/mem/label_medium_10.gif" alt="이메일 수신여부" /&gt;&lt;/span&gt;
+	&lt;div class="insert"&gt;
+		&lt;div&gt;
+			&lt;span class="text last"&gt;이메일 수신에 동의 하십니까?&lt;/span&gt;
+			&lt;span class="option_select small"&gt;
+				&lt;label for="emailReceive"&gt;&lt;input type="radio" class="radio" id="emailReceive" name="email-state" title="수신 선택" checked="checked" /&gt; 수신&lt;/label&gt;
+				&lt;label for="emailNotReceived"&gt;&lt;input type="radio" class="radio" id="emailNotReceived" name="email-state" title="비수신 선택" /&gt; 비수신&lt;/label&gt;
+			&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div class="advice medium"&gt;
+			&lt;strong class="subject"&gt;&lt;img src="../img/mem/txt_medium_slightly_02.gif" alt="뉴스레터 수신 선택" /&gt;&lt;/strong&gt;
+			&lt;span class="definition"&gt;&lt;img src="../img/mem/txt_small_slightly_09.gif" alt="E-mail로 받고자 하는 뉴스레터를 선택하시면, 신세계에서 제공하는 다양한 정보와 각종 서비스 혜택을 받으실 수 있습니다." /&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field emart_club"&gt;
+	&lt;span class="label"&gt;&lt;img src="../img/mem/label_medium_21.gif" alt="클럽선택(이마트)" /&gt;&lt;/span&gt;
+	&lt;div class="insert"&gt;
+		&lt;span class="option_select medium"&gt;
+			&lt;label for="clubState01"&gt;&lt;input type="checkbox" id="clubState01" name="clubState" class="checkbox" title="빅텐 CLUB 선택" checked="checked" /&gt; 빅텐 CLUB&lt;/label&gt;
+			&lt;label for="clubState02"&gt;&lt;input type="checkbox" id="clubState02" name="clubState" class="checkbox" title="맘키즈 CLUB 선택" checked="checked" /&gt; 맘키즈 CLUB&lt;/label&gt;
+			&lt;label for="clubState03"&gt;&lt;input type="checkbox" id="clubState03" name="clubState" class="checkbox" title="와인클럽 선택" checked="checked" /&gt; 와인클럽&lt;/label&gt;
+			&lt;label for="clubState04"&gt;&lt;input type="checkbox" id="clubState04" name="clubState" class="checkbox" title="몰리스 클럽 선택" checked="checked" /&gt; 몰리스 클럽&lt;/label&gt;
+			&lt;label for="clubState05"&gt;&lt;input type="checkbox" id="clubState05" name="clubState" class="checkbox" title="BOONS 일반 선택" checked="checked" /&gt; BOONS 일반&lt;/label&gt;
+			&lt;label for="clubState06"&gt;&lt;input type="checkbox" id="clubState06" name="clubState" class="checkbox" title="BOONS 유료 선택" checked="checked" /&gt; BOONS 유료&lt;/label&gt;
+		&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;label class="label" for="macAddress"&gt;&lt;img src="../img/mem/label_medium_22.gif" alt="Wi-Fi MAC 주소" /&gt;&lt;/label&gt;
+	&lt;div class="insert"&gt;
+		&lt;div&gt;백화점/이마트 무료 Wi-Fi접속에 사용하실 기기의 MAC주소를 입력하세요.&lt;/div&gt;
+		&lt;div class="mac-address"&gt;
+			&lt;input type="text" class="input_text small" id="macAddress" title="MAC 주소 첫째 자리 입력" value="" style="width: 90px;" /&gt;
+			&lt;span&gt;:&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="MAC 주소 둘째 자리 입력" value="" style="width: 90px;" /&gt;
+			&lt;span&gt;:&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="MAC 주소 셋째 자리 입력" value="" style="width: 90px;" /&gt;
+			&lt;span&gt;:&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="MAC 주소 넷째 자리 입력" value="" style="width: 90px;" /&gt;
+			&lt;span&gt;:&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="MAC 주소 다섯째 자리 입력" value="" style="width: 90px;" /&gt;
+			&lt;span&gt;:&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="MAC 주소 여섯째 자리 입력" value="" style="width: 90px;" /&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;ul class="data-list small"&gt;
+			&lt;li&gt;홈페이지를 통한 등록 및 삭제(월회)는 익월 이후에 반영됩니다.&lt;/li&gt;
+			&lt;li&gt;매장 내점 시, 무료 Wi-Fi접속하여 웹페이지 인증을 하시면 즉시 사용 가능합니다.&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+	&lt;label class="label" for="areaCode"&gt;&lt;img src="../img/mem/label_medium_23.gif" alt="차량번호 입력" /&gt;&lt;/label&gt;
+	&lt;div class="insert"&gt;
+		&lt;div&gt;
+			&lt;select class="select" id="areaCode" title="지역번호 선택"&gt;
+			&lt;option&gt;지역번호없음&lt;/option&gt;
+			&lt;option&gt;서울&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;input type="text" class="input_text small" title="첫째 자리 입력" value="01" style="width: 100px;" /&gt;
+			&lt;span&gt;-&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="둘째 자리 입력" value="가" style="width: 100px;" /&gt;
+			&lt;span&gt;-&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="셋째 자리 입력" value="1234" style="width: 100px;" /&gt;
+			&lt;a href=""&gt;&lt;img src="../img/mem/btn_small_02.gif" alt="추가" /&gt;&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class="advice small"&gt;
+			차량번호 등록시, 구매하신 내역에 따라 해당 차량의 주차비가 자동으로 정산됩니다. 일부 차량번호는 등록이 불가합니다.&lt;br /&gt;(임시번호, 외교차량 등) 차량번호를 잘못입력하실 경우, 주차시간이 반영되지 않으므로. 다시 한번 확인 부탁 드립니다.
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;!-- //fieldset --&gt;
+&lt;/form&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>fieldset large</h1>
+			<section>
+			<form>
+			<!-- fieldset -->
+			<fieldset class="fieldset large">
+				<legend class="blind">항목입력</legend>
+				<div class="field">
+					<label class="label" for="contactType"><img src="../img/csc/label_small_01.gif" alt="문의유형 선택" /></label>
+					<div class="insert">
+						<select id="contactType" class="select" title="문의유형 선택">
+						<option>선택하세요</option>
+						<option>취소/교환/반품</option>
+						</select>
+						<select class="select" title="문의도움말 선택">
+						<option>선택하세요</option>
+						<option>교환/반품</option>
+						</select>
+					</div>
+				</div>
+				<div class="field">
+					<label class="label" for="buySelectProducts"><img src="../img/csc/label_small_02.gif" alt="주문상품 선택" /></label>
+					<div class="insert">
+						<input type="text" class="input_text small" id="buySelectProducts" title="주문상품을 입력하세요" style="width: 390px" />
+						<a class="btn" href="#"><img src="../img/csc/btn_xsmall_normal_02.gif" alt="주문상품 찾기" /></a>
+					</div>
+				</div>
+				<div class="field write">
+					<div class="insert">
+						<textarea class="textarea" id="inputQuestions" name="questions-input" cols="30" rows="10" title="질문내용을 구체적으로 꼼꼼히 작성해주세요. 정확하고 빠른 답변에 도움이 됩니다."></textarea>
+						<span class="data_count"><strong>0</strong>자/최대 2000자</span>
+					</div>
+				</div>
+				<div class="field">
+					<label class="label" for="inputFile"><img src="../img/csc/label_small_03.gif" alt="파일첨부" /></label>
+					<div class="insert">
+						<input type="file" class="input_file" id="inputFile" title="파일 찾기" />
+					</div>
+				</div>
+				<div class="field">
+					<label class="label" for="cstomerName"><img src="../img/csc/label_small_04.gif" alt="고객명" /></label>
+					<div class="insert">
+						<input type="text" class="input_text small" id="cstomerName" title="고객명 입력" value="홍길동" style="width: 220px" />
+					</div>
+				</div>
+				<div class="field">
+					<label class="label" for="tel"><img src="../img/csc/label_small_05.gif" alt="휴대폰 번호" /></label>
+					<div class="insert">
+						<select id="selectBox3" class="select" id="tel" title="휴대폰 번호 앞자리 선택">
+						<option>010</option>
+						</select>
+						<span class="text">-</span>
+						<input type="text" class="input_text small" title="휴대폰 번호 두번째 자리 입력" value="6554" style="width: 100px" />
+						<span class="text">-</span>
+						<input type="text" class="input_text small" title="휴대폰 번호 세번째 자리 입력" value="6554" style="width: 100px" />
+						<label for="telState"><input type="checkbox" id="telState" class="checkbox" name="checkExample3" checked="checked" /> 휴대폰으로 답변알림 받기</label>
+					</div>
+				</div>
+				<div class="field">
+					<label class="label" for="email"><img src="../img/csc/label_small_06.gif" alt="이메일 주소" /></label>
+					<div class="insert">
+						<input type="text" class="input_text small" id="email" title="이메일 아이디 입력" value="Braveinno" style="width: 160px" />
+						<span class="text">@</span>
+						<input type="text" class="input_text small" title="이메일 도메인 입력" value="naver.com" style="width: 125px" />
+						<select id="selectBox4" class="select" title="이메일 도메인 선택">
+						<option>직접 입력</option>
+						<option>naver.com</option>
+						<option>hanmail.net</option>
+						</select>
+					</div>
+				</div>
+				<div class="field inquiry-period">
+					<span class="label"><img src="../img/csc/label_small_07.gif" alt="조회기간" /></span>
+					<div class="insert">
+						<a href="" class="btn medium slightly">1주일</a>
+						<a href="" class="btn medium slightly">1개월</a>
+						<a href="" class="btn medium slightly">3개월</a>
+						<a href="" class="btn medium slightly last">6개월</a>
+						<input type="text" class="input_text small" id="searchPeriodStart" title="조회기간 시작 날짜 입력" value="2012.11.12" style="width: 72px" /><a href="" class="btn"><img src="../img/common/ico_calendar.gif" alt="조회기간 선택" /></a>
+						<span class="text">-</span>
+						<input type="text" class="input_text small" id="searchPeriodlast" title="조회기간 마지막 날짜 입력" value="2012.11.12" style="width: 72px" /><a href="" class="btn"><img src="../img/common/ico_calendar.gif" alt="조회기간 선택" /></a>
+						<a href="" class="btn"><img src="../img/csc/btn_consult3.gif" alt="조회하기" /></a>
+					</div>
+				</div>
+			</fieldset>
+			<!-- //fieldset -->
+			</form>
+			</section>
+			<section class="code">
+				<h1>html</h1>
+<pre class="brush: xml">
+&lt;form&gt;
+&lt;!-- fieldset --&gt;
+&lt;fieldset class="fieldset large"&gt;
+	&lt;legend class="blind"&gt;항목입력&lt;/legend&gt;
+	&lt;div class="field"&gt;
+		&lt;label class="label" for="contactType"&gt;&lt;img src="../img/csc/label_small_01.gif" alt="문의유형 선택" /&gt;&lt;/label&gt;
+		&lt;div class="insert"&gt;
+			&lt;select id="contactType" class="select" title="문의유형 선택"&gt;
+			&lt;option&gt;선택하세요&lt;/option&gt;
+			&lt;option&gt;취소/교환/반품&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;select class="select" title="문의도움말 선택"&gt;
+			&lt;option&gt;선택하세요&lt;/option&gt;
+			&lt;option&gt;교환/반품&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field"&gt;
+		&lt;label class="label" for="buySelectProducts"&gt;&lt;img src="../img/csc/label_small_02.gif" alt="주문상품 선택" /&gt;&lt;/label&gt;
+		&lt;div class="insert"&gt;
+			&lt;input type="text" class="input_text small" id="buySelectProducts" title="주문상품을 입력하세요" style="width: 390px" /&gt;
+			&lt;a class="btn" href="#"&gt;&lt;img src="../img/csc/btn_xsmall_normal_02.gif" alt="주문상품 찾기" /&gt;&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field write"&gt;
+		&lt;div class="insert"&gt;
+			&lt;textarea class="textarea" id="inputQuestions" name="questions-input" cols="30" rows="10" title="질문내용을 구체적으로 꼼꼼히 작성해주세요. 정확하고 빠른 답변에 도움이 됩니다."&gt;&lt;/textarea&gt;
+			&lt;span class="data_count"&gt;&lt;strong&gt;0&lt;/strong&gt;자/최대 2000자&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field"&gt;
+		&lt;label class="label" for="inputFile"&gt;&lt;img src="../img/csc/label_small_03.gif" alt="파일첨부" /&gt;&lt;/label&gt;
+		&lt;div class="insert"&gt;
+			&lt;input type="file" class="input_file" id="inputFile" title="파일 찾기" /&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field"&gt;
+		&lt;label class="label" for="cstomerName"&gt;&lt;img src="../img/csc/label_small_04.gif" alt="고객명" /&gt;&lt;/label&gt;
+		&lt;div class="insert"&gt;
+			&lt;input type="text" class="input_text small" id="cstomerName" title="고객명 입력" value="홍길동" style="width: 220px" /&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field"&gt;
+		&lt;label class="label" for="tel"&gt;&lt;img src="../img/csc/label_small_05.gif" alt="휴대폰 번호" /&gt;&lt;/label&gt;
+		&lt;div class="insert"&gt;
+			&lt;select id="selectBox3" class="select" id="tel" title="휴대폰 번호 앞자리 선택"&gt;
+			&lt;option&gt;010&lt;/option&gt;
+			&lt;/select&gt;
+			&lt;span class="text"&gt;-&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="휴대폰 번호 두번째 자리 입력" value="6554" style="width: 100px" /&gt;
+			&lt;span class="text"&gt;-&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="휴대폰 번호 세번째 자리 입력" value="6554" style="width: 100px" /&gt;
+			&lt;label for="telState"&gt;&lt;input type="checkbox" id="telState" class="checkbox" name="checkExample3" checked="checked" /&gt; 휴대폰으로 답변알림 받기&lt;/label&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field"&gt;
+		&lt;label class="label" for="email"&gt;&lt;img src="../img/csc/label_small_06.gif" alt="이메일 주소" /&gt;&lt;/label&gt;
+		&lt;div class="insert"&gt;
+			&lt;input type="text" class="input_text small" id="email" title="이메일 아이디 입력" value="Braveinno" style="width: 160px" /&gt;
+			&lt;span class="text"&gt;@&lt;/span&gt;
+			&lt;input type="text" class="input_text small" title="이메일 도메인 입력" value="naver.com" style="width: 125px" /&gt;
+			&lt;select id="selectBox4" class="select" title="이메일 도메인 선택"&gt;
+			&lt;option&gt;직접 입력&lt;/option&gt;
+			&lt;option&gt;naver.com&lt;/option&gt;
+			&lt;option&gt;hanmail.net&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="field inquiry-period"&gt;
+		&lt;span class="label"&gt;&lt;img src="../img/csc/label_small_07.gif" alt="조회기간" /&gt;&lt;/span&gt;
+		&lt;div class="insert"&gt;
+			&lt;a href="" class="btn medium slightly"&gt;1주일&lt;/a&gt;
+			&lt;a href="" class="btn medium slightly"&gt;1개월&lt;/a&gt;
+			&lt;a href="" class="btn medium slightly"&gt;3개월&lt;/a&gt;
+			&lt;a href="" class="btn medium slightly last"&gt;6개월&lt;/a&gt;
+			&lt;input type="text" class="input_text small" id="searchPeriodStart" title="조회기간 시작 날짜 입력" value="2012.11.12" style="width: 72px" /&gt;&lt;a href="" class="btn"&gt;&lt;img src="../img/common/ico_calendar.gif" alt="조회기간 선택" /&gt;&lt;/a&gt;
+			&lt;span class="text"&gt;-&lt;/span&gt;
+			&lt;input type="text" class="input_text small" id="searchPeriodlast" title="조회기간 마지막 날짜 입력" value="2012.11.12" style="width: 72px" /&gt;&lt;a href="" class="btn"&gt;&lt;img src="../img/common/ico_calendar.gif" alt="조회기간 선택" /&gt;&lt;/a&gt;
+			&lt;a href="" class="btn"&gt;&lt;img src="../img/csc/btn_consult3.gif" alt="조회하기" /&gt;&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;!-- //fieldset --&gt;
+&lt;/form&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>fieldset large</h1>
+			<section>
+			<form>
+			<!-- fieldset -->
+			<fieldset class="fieldset large">
+				<legend class="blind">답글 입력</legend>
+				<div class="field comment_write">
+					<div class="insert">
+						<strong class="subject"><img src="../img/csc/txt_ask_01.gif" alt="위 답변으로 궁금하신 사항이 해결되셨나요?" /></strong>
+						<span class="option_select small">
+							<label for="resolveProblem"><input type="radio" class="radio" id="resolveProblem" name="resolve-problem" title="예 선택" checked="checked" /> 예</label>
+							<label for="notResolveProblem"><input type="radio" class="radio" id="notResolveProblem" name="resolve-problem" title="아니오 선택" /> 아니오</label>
+						</span>
+						<textarea class="textarea" id="inputComment" name="" cols="30" rows="10" title="해결되지 않으셨다면 어떤 답변을 원하셨는지 알려주세요. "></textarea>
+						<span class="data_count"><strong>0</strong>자/최대 200자</span>
+						<div class="button_area">
+							<button type="submit" class="btn"><img src="../img/csc/btn_small_normal_03.gif" alt="확인" /></button>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<!-- //fieldset -->
+			</form>
+			</section>
+			<section class="code">
+				<h1>html</h1>
+<pre class="brush: xml">
+&lt;form&gt;
+&lt;!-- fieldset --&gt;
+&lt;fieldset class="fieldset large"&gt;
+	&lt;legend class="blind"&gt;답글 입력&lt;/legend&gt;
+	&lt;div class="field comment_write"&gt;
+		&lt;div class="insert"&gt;
+			&lt;strong class="subject"&gt;&lt;img src="../img/csc/txt_ask_01.gif" alt="위 답변으로 궁금하신 사항이 해결되셨나요?" /&gt;&lt;/strong&gt;
+			&lt;span class="option_select small"&gt;
+				&lt;label for="resolveProblem"&gt;&lt;input type="radio" class="radio" id="resolveProblem" name="resolve-problem" title="예 선택" checked="checked" /&gt; 예&lt;/label&gt;
+				&lt;label for="notResolveProblem"&gt;&lt;input type="radio" class="radio" id="notResolveProblem" name="resolve-problem" title="아니오 선택" /&gt; 아니오&lt;/label&gt;
+			&lt;/span&gt;
+			&lt;textarea class="textarea" id="inputComment" name="" cols="30" rows="10" title="해결되지 않으셨다면 어떤 답변을 원하셨는지 알려주세요. "&gt;&lt;/textarea&gt;
+			&lt;span class="data_count"&gt;&lt;strong&gt;0&lt;/strong&gt;자/최대 200자&lt;/span&gt;
+			&lt;div class="button_area"&gt;
+				&lt;button type="submit" class="btn"&gt;&lt;img src="../img/csc/btn_small_normal_03.gif" alt="확인" /&gt;&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;!-- //fieldset --&gt;
+&lt;/form&gt;
+</pre>
+			</section>
+		</section>
+	</section>
+	<!-- //contentPrimary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<footer id="footer">
+	<small><span>Copyright &copy; 2013 <abbr title="Web Standard Guide">WSG</abbr></span> <span>made by <a target="_blank" href="http://www.braveinno.com/ver3/html/main.html">BRAVE INNOVATION</a> TX GROUP.</span></small>
+</footer>
+<!-- //footer -->
+</div>
+<script type="text/javascript" src="../js/common/jquery-latest.js"></script>
+<script type="text/javascript" src="../js/common/selectivizr.js"></script>
+<script type="text/javascript" src="../js/common/jquery.form.min.js"></script>
+<script type="text/javascript" src="../js/common/layout.js"></script>
+</body>
+</html>

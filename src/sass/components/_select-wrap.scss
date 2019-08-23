@@ -1,0 +1,50 @@
+// .select-wrap
+	$select-wrap-padding-left : 4px;
+	$select-wrap-asset-margin-bottom : 10px;
+	$select-wrap-asset-line-height : 25px;
+	$select-wrap-asset-width : auto;
+	$select-wrap-asset-height : $select-wrap-asset-line-height;
+	$select-wrap-asset-input-size : 25px;
+	$select-wrap-asset-label-line-height : 25px;
+
+
+.select-wrap {
+	@include clearfix();
+	// padding-left: $select-wrap-padding-left;
+	.asset {
+		// margin-top: $select-wrap-asset-margin-bottom * 0.5;
+		margin-bottom: $select-wrap-asset-margin-bottom;
+		width: $select-wrap-asset-width;
+		min-height: $select-wrap-asset-height;
+		line-height: $select-wrap-asset-line-height;
+		input[type="radio"], input[type="checkbox"] {
+			// width: $select-wrap-asset-input-size;
+			// height: $select-wrap-asset-input-size;
+			// vertical-align: middle;
+		}
+		label {
+			padding-left: 4px;
+			display: inline-block;
+			font-size: 14px;
+			vertical-align: top;
+			line-height: $select-wrap-asset-label-line-height;
+		}
+	}
+	&.horizontal {
+		.asset {
+			float: left;
+			margin-right: 20px;
+			+ .asset {
+				// margin-left: 20px;
+			}
+		}
+		&.join-check{
+			margin-top:5px;
+			.asset{
+				label{
+					padding-left:0;
+				}
+			}
+		}
+	}
+}

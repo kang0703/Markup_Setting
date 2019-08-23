@@ -1,0 +1,117 @@
+@include mq($pc) {
+	/* module(검색) */
+	.search-p-write-area{
+		padding:28px;
+		background:#f7f7f7;
+		.search-p-w-in{
+			position:relative;
+			.search-write{
+				position:relative;
+				.write{
+					@include box-sizing;
+					height:44px;
+					border:2px solid #e1e1e1;
+					padding-left:44px;
+					background:#fff;
+					input[type=text]{
+						width:100%;
+						height:100%;
+						border:0;
+						padding-left:0;
+					}
+				}
+				.btnn-button{
+					border:0;
+					position:absolute;
+					top:0;
+					left:0;
+					width:44px;
+					height:44px;
+					@include box-sizing;
+					background:url($img + 'svg/icon-search.svg') 0 center no-repeat;
+					background-size:18px;
+					background-origin:content-box;
+					padding:13px 0 12px 17px;
+				}
+			}
+			.search-recommend-tag-wrap{
+				margin-top:15px;
+				@include cf;
+				.sear-rec-tt{
+					font-size:rem(14px);
+					color:#111;
+					float:left;
+					margin-top:5px;
+				}
+				.sear-rec-round-list{
+					@include cf;
+					width:auto;
+					overflow:hidden;
+					margin:-2px;
+					padding-left:18px;
+					li{
+						float:left;
+						margin:2px;
+						a{
+							text-decoration:none;
+							text-align:center;
+							border:1px solid #111;
+							display:block;
+							padding:0 19px;
+							font-size:rem(14px);
+							color:#111;
+							background:#fff;
+							height:30px;
+							@include box-sizing;
+							line-height:28px;
+							@include border-radius($border-radius : 15px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
+	/* layout(검색) */
+	.search-page-detail-wrap{
+		.search-p-write-area{
+			//
+		}
+		.search-list-cate-tab{
+			margin-top:60px;
+		}
+		.search-p-result-area{
+			margin-top:48px;
+			.review{
+				.product-list-contents-area{
+					.list-see-all-wrap{
+						.side-filter-box{
+							.side-filter-box-line{
+								display:none;
+							}
+						}
+						.right-list-zone{
+							padding:38px 0 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+}

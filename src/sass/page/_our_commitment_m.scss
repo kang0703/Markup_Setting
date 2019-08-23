@@ -1,0 +1,134 @@
+@include mq($mobile) {
+
+	/* module */
+	.our-comm-small-contents{
+		text-align:center;
+		strong{
+			font-size:rem(24px);
+			color:#111;
+		}
+		p{
+			margin-top:10px;
+			font-size:rem(14px);
+			color:#2d2d2d;
+			br{
+				display:none;
+			}
+		}
+	}
+
+	.floating-zig-content-wrap{
+		.flo-zig-con-ul{
+			.flo-zig-con-li{
+				border-bottom:1px solid #e1e1e1;
+				padding-top:40px;
+				&:last-child{
+					border-bottom:0;
+				}
+				&:first-child{
+					padding-top:0;
+				}
+				.flo-zig-in-div{
+					.pic-zone{
+						img{
+							width:100%;
+						}
+					}
+					.con-zone{
+						padding:35px 30px;
+						.con-in-zig{
+							text-align:center;
+							.zig-tt{
+								font-size:rem(21px);
+								color:#111;
+								font-weight:bold;
+							}
+							.zig-con{
+								font-size:rem(14px);
+								color:#2d2d2d;
+								margin-top:13px;
+								br{
+									display:none;
+								}
+								.zig-ul-list{
+									margin-top:20px;
+									li{
+										margin-bottom:12px;
+										&:last-child{
+											margin-bottom:0;
+										}
+										strong{
+											font-weight:normal;
+										}
+										p{
+											//
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&:last-child{
+					.flo-zig-in-div{
+						.pic-zone{
+							vertical-align:top;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.campaign-banner-list{
+		padding:0 10px;
+		.cam-ban-li{
+			margin-bottom:48px;
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+	/* layout */
+
+	.our-commitment-page-wrap{
+		// 선언문
+		.title-sale-save{
+			.page-tt-h3{
+				margin-bottom:12px;
+				margin-top:12px;
+			}
+		}
+		.manifesto-detail-img-zone{
+			display:none;
+			img{
+				width:100%;
+			}
+		}
+
+		// 지구를 풍요롭게
+		.sub-big-banner-case03-wrap{
+			//
+		}
+		.our-comm-bdt-wrap{
+			border-top: 1px solid #e1e1e1;
+			padding-top: 40px;
+			margin-top:30px;
+			.our-comm-small-contents{
+				p{
+					padding:0 30px;
+				}
+			}
+		}
+	}
+
+
+}

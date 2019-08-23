@@ -1,0 +1,14 @@
+// image-replace
+//
+// image-replace시 오리지널 컨텐츠 숨김처리
+
+@mixin ir() {
+	overflow: hidden;
+	text-indent: -9999px;
+	font-size: 0.01em;
+	color: transparent;
+}
+
+@mixin image-replace() {
+	@include ir;
+}

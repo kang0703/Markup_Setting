@@ -1,0 +1,14 @@
+// font-size
+//
+// 반응형 사이트에서 rem단위 mixin
+
+@mixin font-size($px) {
+	@if $old-ie == true {
+		font-size: $px;
+	}
+	font-size: rem($px);
+}
+
+@mixin fz($px) {
+	@include font-size($px);
+}

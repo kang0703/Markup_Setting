@@ -1,0 +1,262 @@
+// @include mq($pc) {
+
+.data-table.basket-item-list-table {
+	.status {
+		display: inline-block;
+		width: 60px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		font-weight: bold;
+		// color: #fff;
+		// background-color: #7d7d7d;
+	}
+	.status-btn-area {
+		margin-top: 4px;
+		.btn {
+			margin: 2px auto;
+			display: inline-block;
+			min-width: 60px;
+			&.weighty {
+				color: #fff;
+			}
+		}
+		@include pmq {
+			display: inline-block;
+		}
+	}
+	.td-label {
+		display: none;
+	}
+	.item-order-number {
+		.btn {
+			padding: 0;
+			margin-top: 2px;
+			width: 78px;
+			&.weighty {
+				color: #fff;
+			}
+		}
+		.order-number {
+			display: inline-block;
+			margin-bottom: 6px;
+			.em {
+				text-decoration: underline;
+			}
+		}
+	}
+	td {
+		.add {
+			display: block;
+			font-weight: normal;
+		}
+		.selectric-select-sm {
+			display: inline-block;
+			width: 70px;
+		}
+	}
+	@include mq($bp1-3) {
+		& {
+			margin-left: 12px;
+			margin-right: 12px;
+			width: auto;
+		}
+		&, thead, tbody, tr, th, td {
+			display: block;
+		}
+		thead {
+			display: none;
+		}
+		tbody {
+			tr {
+				display: flex;
+				flex-direction: column;
+				+ tr {
+					.item-order-number {
+						margin-top: 50px;
+					}
+				}
+			}
+			td {
+				position: relative;
+				order: 5;
+				text-align: right;
+				padding: 5px 0;
+				border: none;
+				@include cf;
+			}
+			.item-order-number {
+				margin-bottom: -16px;
+				padding: 10px;
+				order: 1;
+				text-align: left;
+				background-color: #f7f7f7;
+				border-top: 1px #e1e1e1 solid;
+				border-bottom: 1px #e1e1e1 solid;
+				.td-label {
+					float: none;
+					display: inline-block;
+				}
+
+				.btn {
+					// float: right;
+					margin-top: 0;
+				}
+				.btns {
+					float: right;
+					.btn {
+						// margin: 0 2px;
+					}
+				}
+			}
+			// .item-division{
+			// 	margin-bottom: -16px;
+			// 	padding: 10px;
+			// 	order: 1;
+			// 	text-align: left;
+			// 	background-color: #f7f7f7;
+			// 	border-top: 1px #e1e1e1 solid;
+			// 	border-bottom: 1px #e1e1e1 solid;
+			// 	text-align:center;
+			// 	.td-label {
+			// 		display:none;
+			// 		// float: none;
+			// 		// display: inline-block;
+			// 	}
+			// }
+			.item-day{
+				margin-bottom: -16px;
+				padding: 10px;
+				order: 1;
+				text-align: left;
+				background-color: #f7f7f7;
+				border-top: 1px #e1e1e1 solid;
+				border-bottom: 1px #e1e1e1 solid;
+				text-align:center;
+				.td-label {
+					display:none;
+					// float: none;
+					// display: inline-block;
+				}
+			}
+			.item-data {
+				order:3;
+			}
+			.item-code, .item-point, .item-normal-price, .item-sakes-price, .item-add-discount, .item-division{
+				display: none;
+				&.block{
+					display:block;
+				}
+			}
+
+			.item-shipped, .item-status {
+				// vertical-align: top;
+				.status {
+					padding-top: 4px;
+					padding-right: 5px;
+					width: auto;
+					vertical-align: top;
+				}
+				.status-btn-area {
+					margin-top: 0;
+				}
+			}
+			.item-status {
+				margin-top: 15px;
+				padding-top: 8px;
+				order: 2;
+				border-top: 1px #e1e1e1 solid;
+				// background-color: #f7f7f7;
+
+			}
+		}
+		.td-label {
+			display: block;
+			float: left;
+		}
+		.item-data {
+			margin-top: 15px;
+			padding-top: 10px;
+			text-align: left;
+			border-top: 1px #e1e1e1 solid;
+		}
+		.selectric {
+			.label {
+				text-align: center;
+			}
+		}
+	}
+	@include mq(0 520px) {
+		tbody {
+			.item-order-number {
+				.btns {
+					float: none;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.basket-list-item {
+	position: relative;
+	margin: 5px 10px;
+	@include cf;
+	.checkbox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		.checker {
+			@include size(14px);
+			span {
+				@include size(14px);
+				background-position: -96px 0;
+				&.checked {
+					background-position: -110px 0;
+				}
+			}
+		}
+	}
+	.thumbnail {
+		margin-right: 10px;
+		float: left;
+		// display: table;
+		@include size(80px);
+		.frame {
+			// display: table-cell;
+			@include size(100%);
+			text-align: center;
+			vertical-align: middle;
+		}
+		img {
+			@include size(auto);
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	.detail {
+		float: none;
+		overflow: hidden;
+		@include mq($pc) {
+			.item-spec {
+				margin-top: 5px;
+			}
+			.item-period {
+				margin-top: 10px;
+			}
+			.item-title {
+				font-size: 14px;
+				+ .item-review {
+					margin-top: 20px;
+				}
+			}
+			.item-review {
+				margin-top: 5px;
+			}
+		}
+	}
+}
+
+
+
+// }

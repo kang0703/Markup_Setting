@@ -1,0 +1,8 @@
+// sprite
+//
+// sprite 이미지 사용시 경로 쉽게 집어넣기
+
+@mixin sprite($sprite-name: 'sprite') {
+	background-repeat: no-repeat;
+	background-image: url($img + 'sprite/' + $sprite-name + '.png');
+}

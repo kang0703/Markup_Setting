@@ -1,0 +1,327 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="ko" class="explorer v6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="explorer v7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="explorer v8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Web Standard Guide</title>
+<link type="text/css" rel="stylesheet" href="../res/css/common.css" />
+<link type="text/css" rel="stylesheet" href="../wsg/res/css/wsg.css" />
+<script type="text/javascript" src="../res/js/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../res/js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/codemirror/codemirror.css" />
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/jqueryFileTree/jqueryFileTree.css" media="screen" />
+<script type="text/javascript" src="../wsg/plugin/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="../wsg/plugin/codemirror/xml.js"></script>
+<script type="text/javascript" src="../wsg/res/js/wsg.js"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="../res/js/libs/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrap">
+<!-- header -->
+<header id="header">
+	<h1><a href="index.html">PROJECT</a></h1>
+	<p class="skip-lnb"><a href="#lnb">메뉴</a></p>
+	<p class="history-back"><a href="index.html">BACK</a></p>
+</header>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container" class="intro">
+	<!-- contentAside -->
+	<div id="contentAside" class="content-aside">
+		<!-- lnb -->
+		<nav id="lnb" class="lnb">
+			<h2>주요메뉴</h2>
+			<ul>
+			<li><strong>GUIDELINE</strong>
+				<ul>
+				<li><a href="information.html">PROJECT 기본정보</a></li>
+				<li><a href="naming.html">네이밍</a></li>
+				<li><a href="rule_html_code.html">HTML 코드 규칙</a></li>
+				<!--<li><a href="rule_html_mark.html">HTML 요소 작성 규칙</a></li>-->
+				<li><a href="rule_css_code.html">CSS 코드 규칙</a></li>
+				<li><a href="validation.html">테스트 및 검수</a></li>
+				</ul>
+			</li>
+			<li><strong>PROGRESS</strong>
+				<ul>
+				<li><a href="checklist.html">issue &amp; check list</a></li>
+				<li><a href="markup.html">markup</a></li>
+				</ul>
+			</li>
+			<li><strong><abbr title="User Interface">UI</abbr> LIBRARY</strong>
+				<ul>
+				<li><a href="typography.html">typography</a></li>
+				<li><a href="form.html">form</a></li>
+				<li><a href="table.html">table</a></li>
+				<li><a href="tab.html">tab</a></li>
+				<li><a href="button.html">button</a></li>
+				<li><a href="panel.html">panel</a></li>
+				<li><a href="fieldset.html">fieldset</a></li>
+				<li><a href="list.html">list</a></li>
+				<li><a href="images.html">images</a></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+		<!-- //lnb -->
+	</div>
+	<!-- //contentAside -->
+	<!-- contentPrimary -->
+	<section id="contentPrimary" class="content-primary">
+		<h1>CSS 코드 규칙</h1>
+		<section>
+			<h1>CSS Validation Check</h1>
+			<p>CSS는 사용 가능가능한 CSS3 속성을 제외하고 W3C Validation을 통과 해야 한다. W3C validation 체크 사이트(<a href="http://jigsaw.w3.org/css-validator/" target="_blank">http://jigsaw.w3.org/css-validator/</a>)에서 직접 검사하도록 한다.</p>
+			<figure>
+				<img src="../wsg/res/images/img_w3c_css.jpg" />
+				<figcaption>W3C CSS Validationn</figcaption>
+			</figure>
+		</section>
+		<section>
+			<h1>CSS 분리 관리</h1>
+			<p>CSS는 원활한 프로젝트의 진행 및 향 후 유지 관리를 위하여, 반드시 사용 목적에 따라 분리 하여 관리 합니다.</p>
+			<!-- data-table small -->
+			<table class="data-table wsg">
+			<colgroup>
+				<col style="width: 25%" />
+				<col style="width: 25%" />
+				<col />
+			</colgroup>
+			<thead>
+			<tr>
+				<th scope="col">분류</th>
+				<th scope="col">파일명</th>
+				<th scope="col">내용</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td rowspan="4">공통</td>
+				<td>base.css</td>
+				<td class="align-left">브라우져별 특성을 띄는 기본 속성을 초기화 한다.</td>
+			</tr>
+			<tr>
+				<td>global.css</td>
+				<td class="align-left">모든영역에서 사용되는 모듈화된 오브젝트 (가급적 기본적인 구조만 정의 하고 해당 카테고리의 CSS에서 커스터마이징 하여 사용하도록 한다.)</td>
+			</tr>
+			<tr>
+				<td>button.css</td>
+				<td class="align-left">특정타입의 오브젝트 셋 버튼 셋 (필요에 따라 분리 관리 한다.)</td>
+			</tr>
+			<tr>
+				<td>layout.css</td>
+				<td class="align-left">해당 카테고리와 맞는 레이아웃 구조 (header, footer 및 navigation이 이에 해당한다)</td>
+			</tr>
+			<tr>
+				<td>해당카테고리</td>
+				<td>intro.css</td>
+				<td class="align-left">해당 카테고리에 특화된 UI, 각 섹션당 분기 해야 할 항목만 정의 한다.</td>
+			</tr>
+			</tbody>
+			</table>
+			<!-- //data-table small -->
+			<section>
+				<h1>directory</h1>
+				<div class="example">
+					<ul class="jqueryFileTree">
+					<li class="directory">
+						res
+						<ul class="jqueryFileTree">
+						<li class="directory">
+							css
+							<ul class="jqueryFileTree">
+							<li class="directory">
+								common
+								<ul class="jqueryFileTree">
+								<li class="file ext_txt">basic.css</li>
+								<li class="file ext_txt">global.css</li>
+								<li class="file ext_txt">button.css</li>
+								<li class="file ext_txt">table.css</li>
+								<li class="file ext_txt">layout.css</li>
+								</ul>
+							</li>
+							<li class="file ext_txt">intro.css</li>
+							<li class="file ext_txt">signup.css</li>
+							</ul>
+						</li>
+						<li class="directory">
+							images
+							<ul class="jqueryFileTree">
+							<li class="directory">common</li>
+							<li class="directory">intro</li>
+							<li class="directory">signup</li>
+							</ul>
+						</li>
+						<li class="directory">js</li>
+						</ul>
+					</li>
+					<li class="directory">
+						html
+						<ul class="jqueryFileTree">
+						<li class="directory">@temp</li>
+						<li class="directory">
+							intro
+							<ul class="jqueryFileTree">
+							<li class="file ext_txt">intro_01.html</li>
+							</ul>
+						</li>
+						<li class="directory">
+							signup
+							<ul class="jqueryFileTree">
+							<li class="file ext_txt">signup_01.html</li>
+							<li class="file ext_txt">signup_02.html</li>
+							</ul>
+						</li>
+						</ul>
+					</li>
+					<li class="directory">wsg</li>
+					</ul>
+				</div>
+			</section>
+		</section>
+		<section>
+			<h1>ENCODING</h1>
+			<p>신규 HTML 문서를 작성할 때 기본 인코딩은 utf-8을 원칙으로 한다.<br />utf-8은 다국어 지원이 가능하며, euc-kr보다 표현 가능한 한글(고어, 음절 등)이 더 많다.</p>
+<pre class="code">
+@charset "utf-8";
+</pre>
+		</section>
+		<section>
+			<h1>클래스명</h1>
+			<p>class명은 직관적이며 문서의 의미와 시각적 분리가 이루어 져야 합니다. 그러기 위해 최대한 약어를 사용하지 않고 해당 영역의 의미를 담아 네이밍 합니다.</p>
+<pre class="code">
+&lt;!-- 의미와 시각적 분리 및 약어를 사용한 바른 예 --&gt;
+&lt;div class="button_area"&gt;
+&lt;div class="my_cart"&gt;
+&lt;div class="today_hot_issue"&gt;
+&lt;!-- 의미와 시각적 분리 및 약어를 사용한 잘못된 예 --&gt;
+&lt;div class="con_01"&gt;
+&lt;div class="box_01"&gt;
+&lt;div class="mt_10"&gt;
+&lt;div class="pd_10"&gt;
+&lt;div class="txt_blue"&gt;
+</pre>
+		</section>
+		<section>
+			<h1>들여쓰기 공백</h1>
+			<p>선택자 간, 속성 및 속성 값의 여백은 좌측 한칸 이며, 중괄호의 여백은 허용하지 않는다. 최종 작업물을 전달하기 이전까지는 텝81라인에 맞춰 가독성을 높이되 작업이 완료되어 배포시 코드를 최적화 한다.</p>
+			<p>항목간의 구분을 짖는 빈줄 이외에는 허용하지 않는다.</p>
+<pre class="code">
+/* header */
+#header												{position: relative; height: 48px; background-color: #323232; border-bottom: 3px solid #ff4f19;}
+#header h1											{text-align: center; font: normal 2em/48px verdana, dotum, sans-serif; color: #ffffff;}
+#header h1 a										{color: #ffffff; text-decoration: none;}
+/* skip-gnb */
+#header .skip-gnb									{position: absolute; top: 8px; left: 8px;}
+#header .skip-gnb a									{position: relative; display: block; width: 31px; height: 31px; line-height: 31px; text-align: center; color: #ffffff; text-decoration: none;}
+/* header explorer */
+.explorer.v7 #header .skip-gnb a,
+.explorer.v8 #header .skip-gnb a					{border: 1px solid #595959;}
+.explorer.v8 #header .skip-gnb a:after				{background: none;}
+</pre>
+		</section>
+		<section>
+			<h1>속성 선언</h1>
+			<p>CSS속성은 아래의 우선순위 순으로 선언 합니다.</p>
+			<table border="1" class="data-table wsg">
+			<colgroup>
+				<col style="width: 10%;" />
+				<col style="width: 20%;" />
+				<col />
+			</colgroup>
+			<thead>
+			<tr>
+				<th>우선순위</th>
+				<th></th>
+				<th>속성</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>1</td>
+				<td>레이아웃</td>
+				<td class="align-left">display, visibility, overflow, float, clear, position, z-index</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>박스모델</td>
+				<td class="align-left">width, height, margin, padding, border, border-radius, box-shadow, outline</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>백그라운드</td>
+				<td class="align-left">background-color, background-image, background-repeat, background-position</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>텍스트</td>
+				<td class="align-left">line-height, font-family, font-size, color, text-align, text-decoration, text-indent, white-space, text-align, vertical-align, text-shadow</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>기타</td>
+				<td class="align-left">etc...</td>
+			</tr>
+			</tbody>
+			</table>
+			<section>
+				<h1>CODE</h1>
+<pre class="code">
+/* example */
+.example {display: value; visibility: value; overflow: value; float: value; clear: value; position: value; z-index: value; width: value; height: value; margin: value; padding: value; border: value; border-radius: value; box-shadow: value; outline: value; background: value; line-height: value; font-family: value; line-size: value; color: value; text-align: value; text-decoration: value; text-indent: value; white-space: value; text-align: value; vertical-align: value; text-shadow: value; etc...}
+</pre>
+			</section>
+			<section>
+				<h1>HTML/CSS minify</h1>
+				<p>만약 속성 선언가 룰과 맞지 않다면, N-MET의 HTML/CSS Formatter(<a href="http://html.nhncorp.com/markup_tools/nmet" target="_blank">http://html.nhncorp.com/markup_tools/nmet</a>)를 이용하여 최적화 하도록 한다.</p>
+				<figure>
+					<img src="../wsg/res/images/img_nmet.jpg" />
+					<figcaption>N-MET</figcaption>
+				</figure>
+			</section>
+		</section>
+		<section>
+			<h1>IE 버전 별 CSS 분기</h1>
+			<p>익스플로러를 버전별로 분기 하여 가급적 css핵은 사용하지 않습니다.</p>
+			<section>
+				<h1>HTML</h1>
+<pre class="code">
+&lt;!--[if lt IE 7]&gt;&lt;body class="explorer v6"&gt;&lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt;&lt;body class="explorer v7"&gt;&lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt;&lt;body class="explorer v8"&gt;&lt;![endif]--&gt;
+&lt;!--[if IE 9]&gt;&lt;body class="explorer v9"&gt;&lt;![endif]--&gt;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;&lt;body&gt;&lt;!--&lt;![endif]--&gt;
+</pre>
+			</section>
+			<section>
+				<h1>CSS</h1>
+<pre class="code">
+/* IE7 */
+.explorer.v7 .class-name {}
+/* IE8 */
+.explorer.v8 .class-name {}
+/* IE9 */
+.explorer.v9 .class-name {}
+/* IE7~9 */
+.explorer .class-name {}
+</pre>
+			</section>
+		</section>
+	</section>
+	<!-- //contentPrimary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<footer id="footer">
+	<small><span>Copyright &copy; 2013 <abbr title="Web Standard Guide">WSG</abbr></span> <span>made by <a target="_blank" href="http://www.braveinno.com/ver3/html/main.html">BRAVE INNOVATION</a> TX GROUP.</span></small>
+</footer>
+<!-- //footer -->
+</div>
+</body>
+</html>

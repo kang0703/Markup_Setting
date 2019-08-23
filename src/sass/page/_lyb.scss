@@ -1,0 +1,279 @@
+@include mq($pc) {
+
+	/* module */
+	// LYB 멤버십 안내
+	.lyb-mem-grade-list{
+		color:#111;
+		// @include cf;
+		margin:0 -12px;
+		// background:#f7f7f7;
+		display: table;
+		table-layout: fixed;
+		.lyb-mem-grade-li{
+			// float:left;
+			// width:33.33333%;
+			@include box-sizing;
+			// padding:0 12px;
+			display: table-cell;
+			// width: 100%;
+			width: 33.3%;
+			height: 100%;
+			background:#f7f7f7;
+			border-left: 12px #fff solid;
+			border-right: 12px #fff solid;
+			.lyb-mem-grade-div{
+				background-color: transparent;
+				padding:0 43px;
+				// height:895px;
+				// tt
+				.lyb-mem-tt-box{
+					text-align:center;
+					border-bottom:1px solid #e1e1e1;
+					padding:28px 0 0;
+					.con-dt{
+						font-size:rem(18px);
+					}
+					.con-dd{
+						height:80px;
+						display: table;
+						width:100%;
+						p{
+							display:table-cell;
+							font-size:rem(14px);
+							height:100%;
+							vertical-align: middle;
+						}
+					}
+				}
+
+				// con
+				.lyb-mem-con-box{
+					.lyb-mem-con-list-ul{
+						padding:20.5px 0;
+						.lyb-mem-con-list-li{
+							position:relative;
+							padding:17.5px 0;
+							min-height:65px;
+							.lyb-list-ico{
+								position:absolute;
+								top:7px;
+								left:0;
+								width:65px;
+								height:65px;
+								background-color:#fff;
+								@include border-radius($border-radius : 33px);
+								background-position:center;
+								&.sale{
+									background-image:url($img + 'lyb/lyb-mem-sale-ico.png');
+								}
+								&.welcome{
+									background-image:url($img + 'lyb/lyb-mem-welcome-ico.png');
+								}
+								&.point{
+									background-image:url($img + 'lyb/lyb-mem-point-ico.png');
+								}
+								&.birthday{
+									background-image:url($img + 'lyb/lyb-mem-birthday-ico.png');
+								}
+								&.renewal{
+									background-image:url($img + 'lyb/lyb-mem-renewal-ico.png');
+								}
+							}
+							.lyb-con-txt{
+								padding-left:90px;
+								.detail-list{
+									margin:0;
+									dt{
+										font-size:rem(14px);
+										font-weight:500;
+										margin-bottom:5px;
+									}
+									dd{
+										margin:0;
+										font-size:rem(14px);
+										color:#2d2d2d;
+										padding-left:8px;
+										position:relative;
+										line-height:1.5;
+										&:after{
+											position:absolute;
+											top:10px;
+											left:0;
+											content:"";
+											display:block;
+											width:5px;
+											height:1px;
+											background:#2d2d2d;
+										}
+										&.dt-mgt-dd{
+											margin-top:15px;
+										}
+									}
+								}
+								.dot-list{
+									padding-left:6px;
+									margin-top:15px;
+									li{
+										font-size:rem(12px);
+										color:#2d2d2d;
+										position:relative;
+										padding-left:6px;
+										line-height: 1.4;
+										margin-bottom:3px;
+										&:last-child{
+											margin-bottom:0;
+										}
+										&:after{
+											position:absolute;
+											top:9px;
+											left:0;
+											content:"";
+											display:block;
+											width:2px;
+											height:2px;
+											background:#7d7d7d;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.lyb-note-wrap{
+		@include cf;
+		.note-tt{
+			float:left;
+			font-size:rem(18px);
+			color:#111;
+			display:block;
+			margin-right:25px;
+			&.red{
+				color:#c84b47;
+			}
+		}
+		.note-con-list{
+			float:left;
+			list-style: decimal;
+			padding-left:20px;
+			li{
+				font-size:rem(14px);
+				color:#7d7d7d;
+				line-height:1.9;
+				&.red{
+					color:#c84b47;
+				}
+				&.none-style{
+					list-style:none;
+				}
+				.note-bt-zone{
+					display:inline-block;
+					margin-left:5px;
+					.btn{
+						padding: 0 10px;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	// LYB 멤버십 등급 및 혜택
+	.poi-part-tt{
+		display:block;
+		font-size:rem(18px);
+		color:#111;
+		margin-bottom:5px;
+	}
+
+	.poi-part-nor-txt{
+		font-size:rem(14px);
+		color:#2d2d2d;
+	}
+
+	.poi-num-ol{
+		list-style: decimal;
+		padding-left:15px;
+		li{
+			font-size:rem(14px);
+			color:#2d2d2d;
+			line-height:1.4;
+			margin-bottom:5px;
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+	/* layout */
+	.lyb-page-content-wrap{
+		.sub-big-banner-case03-wrap{
+			//
+		}
+		.lyb-content-top-line{
+			padding-top:48px;
+			border-top:1px solid #e1e1e1;
+		}
+		// LYB 멤버십 안내
+		.lyb-membership-grade-wrap{
+			margin-top:25px;
+		}
+		.lyb-note-wrap{
+			margin-top:45px;
+		}
+
+
+		// LYB 멤버십 등급 및 혜택
+		.lyb-point-part-box{
+			margin-top:45px;
+			.lyb-poi-board{
+				margin-top:17px;
+				colgroup{
+					col{
+						&.lyb-poi-save-col-01{
+							width:230px;
+						}
+						&.lyb-poi-save-col-02{
+							width:auto;
+						}
+						&.lyb-poi-save-col-03{
+							width:auto;
+						}
+						&.lyb-poi-save-col-04{
+							width:auto;
+						}
+					}
+				}
+				tbody{
+					th{
+						text-align:center;
+					}
+					td{
+						border-left:1px solid #e1e1e1;
+						&:nth-child(2){
+							border-left:0;
+						}
+						.red-txt{
+							color:#c84b47;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+}

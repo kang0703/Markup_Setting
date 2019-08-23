@@ -1,0 +1,41 @@
+// @mixin mq($query) {
+// 	@include susy-breakpoint($query) {
+// 		@content;
+// 	};
+// 	// $class: 'mobile';
+// 	// @if ($query == $phone) {
+// 	// 	$class: 'phone'
+// 	// } @else if ($query == $mobile) {
+// 	// 	$class: 'mobile'
+// 	// } @else if ($query == $tablet) {
+// 	// 	$class: 'tablet'
+// 	// }
+
+// 	// .#{$class}-screen & {
+// 	// 	@content;
+// 	// }
+// }
+
+// @mixin mmq() {
+// 	@include mq($mobile) {
+// 		@content;
+// 	}
+// }
+
+// @mixin pmq() {
+// 	@include mq($phone) {
+// 		@content;
+// 	}
+// }
+
+// @mixin tmq() {
+// 	@include mq($tablet) {
+// 		@content;
+// 	}
+// }
+
+// @mixin cmq() {
+// 	@include mq($pc) {
+// 		@content;
+// 	}
+// }

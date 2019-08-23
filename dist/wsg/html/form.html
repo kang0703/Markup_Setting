@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<title>WSG :: form</title>
+
+	<link type="text/css" rel="stylesheet" href="../../assets/css/style.css">
+	<link type="text/css" rel="stylesheet" href="../source_wsg/css/wsg.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/wsg.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui/common-ui.js"></script>
+</head>
+<body>
+	<div id="wrap" class="wsg-wrap">
+		<!-- header -->
+		<header class="wsg-header">
+			<div class="wsg-header-in">
+				<h1><strong>F</strong>orm</h1>
+				<div class="wsg-h-aside-menu-btn-box">
+					<a href="#lnb" class="aside-menu-btn">
+						<span class="blind">메뉴</span>
+						<div class="stick-bar bar1"></div>
+						<div class="stick-bar bar2"></div>
+						<div class="stick-bar bar3"></div>
+					</a>
+				</div>
+				<div class="wsg-h-list-quick-btn"><a href="markup.html">markup list 바로가기</a></div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<nav class="wsg-all-sitemap-wrap">
+			<div class="wsg-all-sitemap-in">
+				<a href="#" class="wsg-sitemap-close"><span class="blind">닫기</span></a>
+				<div class="wsg-all-sitemap-part">
+					<h2 class="sitemap-title">STYLE GUIDE</h2>
+					<ul class="sitemap-list">
+						<li><a href="button.html">button</a></li>
+						<li><a href="form.html">form</a></li>
+						<li><a href="table.html">table</a></li>
+						<li><a href="tab.html">tab</a></li>
+						<li><a href="pagination.html">pagination</a></li>
+						<li><a href="#none">none</a></li>
+
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+					</ul>
+				</div>
+				<div class="wsg-all-sitemap-part">
+					<h2 class="sitemap-title">STYLE GUIDE</h2>
+					<ul class="sitemap-list">
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<hr>
+
+		<!-- container -->
+		<div class="wsg-contents-wrap">
+			<section class="wsg-contents-in">
+				<!-- part_type -->
+				<div class="wsg-con-part-wrap">
+					<h3>type</h3>
+					<div class="real-code-box">
+						<input type="text" placeholder="text">
+						<input type="text" placeholder="text disabled" disabled>
+						<input type="text" placeholder="text readonly" readonly>
+
+						<div class="wsg-blank-line"></div>
+
+						<input type="password" placeholder="password">
+						<input type="password" placeholder="password disabled" disabled>
+						<input type="password" placeholder="password readonly" readonly>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="mk-select">
+							<select class="select" id="mkSel">
+								<option value="">010</option>
+								<option value="">017</option>
+								<option value="">018</option>
+								<option value="">019</option>
+							</select>
+							<label for="mkSel">010</label>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<span class="mk-fromfile">
+							<input type="file" id="mk-file-01">
+							<label for="mk-file-01" class="btn large weighty">첨부파일</label>
+						</span>
+						<span class="mk-fromfile">
+							<input type="file" id="mk-file-01" disabled>
+							<label for="mk-file-01" class="btn large weighty">첨부파일 disabled</label>
+						</span>
+						<span class="mk-fromfile">
+							<input type="file" id="mk-file-01" readonly>
+							<label for="mk-file-01" class="btn large weighty">첨부파일 readonly 어도 첨부파일 불러옴</label>
+						</span>
+
+						<div class="wsg-blank-line"></div>
+
+						<div>
+							<span class="mk-fromput">
+								<input type="radio" id="mk-radio-01" name="rad-put" checked>
+								<label for="mk-radio-01">라디오1</label>
+							</span>
+
+							<span class="mk-fromput">
+								<input type="radio" id="mk-radio-02" name="rad-put">
+								<label for="mk-radio-02">라디오2</label>
+							</span>
+
+							<span class="mk-fromput">
+								<input type="radio" id="mk-radio-03" name="rad-put" disabled>
+								<label for="mk-radio-03">라디오3 - disabled</label>
+							</span>
+
+							<span class="mk-fromput">
+								<input type="radio" id="mk-radio-04" name="rad-put" readonly>
+								<label for="mk-radio-04">라디오4 - readonly</label>
+							</span>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div>
+							<span class="mk-fromput">
+								<input type="checkbox" id="mk-check-01" checked>
+								<label for="mk-check-01">체크박스1</label>
+							</span>
+
+							<span class="mk-fromput">
+								<input type="checkbox" id="mk-check-02">
+								<label for="mk-check-02">체크박스2</label>
+							</span>
+
+							<span class="mk-fromput">
+								<input type="checkbox" id="mk-check-03" disabled>
+								<label for="mk-check-03">체크박스3 - disabled</label>
+							</span>
+
+							<span class="mk-fromput">
+								<input type="checkbox" id="mk-check-04" readonly>
+								<label for="mk-check-04">체크박스4 - readonly</label>
+							</span>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<textarea cols="60" rows="5" class="textarea" placeholder="textarea"></textarea>
+					</div>
+				</div>
+				<!-- //part_type -->
+
+				<!-- part_block -->
+				<div class="wsg-con-part-wrap">
+					<h3>variable</h3>
+					<div class="real-code-box">
+						<div class="mk-select block">
+							<select class="select" id="mkSel">
+								<option value="">010</option>
+								<option value="">017</option>
+								<option value="">018</option>
+								<option value="">019</option>
+							</select>
+							<label for="mkSel">010</label>
+						</div>
+
+						<div class="form-box block">
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+
+							<div class="formcon-area">
+								<textarea class="textarea" placeholder="textarea"></textarea>
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="form-box block col-2">
+							<div class="formcon-area">
+								<div class="mk-select block">
+									<select class="select" id="mkSel">
+										<option value="">010</option>
+										<option value="">017</option>
+										<option value="">018</option>
+										<option value="">019</option>
+									</select>
+									<label for="mkSel">010</label>
+								</div>
+							</div>
+
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="form-box block col-2">
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="form-box block col-3">
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="form-box block col-4">
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+
+							<div class="formcon-area">
+								<input type="text" placeholder="text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //part_variable -->
+
+				<!-- part_components -->
+				<div class="wsg-con-part-wrap">
+					<h3>components</h3>
+					<div class="real-code-box">
+						<h4>tel, phone type01</h4>
+						<div class="form-box block tel type-01">
+							<div class="formcon-area">
+								<div class="mk-select block">
+									<select class="select" id="mkSel">
+										<option value="">010</option>
+										<option value="">017</option>
+										<option value="">018</option>
+										<option value="">019</option>
+									</select>
+									<label for="mkSel">010</label>
+								</div>
+							</div>
+							<div class="formcon-area">
+								<input type="text" placeholder="중간번호" title="중간번호">
+							</div>
+							<div class="formcon-area">
+								<input type="text" placeholder="끝번호" title="끝번호">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>tel, phone type02</h4>
+						<div class="form-box block tel type-02">
+							<div class="formcon-area">
+								<input type="text" placeholder="중간번호" title="중간번호">
+							</div>
+							<div class="formcon-area">
+								<input type="text" placeholder="끝번호" title="끝번호">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>tel, phone type03</h4>
+						<div class="form-box block tel type-03">
+							<div class="formcon-area">
+								<input type="text" placeholder="앞번호" title="앞번호">
+							</div>
+							<div class="formcon-area">
+								<input type="text" placeholder="중간번호" title="중간번호">
+							</div>
+							<div class="formcon-area">
+								<input type="text" placeholder="끝번호" title="끝번호">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>address</h4>
+						<div class="form-box block address">
+							<ul>
+								<li>
+									<div class="postal-code-box">
+										<div class="formcon-area">
+											<input type="text" placeholder="우편번호">
+										</div>
+										<a href="javascript:void(0)" class="btn large weighty" style="width:100px;">우편번호</a>
+									</div>
+								</li>
+								<li>
+									<div class="formcon-area">
+										<input type="text" placeholder="일반주소 기입란" title="일반주소 기입란">
+									</div>
+								</li>
+								<li>
+									<div class="formcon-area">
+										<input type="text" placeholder="상세주소 기입란" title="상세주소 기입란">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>file</h4>
+						<div class="form-box block file">
+							<div class="formcon-area">
+								<input type="text" placeholder="파일을 첨부해 주세요." readonly>
+							</div>
+							<span class="mk-fromfile" style="width:100px;">
+								<input type="file" id="mk-file-compo">
+								<label for="mk-file-compo" class="btn large weighty">첨부파일</label>
+							</span>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>radio, checkbox vertical</h4>
+						<ul class="checking-form-list vertical">
+							<li>
+								<span class="mk-fromput">
+									<input type="radio" id="mk-radio-ver-01" name="rad-put-ver" checked>
+									<label for="mk-radio-ver-01">라디오1</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput">
+									<input type="radio" id="mk-radio-ver-02" name="rad-put-ver">
+									<label for="mk-radio-ver-02">라디오2</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput">
+									<input type="radio" id="mk-radio-ver-03" name="rad-put-ver">
+									<label for="mk-radio-ver-03">라디오3</label>
+								</span>
+							</li>
+						</ul>
+
+						<div class="wsg-blank-line"></div>
+
+						<ul class="checking-form-list vertical">
+							<li>
+								<span class="mk-fromput">
+									<input type="checkbox" id="mk-check-ver-01" checked>
+									<label for="mk-check-ver-01">체크박스1</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput">
+									<input type="checkbox" id="mk-check-ver-02">
+									<label for="mk-check-ver-02">체크박스2</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput">
+									<input type="checkbox" id="mk-check-ver-03">
+									<label for="mk-check-ver-03">체크박스3</label>
+								</span>
+							</li>
+						</ul>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>radio, checkbox horizontal</h4>
+						<ul class="checking-form-list horizontal">
+							<li>
+								<span class="mk-fromput">
+									<input type="radio" id="mk-radio-hor-01" name="rad-put-hor" checked>
+									<label for="mk-radio-hor-01">라디오1</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput">
+									<input type="radio" id="mk-radio-hor-02" name="rad-put-hor">
+									<label for="mk-radio-hor-02">라디오2</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput">
+									<input type="radio" id="mk-radio-hor-03" name="rad-put-hor">
+									<label for="mk-radio-hor-03">라디오3</label>
+								</span>
+							</li>
+						</ul>
+
+						<div class="wsg-blank-line"></div>
+
+						<ul class="checking-form-list horizontal">
+							<li>
+								<span class="mk-fromput">
+									<input type="checkbox" id="mk-check-hor-01" checked>
+									<label for="mk-check-hor-01">체크박스1</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput">
+									<input type="checkbox" id="mk-check-hor-02">
+									<label for="mk-check-hor-02">체크박스2</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput">
+									<input type="checkbox" id="mk-check-hor-03">
+									<label for="mk-check-hor-03">체크박스3</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //part_components -->
+			</section>
+		</div>
+		<!-- //container -->
+
+		<hr>
+
+		<!-- footer -->
+		<footer class="wsg-footer">
+			<p>ⓒ 2018. <strong><a href="http://kcmschool.com/" target="_blank" title="새창으로 열림">kcmschool</a></strong> all rights reserved.</p>
+		</footer>
+		<!-- //footer -->
+	</div>
+</body>
+</html>

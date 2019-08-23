@@ -1,0 +1,24 @@
+// ellipsis
+//
+// width / height 를 편하게....
+// width, height를 같게 하려면 @include size(100px);
+//                 다르게 하려면 @include size(100px, 1em);
+
+
+@mixin ellipsis() {
+	overflow: hidden;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+
+@mixin multi-ellipsis($line : 2, $line-height: 1.5) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	word-wrap:break-word;
+	height: $line * $line-height * 1em;
+	line-height: $line-height * 1em;
+}

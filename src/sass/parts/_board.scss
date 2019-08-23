@@ -1,0 +1,263 @@
+.jumbotron-big-sign-wrapper {
+	margin-bottom: 50px;
+	@include pmq {
+		margin-bottom: 30px;
+	}
+}
+.jumbotron-big-sign {
+	position: relative;
+	height: 520px;
+	background-color: #999;
+	background-size: cover;
+	background-position: center center;
+	.jumbotron-big-sign-box {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+	h2 {
+		margin: 0 46px;
+		height: 150px;
+		line-height: 150px;
+		font-size: 90px;
+		text-align: center;
+		font-weight: normal;
+		background-color: #fff;
+	}
+	@include mq($phone) {
+		height: 320px;
+		h2 {
+			margin: 0 20px;
+			height: 55px;
+			line-height: 55px;
+			font-size: 26px;
+		}
+	}
+}
+.jumbotron-extra-text {
+	font-size: 16px;
+	text-align: center;
+	@include mq($tablet) {
+		margin-top:35px;
+	}
+	@include pmq {
+		margin-top:35px;
+		margin-left: 12px;
+		margin-right: 12px;
+		font-size: 13px;
+	}
+}
+
+.board-viewer-wrapper {
+	@include pmq {
+		margin-left: 12px;
+		margin-right: 12px;
+	}
+}
+
+.board-viewer-header {
+	padding-top: 40px;
+	padding-bottom: 20px;
+	text-align: center;
+	.board-viewer-category {
+		font-size: 90px;
+		@include pmq {
+			margin-left: 12px;
+			margin-right: 12px;
+			font-size: 60px;
+		}
+	}
+	.board-viewer-title {
+		font-size: 18px;
+		@include mq($mobile) {
+			text-align:left;
+		}
+	}
+}
+
+.board-viewer-content {
+	.board-attr {
+		margin-bottom: 5px;
+		text-align: right;
+		@include mq($mobile) {
+			text-align:left;
+		}
+		.asset {
+			display: inline-block;
+			+ .asset {
+				position: relative;
+				margin-left: 10px;
+				padding-left: 11px;
+				&:before {
+					position: absolute;
+					display: block;
+					content: '';
+					top: 50%;
+					left: 0;
+					width: 1px;
+					height: 10px;
+					margin-top: -5px;
+					background-color: #e1e1e1;
+				}
+			}
+		}
+	}
+	.content-area {
+		padding: 20px;
+		background-color: #f7f7f7;
+	}
+	.file-area {
+		padding: 10px 20px;
+		border-top: 2px #fff solid;
+		background-color: #e1e1e1;
+		@include cf();
+		.file-label {
+			margin-right: 4px;
+			float: left;
+		}
+		.file-list {
+			float: none;
+			overflow: hidden;
+			li {
+				+ li {
+					margin-top: 3px;
+				}
+			}
+			a {
+				display: inline-block;
+				color: #333;
+				text-decoration: none;
+				line-height: 1.2em;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.board-navigation {
+	margin-top: 40px;
+	@include pmq {
+		margin-left: 12px;
+		margin-right: 12px;
+	}
+	li {
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+		background-color: #f7f7f7;
+		padding:15px 0;
+		margin-bottom:2px;
+		&:last-child{
+			margin-bottom:0;
+		}
+		> span {
+			display: table-cell;
+			vertical-align:middle;
+			// padding: 10px 20px;
+		}
+		.label {
+			text-align:center;
+			position: relative;
+			width: 155px;
+			padding-right:30px;
+			@include mq($mobile) {
+				width:105px;
+				padding-right:0;
+			}
+			@include mq($tablet) {
+				width: 155px;
+				padding-right:30px;
+			}
+			.ico {
+				display:inline-block;
+				// position: absolute;
+				// top: 50%;
+				// right: 0;
+				width: 11px;
+				height: 11px;
+				margin-left:18px;
+				// margin-top: -5px;
+				// background-color: #999;
+				background-position: center center;
+				background-repeat: no-repeat;
+				@include mq($mobile) {
+					margin-left:5px;
+				}
+				@include mq($tablet) {
+					margin-left:18px;
+				}
+				&.up{
+					background-image:url($img + 'common/bd-navi-up-ico.png');
+					@include mmq {
+						background-image: url($img + 'mobile/common/bd-navi-up-ico.png');
+						background-size: 8px auto;
+					}
+				}
+				&.down{
+					background-image:url($img + 'common/bd-navi-down-ico.png');
+					@include mmq {
+						background-image: url($img + 'mobile/common/bd-navi-down-ico.png');
+						background-size: 8px auto;
+					}
+				}
+			}
+		}
+		a {
+			color: #333;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		// + li {
+		// 	>span {
+		// 		border-top: 2px #fff solid;
+		// 	}
+		// }
+	}
+}
+
+.board-read-btn-box{
+	margin-top:40px;
+	.eve-read-btn-div{
+		text-align:center;
+		.btn{
+			width:192px;
+		}
+	}
+}
+
+.input-file-result-list {
+	margin-top: 10px;
+	li + li {
+		margin-top: 4px;
+	}
+	.file {
+		display: inline-block;
+		margin-right: 10px;
+		a {
+			color: inherit;
+		}
+	}
+	.file-del {
+		// position: absolute;
+		// top: 5px;
+		// right: 8px;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background-color: #e1e1e1;
+		border-radius: 100%;
+		border: none;
+		text-align: center;
+		img {
+			margin-top: 5px;
+			width: 10px;
+			height: 10px;
+			vertical-align: top;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+//////////////////////////////
+// project config
+//////////////////////////////
+
+// Base font
+	$base-font-size  : 14px;
+	$base-font-size-m  : 14px;
+	// $line-height     : (($base-font-size * 1.5) / $base-font-size );
+	$line-height     : (22.2px / $base-font-size );
+	$letter-spacing  : ps-ls(15);
+	// $body-font-family  : 'Open Sans', 'Noto Sans', 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, Helvetica, Arial, sans-serif;
+	$body-font-family  : 'Open Sans', 'Nanum Barun Gothic', 'Nanum Myeongjo', '나눔고딕', 'Nanum Gothic', '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, Helvetica, Arial, sans-serif;
+	$body-font-color : #111;
+
+
+
+// 경로
+	// 이미지 경로
+	$img : '../img/';
+
+
+// 구형 익스플로러(ie8-) 브라우져 고려 여부
+	// 1. clearfix 에서 *zoom:1 을 사용할지 여부
+	// 2. font-size에서 rem단위 대체용 px 커버 여부
+	// 3. filter: alpha() 사용
+	$old-ie : false;
+
+
+// 컬러
+	// 배경 색상
+	$bg-color: transparent !default;
+
+	// 타이포 색상
+	$em-color-disable    : #cccccc !default;
+	$em-color-slightly   : #999999 !default;
+	$em-color-normal     : $body-font-color !default;
+	$em-color-weighty    : #378c62 !default;
+	$em-color-weightiest : #c84b47 !default;
+	$em-color-warning    : #ff0000 !default;
+
+	// 컬러 팔렛트
+	// $c1 : #5974ff !default;
+
+
+// 크기
+	$container-width : 1272px;
+	$cw : $container-width; // container-width
+
+// breakpoint
+	// $bp1: 320px;
+	$bp1: 0px;
+	$bp2: 680px;
+	$bp3: 1080px;
+	$bp4: 1384px;
+	$bp1-2: $bp1 ($bp2 - 1px);
+	$bp1-3: $bp1 ($bp3 - 1px);
+	$bp1-4: $bp1 ($bp4 - 1px);
+	$bp2-3: $bp2 ($bp3 - 1px);
+	$bp2-4: $bp2 ($bp4 - 1px);
+	$bp3-4: $bp3 ($bp4 - 1px);
+	$mobile: $bp1-3;
+	$phone: $bp1-2;
+	$tablet: $bp2-3;
+	$pc: $bp3;
+	// $kcmtest: $bp3-4;

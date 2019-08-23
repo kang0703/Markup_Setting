@@ -1,0 +1,755 @@
+/* table */
+
+
+/**********************************************************************************
+ * normal
+ * 일반 규격
+ **********************************************************************************/
+.table-style{
+	.table{
+		table-layout: fixed;
+		width: 100%;
+		padding: 0;
+		border: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		caption{
+			margin: 0; padding: 0; width: 1px; height: 1px; line-height: 0; font-size: 0; visibility: hidden;
+		}
+		th, td{
+			padding: 0;
+			border-width:1px;
+			border-style:solid;
+			border-color:#333;
+			text-align:center;
+			font-size:1rem;
+			font-weight:normal;
+		}
+	}
+}
+
+
+/**********************************************************************************
+ * type
+ * 필요값 : font-size, font-weight, color, background-color 등... (타입 구분 요소로만)
+ **********************************************************************************/
+// data
+.table-style.data{
+	.table{
+		th, td{
+			//
+		}
+		tr{
+			//
+		}
+		th{
+			font-size:1.1rem;
+			color:#fff;
+			background-color:red;
+			font-weight:bold;
+		}
+		td{
+			font-size:1rem;
+			color:#333;
+		}
+		thead{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tfoot{
+			th, td{
+				//
+			}
+			tr{
+				background-color:orange;
+			}
+			th{
+				color:blue;
+				background-color:yellow;
+			}
+			td{
+				//
+			}
+		}
+		tbody{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				color:#fff;
+				background-color:blue;
+			}
+			td{
+				//
+			}
+		}
+	}
+}
+
+// layout
+.table-style.layout{
+	.table{
+		th, td{
+			//
+		}
+		tr{
+			//
+		}
+		th{
+			font-size:1.1rem;
+			color:#fff;
+			background-color:red;
+			font-weight:bold;
+		}
+		td{
+			font-size:1rem;
+			color:#333;
+		}
+		thead{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tfoot{
+			th, td{
+				//
+			}
+			tr{
+				background-color:orange;
+			}
+			th{
+				color:blue;
+				background-color:yellow;
+			}
+			td{
+				//
+			}
+		}
+		tbody{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				color:#fff;
+				background-color:blue;
+			}
+			td{
+				//
+			}
+		}
+	}
+}
+
+// data-layout
+.table-style.data-layout{
+	.table{
+		th, td{
+			//
+		}
+		tr{
+			//
+		}
+		th{
+			font-size:1.1rem;
+			color:#fff;
+			background-color:red;
+			font-weight:bold;
+		}
+		td{
+			font-size:1rem;
+			color:#333;
+		}
+		thead{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tfoot{
+			th, td{
+				//
+			}
+			tr{
+				background-color:orange;
+			}
+			th{
+				color:blue;
+				background-color:yellow;
+			}
+			td{
+				//
+			}
+		}
+		tbody{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				color:#fff;
+				background-color:blue;
+			}
+			td{
+				//
+			}
+		}
+	}
+}
+
+
+/**********************************************************************************
+ * size
+ * 필요값 : padding, width, height
+ **********************************************************************************/
+// small
+.table-style.small{
+	.table{
+		th, td{
+			font-size: 0.8rem;
+			padding:5px;
+		}
+		tr{
+			//
+		}
+		th{
+			//
+		}
+		td{
+			//
+		}
+		thead{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tfoot{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tbody{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+	}
+}
+
+// medium
+.table-style.medium{
+	.table{
+		th, td{
+			font-size: 1rem;
+			padding:10px;
+		}
+		tr{
+			//
+		}
+		th{
+			//
+		}
+		td{
+			//
+		}
+		thead{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tfoot{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tbody{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+	}
+}
+
+// large
+.table-style.large{
+	.table{
+		th, td{
+			font-size: 1.3rem;
+			padding:15px;
+		}
+		tr{
+			//
+		}
+		th{
+			//
+		}
+		td{
+			//
+		}
+		thead{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tfoot{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tbody{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+	}
+}
+
+
+/**********************************************************************************
+ * version
+ * 필요값 : 디자인 요소 추가
+ **********************************************************************************/
+// line-none-side
+.table-style.line-none-side{
+	.table{
+		th, td{
+			&:first-child{
+				border-left:0;
+			}
+			&:last-child{
+				border-right:0;
+			}
+		}
+		tr{
+			//
+		}
+		th{
+			//
+		}
+		td{
+			//
+		}
+		thead{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tfoot{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tbody{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+	}
+}
+
+// line-impact-top
+.table-style.line-impact-top{
+	.table{
+		border-top:3px solid red;
+		th, td{
+			//
+		}
+		tr{
+			//
+		}
+		th{
+			//
+		}
+		td{
+			//
+		}
+		thead{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tfoot{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+		tbody{
+			th, td{
+				//
+			}
+			tr{
+				//
+			}
+			th{
+				//
+			}
+			td{
+				//
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.data-table {
+	table-layout: fixed;
+	width: 100%;
+	border: 0 none;
+	border-spacing: 0;
+	border-collapse: collapse;
+	caption {
+		// @include blind;
+		margin: 0; padding: 0; width: 1px; height: 1px; line-height: 0; font-size: 0; visibility: hidden;
+	}
+
+	tr{
+		&.bd-data-none{
+			td{
+				padding:40px 0;
+				p{
+					font-weight: normal;
+				}
+			}
+		}
+	}
+
+	// data-table small
+	&.small {
+		th, td {
+			border: none;
+		}
+		tbody {
+			th, td {
+				padding: 12px 20px;
+				border-top: 1px #e1e1e1 solid;
+				border-bottom: 1px #e1e1e1 solid;
+			}
+			th {
+				text-align: left;
+				background-color: #f7f7f7;
+			}
+			td {
+			}
+		}
+	}
+
+	// data-table medium
+	&.medium {
+		& {
+			// border-top: 1px #000 solid;
+			// border-bottom: 1px #000 solid;
+		}
+		thead + tbody {
+			text-align: center;
+		}
+		%th-td {
+			padding: 14px 6px;
+			border: none;
+		}
+		th {
+			@extend %th-td;
+			// height: 21px;
+			font-weight: normal;
+			background-color: #efefef;
+		}
+		td {
+			@extend %th-td;
+			// height: 21px;
+			// line-height: 1.4em;
+			font-size: 1rem;
+			border-top: 2px solid #fff;
+			background-color: #f7f7f7;
+			word-break: break-all;
+			a {
+				color: inherit;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			&.align-left {
+				text-align: left;
+			}
+			&.align-right {
+				text-align: right;
+			}
+		}
+		thead {
+			th {
+				// border-top: 1px solid #000;
+				// border-bottom: 1px solid #000;
+			}
+		}
+		tbody {
+			th {
+				text-align: left;
+				padding-left: 35px;
+				background-color: #f7f7f7;
+				border-top: 1px solid #e1e1e1;
+				border-bottom: 1px solid #e1e1e1;
+				// background-color: #f5f5f5;
+				& ~ td {
+					color: #7d7d7d;
+					border-top: 1px solid #e1e1e1;
+					border-bottom: 1px solid #e1e1e1;
+					background-color: #fff;
+				}
+			}
+			td {
+				input[type="text"], input[type="password"] {
+					padding: 4px 10px;
+					height: 36px;
+					border-width: 1px;
+				}
+			}
+		}
+	}
+
+	// data-table large
+	&.large {
+		th, td {
+			border: none;
+		}
+		thead {
+			th {
+				padding: 14px 2px;
+				background-color: #efefef;
+				// font-weight: normal;
+				// border-bottom: 1px #000 solid;
+			}
+		}
+		tbody {
+			tr + tr {
+				th, td {
+					// border-top: 1px #fff solid;
+				}
+			}
+			th {
+				padding: 14px 4px;
+				// text-align: center;
+				// font-weight: normal;
+			}
+			td {
+				padding: 14px 4px;
+				font-size: 13px;
+				text-align: center;
+				border-bottom: 1px #e1e1e1 solid;
+				border-right: 1px #e1e1e1 solid;
+				&:last-child {
+					border-right: none;
+				}
+				&.align-left {
+				text-align: left;
+				}
+				&.align-right {
+					text-align: right;
+				}
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+				&.btn.weightiest {
+					color: #fff;
+					font-weight: normal;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

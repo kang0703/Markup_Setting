@@ -1,0 +1,55 @@
+/*
+ * Nanum Barun Gothic (Korean) http://hangeul.naver.com
+ */
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../font/NanumBarunGothic/NanumBarunGothicUltraLight.eot);
+  src: local('Nanum Barun Gothic UltraLight'),
+       local('NanumBarunGothicUltraLight'),
+       url(../font/NanumBarunGothic/NanumBarunGothicUltraLight.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumBarunGothic/NanumBarunGothicUltraLight.woff2) format('woff2'),
+       url(../font/NanumBarunGothic/NanumBarunGothicUltraLight.woff) format('woff'),
+       url(../font/NanumBarunGothic/NanumBarunGothicUltraLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/NanumBarunGothic/NanumBarunGothicLight.eot);
+  src: local('Nanum Barun Gothic Light'),
+       local('NanumBarunGothicLight'),
+       url(../font/NanumBarunGothic/NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumBarunGothic/NanumBarunGothicLight.woff2) format('woff2'),
+       url(../font/NanumBarunGothic/NanumBarunGothicLight.woff) format('woff'),
+       url(../font/NanumBarunGothic/NanumBarunGothicLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumBarunGothic/NanumBarunGothic.eot);
+  src: local('Nanum Barun Gothic'),
+       local('NanumBarunGothic'),
+       url(../font/NanumBarunGothic/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumBarunGothic/NanumBarunGothic.woff2) format('woff2'),
+       url(../font/NanumBarunGothic/NanumBarunGothic.woff) format('woff'),
+       url(../font/NanumBarunGothic/NanumBarunGothic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumBarunGothic/NanumBarunGothicBold.eot);
+  src: local('Nanum Barun Gothic Bold'),
+       local('NanumBarunGothicBold'),
+       url(../font/NanumBarunGothic/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../font/NanumBarunGothic/NanumBarunGothicBold.woff2) format('woff2'),
+       url(../font/NanumBarunGothic/NanumBarunGothicBold.woff) format('woff'),
+       url(../font/NanumBarunGothic/NanumBarunGothicBold.ttf) format('truetype');
+}
+

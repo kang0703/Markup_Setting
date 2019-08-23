@@ -1,0 +1,473 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="ko" class="explorer v6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="explorer v7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="explorer v8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Web Standard Guide</title>
+<link type="text/css" rel="stylesheet" href="../res/css/common.css" />
+<link type="text/css" rel="stylesheet" href="../wsg/res/css/wsg.css" />
+<script type="text/javascript" src="../res/js/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../res/js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/codemirror/codemirror.css" />
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/jqueryFileTree/jqueryFileTree.css" media="screen" />
+<script type="text/javascript" src="../wsg/plugin/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="../wsg/plugin/codemirror/xml.js"></script>
+<script type="text/javascript" src="../wsg/res/js/wsg.js"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="../res/js/libs/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrap">
+<!-- header -->
+<header id="header">
+	<h1><a href="index.html">PROJECT</a></h1>
+	<p class="skip-lnb"><a href="#lnb">메뉴</a></p>
+	<p class="history-back"><a href="index.html">BACK</a></p>
+</header>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container">
+	<!-- contentAside -->
+	<div id="contentAside" class="content-aside">
+		<!-- lnb -->
+		<nav id="lnb" class="lnb">
+			<h2>주요메뉴</h2>
+			<ul>
+			<li><strong>GUIDELINE</strong>
+				<ul>
+				<li><a href="information.html">PROJECT 기본정보</a></li>
+				<li><a href="naming.html">네이밍</a></li>
+				<li><a href="rule_html_code.html">HTML 코드 규칙</a></li>
+				<!--<li><a href="rule_html_mark.html">HTML 요소 작성 규칙</a></li>-->
+				<li><a href="rule_css_code.html">CSS 코드 규칙</a></li>
+				<li><a href="validation.html">테스트 및 검수</a></li>
+				</ul>
+			</li>
+			<li><strong>PROGRESS</strong>
+				<ul>
+				<li><a href="checklist.html">issue &amp; check list</a></li>
+				<li><a href="markup.html">markup</a></li>
+				</ul>
+			</li>
+			<li><strong><abbr title="User Interface">UI</abbr> LIBRARY</strong>
+				<ul>
+				<li><a href="typography.html">typography</a></li>
+				<li><a href="form.html">form</a></li>
+				<li><a href="table.html">table</a></li>
+				<li><a href="tab.html">tab</a></li>
+				<li><a href="button.html">button</a></li>
+				<li><a href="panel.html">panel</a></li>
+				<li><a href="fieldset.html">fieldset</a></li>
+				<li><a href="list.html">list</a></li>
+				<li><a href="images.html">images</a></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+		<!-- //lnb -->
+	</div>
+	<!-- //contentAside -->
+	<!-- contentPrimary -->
+	<section id="contentPrimary" class="content-primary">
+		<h1>네이밍</h1>
+		<p>ID의 단어와 단어 사이의 구분을 제외한 모든 네이밍의 기준은 영문 소문자를 기본으로 하며, 네이밍의 첫글자는 반드시 영문 소문자로 시작합니다.</p>
+		<p>또한, ID 및 class명은 문서의 의미와 시각적분리를 하며 최대한 약어를 사용하지 않습니다.</p>
+		<section>
+			<h1>Casing Notation</h1>
+			<p>표기법의 기준은 단어와 단어사이의 구분을 ID는 카멜(Camel), class는 언더스코어(underscore), 이미지는 언더스코어(underscore)로 통일화 합니다.</p>
+			<p>이는 해당 언어의 기본표기법을 따라 네이밍함으로써 동작(javascript)과 표현(css)을 혼란을 막고 일관성있는 코드 관리가 가능합니다.</p>
+			<p>id와 class의 구분은 렌더링 되는 모든 오브젝트의 셀렉팅은 class를, 동작를 위한 셀렉팅은 id로 사용합니다. 만약 해당 오브젝트에 이미 id가 존재 하여도 해당 id를 시각적 표현을 위한 셀렉터로 사용하지 않습니다.</p>
+			<section>
+				<h1>example</h1>
+<pre class="code">
+&lt;!-- section --&gt;
+&lt;element id="myCart" class="my_cart"&gt;
+	&lt;hx&gt;heading&lt;/hx&gt;
+	&lt;p&gt;content&lt;/p&gt;
+	&lt;img src="/res/images/common/my_cart.gif" alt="나의 장바구니" /&gt;
+&lt;/element&gt;
+&lt;!-- //section --&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>클래스 확장</h1>
+			<p>클래스 선언을 효율적으로 관리 하기 위하여 다중 선택자 확장합니다. <br />선택자의 확장 순서는 오브젝트의 <strong>사용목적</strong> &gt; <strong>중요도</strong> &gt; <strong>상태</strong> 순으로 네이밍합니다. <a target="_blank" href="/wsg/layout.html">레이아웃 보기</a></p>
+			<section>
+				<h1>example</h1>
+<pre class="code">
+&lt;!-- button_area --&gt;
+&lt;div class="button_area"&gt;
+	&lt;a href="#" class="btn large normal"&gt;example&lt;/a&gt;
+	&lt;a href="#" class="btn large weighty"&gt;example&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- //button_area --&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>약속어</h1>
+			<p>해당 오브젝트의 <strong>활용목적</strong> &gt; <strong>구조 및 중요도</strong> &gt; <strong>상태</strong> 순으로 네이밍합니다. <a target="_blank" href="/wsg/layout.html">레이아웃 보기</a></p>
+			<section>
+				<h1>ID</h1>
+				<!-- data-table small -->
+				<table class="data-table wsg">
+				<colgroup>
+					<col style="width: 25%" />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">사용목적</th>
+					<th scope="col">구조</th>
+					<th scope="col">중요도 및 상태</th>
+					<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td rowspan="9">layout</td>
+					<td>#wrap</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>#header</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>#gnb</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>#container</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>#contentAside</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>#lnb</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>#contentPrimary</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>#contentSecondary</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>#footer</td>
+					<td></td>
+					<td></td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //data-table small -->
+			</section>
+			<section>
+				<h1>class</h1>
+				<!-- data-table small -->
+				<table class="data-table wsg">
+				<colgroup>
+					<col style="width: 25%" />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">사용목적</th>
+					<th scope="col">구조</th>
+					<th scope="col">중요도 및 상태</th>
+					<th scope="col">내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td rowspan="7">layout</td>
+					<td>.content_aside</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">본문의 지원 영역</td>
+				</tr>
+				<tr>
+					<td>.content-primary</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">본문의 주요내용</td>
+				</tr>
+				<tr>
+					<td>.content_secondary</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">본문의 추가내용</td>
+				</tr>
+				<tr>
+					<td>.section</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">단독적으로 분리가 가능한 컨텐츠</td>
+				</tr>
+				<tr>
+					<td>.aside</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">섹션의 지원 영역</td>
+				</tr>
+				<tr>
+					<td>.content</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">섹션의 내용</td>
+				</tr>
+				<tr>
+					<td>.wrap</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">단순 그룹핑을 위한 의미 없는 네이밍</td>
+				</tr>
+				<tr>
+					<td>.btn</td>
+					<td>.small, .medium, .large</td>
+					<td>.slightly, .normal, .weighty, .weightiest</td>
+					<td class="align_left">인터렉션을 위한 버튼</td>
+				</tr>
+				<tr>
+					<td>.button_area</td>
+					<td>.small, .medium, .large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">버튼 set</td>
+				</tr>
+				<tr>
+					<td>.tab</td>
+					<td>.small, .medium, .large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">섹션간 이동을 위한 스킵링크 또는 페이지 이동</td>
+				</tr>
+				<tr>
+					<td>.data-table</td>
+					<td>.small, .medium, .large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">데이타를 담는 테이블</td>
+				</tr>
+				<tr>
+					<td>.data-list</td>
+					<td>.small, .medium, .large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">데이타를 담는 목록</td>
+				</tr>
+				<tr>
+					<td>.item_list</td>
+					<td>.small, .medium, .large</td>
+					<td>.simple, .detail</td>
+					<td class="align_left">컨텐츠 목록</td>
+				</tr>
+				<tr>
+					<td>.option_panel</td>
+					<td>.small, .medium, .large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">기능구현을 위한 영역</td>
+				</tr>
+				<tr>
+					<td>.pagination</td>
+					<td>.small, .medium, .large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">페이지의 넘버링과 이동수단</td>
+				</tr>
+				<tr>
+					<td>.direction</td>
+					<td>.small, .medium, .large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">해당 항목의 이동</td>
+				</tr>
+				<tr>
+					<td>.page_control</td>
+					<td>.small, .medium, .large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">자바스크립트를 이용한 인터렉션 영역 (플리킹 리스트의 현재 위치)</td>
+				</tr>
+				<tr>
+					<td>.skip_link</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">자바스크립트를 이용한 인터렉션 영역 (컨텐츠 이동)</td>
+				</tr>
+				<tr>
+					<td>.toggle_switch</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">자바스크립트를 이용한 인터렉션 영역 (단일 토글)</td>
+				</tr>
+				<tr>
+					<td>.switch_toggle</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td class="align_left">자바스크립트를 이용한 인터렉션 영역 (양방향 토글)</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //data-table small -->
+			</section>
+			<section class="naming-list">
+				<h1>image</h1>
+				<!-- data-table small -->
+				<table class="data-table wsg">
+				<colgroup>
+					<col style="width: 70px" />
+					<col style="width: 70px" />
+					<col />
+					<col />
+					<col style="width: 70px" />
+					<col style="width: 70px" />
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">사용목적</th>
+					<th scope="col">약속어</th>
+					<th scope="col">확장</th>
+					<th scope="col">상태</th>
+					<th scope="col">표현</th>
+					<th scope="col">파일포멧</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>메뉴</td>
+					<td>nav_</td>
+					<td>gnb, lnb, snb, util, support</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td>배경, 전경</td>
+					<td>gif, png</td>
+				</tr>
+				<tr>
+					<td>제목</td>
+					<td>hx</td>
+					<td>h1, h2, h3, h4, h5, h6</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td>전경</td>
+					<td>gif</td>
+				</tr>
+				<tr>
+					<td>문장</td>
+					<td>txt_</td>
+					<td>small, medium, large</td>
+					<td>slightly, normal, weighty, weightiest, warning</td>
+					<td>전경</td>
+					<td>gif</td>
+				</tr>
+				<tr>
+					<td>라벨</td>
+					<td>label_</td>
+					<td>small, medium, large</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td>전경</td>
+					<td>gif</td>
+				</tr>
+				<tr>
+					<td>버튼</td>
+					<td>btn_</td>
+					<td>small, medium, large</td>
+					<td>slightly, normal, weighty, weightiest, warning</td>
+					<td>전경</td>
+					<td>gif, png</td>
+				</tr>
+				<tr>
+					<td rowspan="4">불릿</td>
+					<td rowspan="4">bul_</td>
+					<td rowspan="4">small, medium, large</td>
+					<td>square</td>
+					<td rowspan="4">배경</td>
+					<td rowspan="4">gif</td>
+				</tr>
+				<tr>
+					<td>arrow</td>
+				</tr>
+				<tr>
+					<td>circle</td>
+				</tr>
+				<tr>
+					<td>hyphen</td>
+				</tr>
+				<tr>
+					<td rowspan="2">텝</td>
+					<td rowspan="2">tab_</td>
+					<td rowspan="2">small, medium, large</td>
+					<td>normal</td>
+					<td rowspan="2">전경, 배경</td>
+					<td rowspan="2">gif, png</td>
+				</tr>
+				<tr>
+					<td>active</td>
+				</tr>
+				<tr>
+					<td rowspan="2">아이콘</td>
+					<td rowspan="2">ico_</td>
+					<td rowspan="2">small, medium, large</td>
+					<td>state</td>
+					<td rowspan="2">배경, 전경</td>
+					<td rowspan="2">gif</td>
+				</tr>
+				<tr>
+					<td>rating</td>
+				</tr>
+				<tr>
+					<td rowspan="2">분할</td>
+					<td rowspan="2">part_</td>
+					<td rowspan="2"></td>
+					<td>vertical</td>
+					<td rowspan="2">배경</td>
+					<td rowspan="2">gif</td>
+				</tr>
+				<tr>
+					<td>colon</td>
+				</tr>
+				<tr>
+					<td rowspan="3">etc</td>
+					<td>layout_</td>
+					<td>layout_aside</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td>전경</td>
+					<td>gif</td>
+				</tr>
+				<tr>
+					<td>thumbnail_</td>
+					<td>thumbnail_000x000</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td>전경</td>
+					<td>jpg, gif</td>
+				</tr>
+				<tr>
+					<td>banner_</td>
+					<td>banner_000x000</td>
+					<td><span class="em disable">Not applicable</span></td>
+					<td>전경</td>
+					<td>jpg, gif</td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //data-table small -->
+			</section>
+		</section>
+	</section>
+	<!-- //contentPrimary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<footer id="footer">
+	<small><span>Copyright &copy; 2013 <abbr title="Web Standard Guide">WSG</abbr></span> <span>made by <a target="_blank" href="http://www.braveinno.com/ver3/html/main.html">BRAVE INNOVATION</a> TX GROUP.</span></small>
+</footer>
+<!-- //footer -->
+</div>
+</body>
+</html>

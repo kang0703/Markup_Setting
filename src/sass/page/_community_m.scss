@@ -1,0 +1,480 @@
+@include mq($mobile) {
+
+	/* module */
+	// 더 바디샵 프렌즈 소개
+	.comm-tt-rela-zone{
+		position:relative;
+		.community-h3-tt{
+			font-size:rem(19px);
+			color:#111;
+			text-align:center;
+		}
+		.comm-small-guide-txt{
+			text-align:left;
+			font-size:rem(14px);
+			color:#2d2d2d;
+		}
+	}
+
+	.comm-friends-intro-board{
+		.data-table{
+			display:block;
+			colgroup{
+				col{
+					&:nth-child(1){
+						width:50%;
+					}
+					&:nth-child(2){
+						width:50%;
+					}
+					&:nth-child(3){
+						width:100%;
+					}
+					&:nth-child(4){
+						width:100%;
+					}
+				}
+			}
+			thead{
+				display:none;
+				tr{
+					th{
+						border:2px solid #fff;
+						&:first-child{
+							border-left:0;
+						}
+						&:last-child{
+							border-right:0;
+						}
+					}
+				}
+			}
+			tbody{
+				tr{
+					td{
+						display:inline-block;
+						vertical-align:top;
+						border:2px solid #fff;
+						padding:0;
+						width:100%;
+						margin:0 -2px -2px;
+						&:first-child{
+							border-left:0;
+						}
+						&:last-child{
+							border-right:0;
+						}
+						&.per-50{
+							width:50%;
+						}
+						.mobile-th{
+							display:block;
+							vertical-align:top;
+							background:#e1e1e1;
+							color:#111;
+							padding:14px 6px;
+						}
+						.mobile-td{
+							display:block;
+							padding: 25px 10px;
+							br{
+								display:none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.comm-white-quick-btn{
+		text-align:center;
+		.comm-bt-div{
+			display: inline-block;
+			.btn{
+				width:184px;
+			}
+		}
+	}
+
+	.gi-gray-circle-list-wrap{
+		ul{
+			background:#f1f1f1;
+			padding:10px 5px;
+			@include cf;
+			// margin:-27px 0;
+			li{
+				width:50%;
+				float:left;
+				padding:20px 0;
+				@include mq($tablet) {
+					width:25%;
+				}
+				.pic-img{
+					margin:0 auto;
+					width:80%;
+					max-width:150px;
+					// height:120px;
+					overflow:hidden;
+					@include border-radius($border-radius : 50%);
+					img{
+						width:100%;
+					}
+				}
+				.human-infor{
+					text-align:center;
+					font-size:rem(14px);
+					color:#2d2d2d;
+					margin-top:12px;
+				}
+				&.list-none{
+					width:100%;
+					text-align:center;
+					padding:80px 0;
+					p{
+						font-size:rem(14px);
+						color:#676767;
+					}
+				}
+			}
+		}
+	}
+
+
+	// 신청하기
+	.friends-tit-h4{
+		font-size:rem(19px);
+		color:#000;
+		// margin-bottom:10px;
+	}
+	.fri-num-tt{
+		font-size:rem(14px);
+		color:#2b2b2b;
+		margin-bottom:10px;
+		display:block;
+		font-weight:normal;
+	}
+	.fri-input-file{
+		.uploader{
+			display:inline-block;
+			vertical-align:middle;
+			height:36px;
+			.action{
+				height:36px;
+				line-height:36px;
+			}
+		}
+		.file-info-txt{
+			margin-top:5px;
+			display:block;
+			@include mq($tablet) {
+				margin-left:5px;
+				display:inline-block;
+			}
+		}
+	}
+	.fri-num-list-board{
+		.fri-num-list-li{
+			margin-bottom:40px;
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+	.fri-check-graypd-box{
+		// background:#f7f7f7;
+		// padding:37px 48px;
+		ul{
+			@include cf;
+			li{
+				// float:left;
+				font-size:rem(14px);
+				color:#111;
+				// padding-right:90px;
+				margin:10px 0;
+				@include mq($tablet) {
+					width:50%;
+					float:left;
+				}
+				label{
+					.checker{
+						margin-right:12px;
+					}
+				}
+				&.rong-area{
+					width:100% !important;
+					@include cf;
+					label{
+						float:left;
+						margin-top:7px;
+						.checker{
+							margin-right:12px;
+						}
+					}
+					.etc-put{
+						display:block;
+						padding-left:15px;
+						width:auto;
+						overflow:hidden;
+						input[type=text]{
+							width:100%;
+							padding: 4px 10px;
+							height: 36px;
+							border-width: 1px;
+						}
+					}
+				}
+			}
+		}
+		&.persent-5{
+			ul{
+				li{
+					// width:20%;
+					// padding-right:0;
+					@include mq($tablet) {
+						width:50%;
+						float:left;
+					}
+				}
+			}
+		}
+		&.persent-4{
+			ul{
+				li{
+					// width:25%;
+					// padding-right:0;
+					@include mq($tablet) {
+						width:50%;
+						float:left;
+					}
+				}
+			}
+		}
+	}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+	/* layout */
+	.community-page-content-wrap{
+		.sub-big-banner-case03-wrap{
+			//
+		}
+
+		.community-con-wrap-box{
+			padding-top: 37px;
+			margin-top:22px;
+			border-top: 1px solid #e1e1e1;
+		}
+
+
+
+		// 더 바디샵 프렌즈 소개
+		.comm-wrap-area{
+			padding:0 10px;
+			.comm-tt-rela-zone{
+				margin-bottom:20px;
+				.community-h3-tt{
+					//
+				}
+			}
+			.comm-friends-intro-board{
+				//
+			}
+			.mail-nor-text{
+				font-size:rem(14px);
+				color:#2d2d2d;
+				margin-top:10px;
+				a{
+					color:#2d2d2d;
+					text-decoration:none;
+					&:hover{
+						text-decoration:underline;
+					}
+				}
+			}
+		}
+		.comm-white-quick-btn{
+			margin:0 -2px;
+			margin-top:20px;
+			padding:0 10px;
+			font-size:0;
+			.comm-bt-div{
+				@include box-sizing;
+				width:50%;
+				padding:0 2px;
+				.btn{
+					width:100%;
+					display:block;
+					overflow:hidden;
+					text-overflow:ellipsis;
+					white-space:nowrap;
+				}
+			}
+		}
+		.comm-32gi-area{
+			margin-top:37px;
+			padding:0 10px;
+			.comm-tt-rela-zone{
+				margin-bottom:20px;
+				.community-h3-tt{
+					//
+				}
+				.gi-select-choice{
+					text-align:right;
+					margin-top:10px;
+					.sort-by-select{
+						text-align:left;
+						float:none;
+						width:160px;
+						display:inline-block;
+						vertical-align: middle;
+						// height:48px;
+						.selectric-wrapper{
+							.selectric{
+								height:44px;
+							}
+						}
+					}
+					.btn{
+						width:85px;
+						display:inline-block;
+						vertical-align: middle;
+						@include mq($tablet) {
+							width:14%;
+						}
+					}
+				}
+			}
+		}
+
+
+
+		// 신청하기
+		.comm-application-form-all-wrap{
+			padding:0 10px;
+			.fieldset{
+				.label{
+					width:25%;
+					padding-right:10px;
+				}
+			}
+			.comm-tt-rela-zone{
+				margin-bottom:10px;
+				.community-h3-tt{
+					text-align:left;
+				}
+			}
+			.comm-friends-intro-board{
+				.board-email-put-area{
+					// width:635px;
+					display:block;
+					.mail-addchoice{
+						margin-top:3px;
+						display:block;
+						padding-left:0;
+						width:100%;
+						@include mq($tablet) {
+							max-width:422px;
+						}
+						.selectric-wrapper{
+							.selectric{
+								.label{
+									width:auto;
+								}
+							}
+						}
+					}
+				}
+				.input-address{
+					// width:635px;
+				}
+			}
+			.comm-friends-additional-intro-board{
+				margin-top:26px;
+				.fri-area-form{
+					textarea{
+						width:100%;
+						border: 1px #e1e1e1 solid;
+						height:104px;
+						padding: 4px 10px;
+					}
+				}
+				.field{
+					.insert{
+						&.in-table-in{
+							padding:0;
+							.field-double{
+								.field{
+									.label{
+										background:#eaeaea;
+									}
+								}
+								+ .field-double{
+									.field{
+										width:100%;
+									}
+								}
+							}
+						}
+					}
+					&.mobile-layout-change{
+						.label{
+							display:none;
+							width:100%;
+							text-align:center;
+						}
+						.in-table-in{
+							display:block;
+							height:auto;
+							.field-double{
+								.field{
+									&:first-child{
+										border-top:0;
+									}
+									.label{
+										display:table-cell;
+										width:25%;
+										text-align:left;
+										background-color: #f7f7f7;
+									}
+									.insert{
+										//
+									}
+								}
+							}
+						}
+					}
+				}
+				&.online{
+					//
+				}
+				&.survey{
+					//
+				}
+			}
+		}
+		.fri-app-btn{
+			font-size:0;
+			text-align:center;
+			margin:0 -2.5px;
+			margin-top:30px;
+			padding:0 10px;
+			.fri-last-btn{
+				@include box-sizing;
+				display:inline-block;
+				padding:0 2.5px;
+				width:50%;
+				.btn{
+					width:100%;
+				}
+			}
+		}
+	}
+
+
+}

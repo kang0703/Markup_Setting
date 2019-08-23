@@ -1,0 +1,66 @@
+@include mq($pc) {
+
+	/* module */
+	.error-page-box-wrap{
+		.error-page-box-in{
+			//
+		}
+	}
+
+	.error-p-board{
+		display: table;
+		width:100%;
+		height:100vh;
+		.error-p-td{
+			display: table-cell;
+			vertical-align: middle;
+			text-align:center;
+			.error-inline-box{
+				display:inline-block;
+				text-align:left;
+				padding-left:322px;
+				background:url($img + 'error/error-warning-ico.png') 0 center no-repeat;
+				.er-tt-h1{
+					img{
+						//
+					}
+				}
+				.er-tt-h2{
+					margin-top:15px;
+					font-size:rem(53px);
+					color:#111;
+					font-weight:normal;
+					line-height:1;
+					strong{
+						color:#c11633;
+					}
+				}
+				.er-guide-txt{
+					margin-top:20px;
+					font-size:rem(18px);
+					color:#555;
+				}
+				.er-detail-guide-txt{
+					margin-top:25px;
+					font-size:rem(18px);
+					color:#000;
+					strong{
+						//
+					}
+				}
+				.er-btn-box{
+					margin-top:35px;
+					.er-bt-dv{
+						display:inline-block;
+						.btn{
+							width:140px;
+							height:45px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+}

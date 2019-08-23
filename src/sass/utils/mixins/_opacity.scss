@@ -1,0 +1,12 @@
+// opacity
+//
+// Center-align a block level element
+
+@mixin opacity($opacity) {
+	// IE8 filter
+	@if $old-ie == true {
+		$opacity-ie: ($opacity * 100);
+		filter: alpha(opacity=$opacity-ie);
+	}
+	opacity: $opacity;
+}

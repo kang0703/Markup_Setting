@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="format-detection" content="telephone=no" />
+<title>Web Standard Guide</title>
+<script type="text/javascript" src="/res/js/libs/jquery-latest.js"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="/res/js/libs/html5.js"></script><![endif]-->
+
+<style type="text/css">
+@import url(../css/common/base.css);
+
+@charset "utf-8";
+
+hr																				{display: none;}
+body																			{padding: 1.5em; line-height: 1.5em; font-size: 0.75em; font-family: dotum,'돋움', sans-serif; -webkit-text-size-adjust: none;}
+hr																				{display: none;}
+h1,h2,h3																		{font-size: 1em; font-weight: normal;}
+#wrap																			{padding: 1.5em;}
+
+/* header */
+#header																			{padding: 1.5em;}
+#header:after																	{content: ""; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#header h1																		{float: left;}
+
+/* header util */
+#header .util																	{float: right;}
+
+/* header global navigation */
+#header .gnb																	{float: left; margin-top: 1.5em; width: 100%;}
+
+/* container */
+#container																		{margin-top: 1.5em; padding: 1.5em;}
+#container
+#container:after																{content: ""; display: block; clear: both; width: 0; height: 0; visibility: hidden;}
+#container .content-aside														{float: left; margin-right: 1.5em; padding: 1.5em; width: 20%;}
+#container .content-primary														{float: none; padding: 1.5em; overflow: hidden;}
+#container .content-primary .h2													{}
+#container .content-primary .section											{margin-top: 1.5em; padding: 1.5em;}
+#container .content-primary .section .h3										{}
+#container .content-primary .section .content									{margin-top: 1.5em; padding: 1.5em;}
+#container .content-secondary													{display: none;}
+
+/* footer */
+#footer																			{margin-top: 1.5em; padding: 1.5em;}
+#footer .support																{}
+#footer .copy																	{margin-top: 1.5em;}
+
+
+/* explorer 7 support */
+
+*+html body button																{margin-left: 0.25em;}
+
+*+html body #header																{*zoom: 1;}
+*+html body #header h1															{*zoom: 1; display: inline;}
+*+html body #container															{*zoom: 1;}
+
+
+
+
+
+
+
+
+
+div,h1,h2,h3																	{position: relative; border-width: 1px; border-style: solid; background-color: #ffffff;}
+
+*:before																		{display: block; position: absolute; left: -1px; top: -1px; padding: 0 10px; font: normal .95em/1.2em 'couier new', sans-serif; color: #994500; border: 1px solid #808080; background-color: #ffffc2;}
+
+#wrap																			{border: 2px dashed #999999;}
+#wrap.hover																		{background-color: #e5e5e5; border-color: #000000;}
+#wrap:before																	{content: "div#wrap";}
+
+/* header */
+#header																			{border-color: blue;}
+#header.hover																	{background-color: #e5e5ff;}
+#header:before																	{content: "div#header";}
+
+/* h1 */
+#header h1																		{border-color: green; height: 3em; width: 100px;}
+#header h1.hover																{background-color: #e5f2e5;}
+#header h1:before																{content: "h1";}
+
+/* util */
+#header .util																	{border-color: green; height: 3em; width: 200px;}
+#header .util.hover																{background-color: #e5f2e5;}
+#header .util:before															{content: "div.util, #util";}
+
+/* global navigation bar */
+#header .gnb																	{border-color: green; height: 3em;}
+#header .gnb.hover																{background-color: #e5f2e5;}
+#header .gnb:before																{content: "div#gnb, .gnb";}
+
+/* container */
+#container																		{border-color: blue;}
+#container.hover																{background-color: #e5e5ff;}
+
+/* content-aside */
+#container .content-aside														{border-color: green; height: 15em;}
+#container .content-aside.hover													{background-color: #e5f2e5;}
+#container .content-aside:before												{content: "div#contentAside, .content-aside";}
+
+/* content-primary */
+#container .content-primary														{border-color: green;}
+#container .content-primary.hover												{background-color: #e5f2e5;}
+#container .content-primary:before												{content: "div#contentPrimary, .content-primary";}
+
+#container .content-primary h2													{border-color: orange; height: 2em;}
+#container .content-primary h2.hover											{background-color: #fff6e5;}
+#container .content-primary h2:before											{content: "h2";}
+
+#container .content-primary .section											{border-color: orange;}
+#container .content-primary .section.hover										{background-color: #fff6e5;}
+#container .content-primary .section:before										{content: "div.section";}
+
+#container .content-primary .section h3											{border-color: orange; height: 2em;}
+#container .content-primary .section h3:before									{content: "h3";}
+
+#container .content-primary .section .content									{border-color: orange; height: 5em;}
+#container .content-primary .section .content:before							{content: "element.content";}
+
+/* footer */
+#footer																			{border-color: blue;}
+#footer.hover																	{background-color: #e5e5ff;}
+#footer:before																	{content: "div#footer";}
+
+#footer .support																{border-color: green;; height: 3em;}
+#footer .support.hover															{background-color: #e5f2e5;}
+#footer .support:before															{content: "div.support";}
+
+#footer .copy																	{border-color: green; height: 3em;}
+#footer .copy.hover																{background-color: #e5f2e5;}
+#footer .copy:before															{content: "div.copy";}
+
+.test.test1																		{display: inline-block; position: relative; padding: 0 20px; height: 30px; line-height: 30px; border: 1px solid gray;}
+.test.test1 span																{display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: red;}
+
+.test.test2																		{display: inline-block; height: 30px; line-height: 30px; border: 1px solid gray; background-color: red;}
+.test.test2 span																{display: inline-block; position: relative; z-index: -1; padding: 0 20px;}
+</style>
+
+<script type="text/javascript">
+jQuery(function($){
+	$('*').each(function(){
+		var self = $(this);
+		self.mouseover(function(){
+			self.toggleClass('hover');
+		}).mouseout(function(){
+			self.toggleClass('hover');
+		});
+	});
+});
+</script>
+</head>
+<!--[if lt IE 7]><body class="explorer v6"><![endif]-->
+<!--[if IE 7]><body class="explorer v7"><![endif]-->
+<!--[if IE 8]><body class="explorer v8"><![endif]-->
+<!--[if IE 9]><body class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><body><!--<![endif]-->
+<div id="wrap">
+<!-- header -->
+<div id="header">
+
+	<h1></h1>
+	
+	<!-- util -->
+	<div class="util"></div>
+	<!-- //util -->
+	
+	<!-- global navigation -->
+	<div class="gnb"></div>
+	<!-- //global navigation -->
+	
+</div>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container">
+	
+	<!-- content-aside -->
+	<div class="content-aside"></div>
+	<!-- //content-aside -->
+	
+	<!-- content-primary -->
+	<div id="contentPrimary" class="content-primary">
+		<h2></h2>
+		<!-- section -->
+		<div class="section">
+			<h3></h3>
+			<div class="content"></div>
+		</div>
+		<!-- //section -->
+		
+		<!-- section -->
+		<div class="section">
+			<h3></h3>
+			<div class="content"></div>
+		</div>
+		<!-- //section -->
+		
+		<!-- section -->
+		<div class="section">
+			<h3></h3>
+			<div class="content"></div>
+		</div>
+		<!-- //section -->
+		
+	</div>
+	<!-- //content-primary -->
+	
+	<!-- content-secondary -->
+	<div class="content-secondary"></div>
+	<!-- //content-secondary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<div id="footer">
+	<!-- support -->
+	<div class="support"></div>
+	<!-- //support -->
+	
+	<!-- copy -->
+	<div class="copy"></div>
+	<!-- //copy -->
+</div>
+<!-- //footer -->
+</div>
+</body>
+</html>

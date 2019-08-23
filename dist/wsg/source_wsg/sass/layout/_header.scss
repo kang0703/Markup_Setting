@@ -1,0 +1,147 @@
+$header-height: 1.6rem;
+$header-fz: 1.0rem;
+
+/* header */
+.wsg-header{
+	position:relative;
+	border-top:3px solid #000;
+	padding:30px 0;
+	.wsg-header-in{
+		position:relative;
+		h1{
+			padding-left:60px;
+			font-size:1.6rem;
+			color:#555;
+			font-weight:normal;
+			line-height:2.8rem;
+			strong{
+				font-size:2.8rem;
+				color:#d61a1a;
+			}
+		}
+		.wsg-h-aside-menu-btn-box{
+			position:absolute;
+			top:2px;
+			left:14px;
+			.aside-menu-btn{
+				display: inline-block;
+				cursor: pointer;
+				.stick-bar{
+					width: 35px;
+					height: 5px;
+					background-color: #333;
+					margin: 6px 0;
+					transition: 0.4s;
+				}
+				&.change{
+					.bar1{
+						-webkit-transform: rotate(-45deg) translate(-9px, 7px);
+						transform: rotate(-45deg) translate(-9px, 7px);
+					}
+					.bar2{
+						opacity: 0;
+					}
+					.bar3{
+						-webkit-transform: rotate(45deg) translate(-8px, -7px);
+						transform: rotate(45deg) translate(-8px, -7px);
+					}
+				}
+			}
+		}
+
+		.wsg-h-list-quick-btn{
+			position:absolute;
+			top:0;
+			right:15px;
+			a{
+				text-decoration:none;
+				color:#fff;
+				background-color:#d22a2a;
+				padding:3px 10px;
+				border-radius:5px;
+			}
+		}
+	}
+}
+
+.wsg-all-sitemap-wrap{
+	display:none;
+	z-index:1000;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0, 0, 0, 0.5);
+	padding:10%;
+	box-sizing:border-box;
+	.wsg-all-sitemap-in{
+		position:relative;
+		background:#fff;
+		padding:20px;
+		max-height:80%;
+		overflow:hidden;
+		overflow-y:auto;
+		.wsg-sitemap-close{
+			display:block;
+			position:absolute;
+			top:17px;
+			right:17px;
+			width:30px;
+			height:30px;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			&:before{
+				position:absolute;
+				top:0;
+				left:50%;
+				margin-left:-1.5px;
+				content:"";
+				display:block;
+				width:3px;
+				height:100%;
+				background-color:#000;
+			}
+			&:after{
+				position:absolute;
+				top:50%;
+				left:0;
+				margin-top:-1.5px;
+				content:"";
+				display:block;
+				width:100%;
+				height:3px;
+				background-color:#000;
+			}
+		}
+		.wsg-all-sitemap-part{
+			padding:10px 0;
+			border-bottom:1px dashed #dcdcdc;
+			&:last-child{
+				border-bottom:0;
+			}
+			.sitemap-title{
+				font-size:1.3rem;
+				color:red;
+			}
+			.sitemap-list{
+				@include cf;
+				li{
+					padding:10px 0;
+					float:left;
+					width:20%;
+					a{
+						font-size:1rem;
+						color:#666;
+						&:hover{
+							color:#000;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.on{
+		display:block;
+	}
+}

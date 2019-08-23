@@ -1,0 +1,35 @@
+// Skip Navigation
+
+// 키보드 어시스트
+#skipNavi {
+	position:absolute;
+	margin: 0;
+	left:0;
+	top:0;
+	width:100%;
+	height:0px;
+	z-index:10001;
+	.title {
+		@include blind;
+	}
+	a {
+		position:absolute;
+		left:0;
+		top:-1000px;
+		z-index:1002;
+		width:100%;
+		height:30px;
+		line-height:30px;
+		text-align:center;
+		background-color:rgb(29, 96, 167);
+		color:#fff;
+		z-index:1000;
+		&.on {
+			top:0;
+		}
+		&:focus {
+			top:0;
+			height:30px;
+		}
+	}
+}

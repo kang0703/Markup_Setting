@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<title>WSG :: pagination</title>
+
+	<link type="text/css" rel="stylesheet" href="../../assets/css/style.css">
+	<link type="text/css" rel="stylesheet" href="../source_wsg/css/wsg.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/wsg.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui/common-ui.js"></script>
+</head>
+<body>
+	<div id="wrap" class="wsg-wrap">
+		<!-- header -->
+		<header class="wsg-header">
+			<div class="wsg-header-in">
+				<h1><strong>P</strong>agination</h1>
+				<div class="wsg-h-aside-menu-btn-box">
+					<a href="#lnb" class="aside-menu-btn">
+						<span class="blind">메뉴</span>
+						<div class="stick-bar bar1"></div>
+						<div class="stick-bar bar2"></div>
+						<div class="stick-bar bar3"></div>
+					</a>
+				</div>
+				<div class="wsg-h-list-quick-btn"><a href="markup.html">markup list 바로가기</a></div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<nav class="wsg-all-sitemap-wrap">
+			<div class="wsg-all-sitemap-in">
+				<a href="#" class="wsg-sitemap-close"><span class="blind">닫기</span></a>
+				<div class="wsg-all-sitemap-part">
+					<h2 class="sitemap-title">STYLE GUIDE</h2>
+					<ul class="sitemap-list">
+						<li><a href="button.html">button</a></li>
+						<li><a href="form.html">form</a></li>
+						<li><a href="table.html">table</a></li>
+						<li><a href="tab.html">tab</a></li>
+						<li><a href="pagination.html">pagination</a></li>
+						<li><a href="#none">none</a></li>
+
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+					</ul>
+				</div>
+				<div class="wsg-all-sitemap-part">
+					<h2 class="sitemap-title">STYLE GUIDE</h2>
+					<ul class="sitemap-list">
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+						<li><a href="#none">none</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<hr>
+
+		<!-- container -->
+		<div class="wsg-contents-wrap">
+			<section class="wsg-contents-in">
+				<!-- part_type -->
+				<div class="wsg-con-part-wrap">
+					<h3>type</h3>
+					<div class="real-code-box">
+						<a class="btn large normal" href="javascript:void(0);">ANCHOR</a>
+						<input type="submit" class="btn large normal" value="INPUT">
+						<button type="submit" class="btn large normal">BUTTON</button>
+					</div>
+				</div>
+				<!-- //part_type -->
+
+				<!-- part_color -->
+				<div class="wsg-con-part-wrap">
+					<h3>color</h3>
+					<div class="real-code-box">
+						<a class="btn large basic" href="javascript:void(0);">basic</a>
+						<a class="btn large slightly" href="javascript:void(0);">slightly</a>
+						<a class="btn large normal" href="javascript:void(0);">normal</a>
+						<a class="btn large weighty" href="javascript:void(0);">weighty</a>
+						<a class="btn large weightiest" href="javascript:void(0);">weightiest</a>
+					</div>
+				</div>
+				<!-- //part_color -->
+
+				<!-- part_size -->
+				<div class="wsg-con-part-wrap">
+					<h3>size</h3>
+					<div class="real-code-box">
+						<a class="btn xsmall basic" href="javascript:void(0);">xsmall</a>
+						<a class="btn small slightly" href="javascript:void(0);">small</a>
+						<a class="btn medium normal" href="javascript:void(0);">medium</a>
+						<a class="btn large weighty" href="javascript:void(0);">large</a>
+						<a class="btn xlarge weightiest" href="javascript:void(0);">xlarge</a>
+					</div>
+				</div>
+				<!-- //part_size -->
+
+				<!-- part_disable -->
+				<div class="wsg-con-part-wrap">
+					<h3>disable</h3>
+					<div class="real-code-box">
+						<a class="btn large slightly disable" href="https://www.naver.com/">ANCHOR disable</a>
+						<input type="submit" class="btn large weighty disable" value="INPUT disable" disabled>
+						<button type="submit" class="btn large weightiest disable" disabled>BUTTON disable</button>
+					</div>
+				</div>
+				<!-- //part_disable -->
+
+				<!-- part_readonly -->
+				<div class="wsg-con-part-wrap">
+					<h3>readonly</h3>
+					<div class="real-code-box">
+						<a class="btn large slightly readonly" href="https://www.naver.com/">ANCHOR readonly</a>
+						<input type="submit" class="btn large weighty readonly" value="INPTU readonly" readonly>
+						<button type="submit" class="btn large weightiest readonly" readonly>BUTTON readonly</button>
+					</div>
+				</div>
+				<!-- //part_readonly -->
+
+				<!-- part_position -->
+				<div class="wsg-con-part-wrap">
+					<h3>position</h3>
+					<div class="real-code-box">
+						<div class="button-box">
+							<div class="btn-area">
+								<a class="btn large basic" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large slightly" href="javascript:void(0);">ANCHOR</a>
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="button-box btn-center">
+							<div class="btn-area">
+								<a class="btn large basic" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large slightly" href="javascript:void(0);">ANCHOR</a>
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="button-box btn-right">
+							<div class="btn-area">
+								<a class="btn large basic" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large slightly" href="javascript:void(0);">ANCHOR</a>
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="button-box">
+							<div class="btn-area left">
+								<a class="btn large basic" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area right">
+								<a class="btn large weightiest" href="javascript:void(0);">ANCHOR</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //part_position -->
+
+				<!-- part_block -->
+				<div class="wsg-con-part-wrap">
+					<h3>variable</h3>
+					<div class="real-code-box">
+						<div class="button-box block">
+							<div class="btn-area">
+								<a class="btn large basic" href="javascript:void(0);">ANCHOR</a>
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="button-box block col-2">
+							<div class="btn-area">
+								<a class="btn large slightly" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large normal" href="javascript:void(0);">ANCHOR</a>
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="button-box block col-3">
+							<div class="btn-area">
+								<a class="btn large weighty" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large weightiest" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large basic" href="javascript:void(0);">ANCHOR</a>
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="button-box block col-4">
+							<div class="btn-area">
+								<a class="btn large weighty" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large weightiest" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large basic" href="javascript:void(0);">ANCHOR</a>
+							</div>
+							<div class="btn-area">
+								<a class="btn large slightly" href="javascript:void(0);">ANCHOR</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //part_variable -->
+			</section>
+		</div>
+		<!-- //container -->
+
+		<hr>
+
+		<!-- footer -->
+		<footer class="wsg-footer">
+			<p>ⓒ 2018. <strong><a href="http://kcmschool.com/" target="_blank" title="새창으로 열림">kcmschool</a></strong> all rights reserved.</p>
+		</footer>
+		<!-- //footer -->
+	</div>
+</body>
+</html>

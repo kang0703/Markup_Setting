@@ -1,0 +1,175 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="ko" class="explorer v6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="explorer v7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="explorer v8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Web Standard Guide</title>
+<link type="text/css" rel="stylesheet" href="../res/css/common.css" />
+<link type="text/css" rel="stylesheet" href="../wsg/res/css/wsg.css" />
+<script type="text/javascript" src="../res/js/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../res/js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/codemirror/codemirror.css" />
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/jqueryFileTree/jqueryFileTree.css" media="screen" />
+<script type="text/javascript" src="../wsg/plugin/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="../wsg/plugin/codemirror/xml.js"></script>
+<script type="text/javascript" src="../wsg/res/js/wsg.js"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="../res/js/libs/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrap">
+<!-- header -->
+<header id="header">
+	<h1><a href="index.html">PROJECT</a></h1>
+	<p class="skip-lnb"><a href="#lnb">메뉴</a></p>
+	<p class="history-back"><a href="index.html">BACK</a></p>
+</header>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container" class="intro">
+	<!-- contentAside -->
+	<div id="contentAside" class="content-aside">
+		<!-- lnb -->
+		<nav id="lnb" class="lnb">
+			<h2>주요메뉴</h2>
+			<ul>
+			<li><strong>GUIDELINE</strong>
+				<ul>
+				<li><a href="information.html">PROJECT 기본정보</a></li>
+				<li><a href="naming.html">네이밍</a></li>
+				<li><a href="rule_html_code.html">HTML 코드 규칙</a></li>
+				<!--<li><a href="rule_html_mark.html">HTML 요소 작성 규칙</a></li>-->
+				<li><a href="rule_css_code.html">CSS 코드 규칙</a></li>
+				<li><a href="validation.html">테스트 및 검수</a></li>
+				</ul>
+			</li>
+			<li><strong>PROGRESS</strong>
+				<ul>
+				<li><a href="checklist.html">issue &amp; check list</a></li>
+				<li><a href="markup.html">markup</a></li>
+				</ul>
+			</li>
+			<li><strong><abbr title="User Interface">UI</abbr> LIBRARY</strong>
+				<ul>
+				<li><a href="typography.html">typography</a></li>
+				<li><a href="form.html">form</a></li>
+				<li><a href="table.html">table</a></li>
+				<li><a href="tab.html">tab</a></li>
+				<li><a href="button.html">button</a></li>
+				<li><a href="panel.html">panel</a></li>
+				<li><a href="fieldset.html">fieldset</a></li>
+				<li><a href="list.html">list</a></li>
+				<li><a href="images.html">images</a></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+		<!-- //lnb -->
+	</div>
+	<!-- //contentAside -->
+	<!-- contentPrimary -->
+	<section id="contentPrimary" class="content-primary">
+		<h1>validation</h1>
+		<section>
+			<h1>HTML/CSS validation</h1>
+			<section>
+				<h1>HTML Validation Check</h1>
+				<p>W3C validation 체크 사이트(<a href="http://validator.w3.org/" target="_blank">http://validator.w3.org/</a>)에서 직접 검사하도록 한다.<br />
+				또는 파이어폭스 혹은 크롬의 validator add-on(N-WAX) 기능을 활용하여 확인하도록 한다.</p>
+				<figure>
+					<img src="../wsg/res/images/img_w3c_html.jpg" />
+					<figcaption>W3C Markup Validation</figcaption>
+				</figure>
+			</section>
+			<section>
+				<h1>CSS Validation Check</h1>
+				<p>W3C validation 체크 사이트(<a href="http://jigsaw.w3.org/css-validator/" target="_blank">http://jigsaw.w3.org/css-validator/</a>)에서 직접 검사하도록 한다.</p>
+				<figure>
+					<img src="../wsg/res/images/img_w3c_css.jpg" />
+					<figcaption>W3C CSS Validationn</figcaption>
+				</figure>
+			</section>
+			<section>
+				<h1>HTML/CSS minify</h1>
+				<p>N-MET의 HTML/CSS Formatter(<a href="http://html.nhncorp.com/markup_tools/nmet" target="_blank">http://html.nhncorp.com/markup_tools/nmet</a>)를 이용하여 최적화 하도록 한다.</p>
+				<figure>
+					<img src="../wsg/res/images/img_nmet.jpg" />
+					<figcaption>N-MET</figcaption>
+				</figure>
+			</section>
+		</section>
+		<section>
+			<h1>cross browsing check</h1>
+			<p>인터넷 익스플로러의 버전별 크로스 브라우징 체크는 개발자도구(F12)의 브라우저 모드를 변경하면서 직접 확인하도록 한다.<br />
+			OS별로 인터넷 익스클로러의 렌더링이 다를 수 있으므로 <a href="https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/5_0" target="_blank">vmware</a>를 설치하여 크로스 브라우징 체크를 병행하도록 한다.</p>
+			<section>
+				<h1>기본 지원 브라우저</h1>
+				<p>IE9</p>
+			</section>
+			<section>
+				<h1>확장 지원 브라우저</h1>
+				<p>IE7, IE8, Chrome 최신버전, FireFox 최신버전, Safari 최신버전</p>
+			</section>
+		</section>
+		<section>
+			<h1>web accessibility check</h1>
+			<p>웹 접근성 준수 기준은 KWCAG2.0 (<a href="http://www.wah.or.kr/Board/brd_view.asp?page=1&amp;brd_sn=4&amp;brd_idx=625" target="_blank">http://www.wah.or.kr/Board/brd_view.asp?page=1&amp;brd_sn=4&amp;brd_idx=625</a>)으로 한다.</p>
+			<section>
+				<h1>웹 접근성 체크 항목</h1>
+				<ol class="data-list">
+				<li>대체 텍스트(img,bg,object)</li>
+				<li>W3C Validation</li>
+				<li>표 제목</li>
+				<li>표 구조화</li>
+				<li>주언어 명시</li>
+				<li>명도 대비</li>
+				<li>키보드 포커스</li>
+				<li>페이지 제목</li>
+				<li>프레임 사용</li>
+				<li>콘텐츠 블록 제목</li>
+				<li>링크 텍스트</li>
+				<li>의도하지 않은 기능</li>
+				<li>레이블</li>
+				</ol>
+			</section>
+			<section>
+				<h1>참고 자료</h1>
+				<table border="1" class="data-table wsg">
+				<colgroup>
+					<col style="width: 25%;" />
+					<col />
+				</colgroup>
+				<tbody>
+				<tr>
+					<th class="row">NSCAG1.0</th>
+					<td><a href="http://html.nhncorp.com/accessibility" target="_blank" title="새창">http://html.nhncorp.com/accessibility</a></td>
+				</tr>
+				<tr>
+					<th class="row">웹 접근성 체크리스트</th>
+					<td><a href="http://html.nhncorp.com/accessibility/manual" target="_blank" title="새창">http://html.nhncorp.com/accessibility/manual</a></td>
+				</tr>
+				<tr>
+					<th class="row">평가 도구</th>
+					<td><a href="http://html.nhncorp.com/accessibility/tool" target="_blank" title="새창">http://html.nhncorp.com/accessibility/tool</a></td>
+				</tr>
+				</tbody>
+				</table>
+			</section>
+		</section>
+	</section>
+	<!-- //contentPrimary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<footer id="footer">
+	<small><span>Copyright &copy; 2013 <abbr title="Web Standard Guide">WSG</abbr></span> <span>made by <a target="_blank" href="http://www.braveinno.com/ver3/html/main.html">BRAVE INNOVATION</a> TX GROUP.</span></small>
+</footer>
+<!-- //footer -->
+</div>
+</body>
+</html>

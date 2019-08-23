@@ -1,0 +1,257 @@
+/* btn */
+
+// Button ===============================
+	// 공통
+	$btn-all-border-width:1px;
+
+	// type size
+	// $xsmall-width:40px; // 버튼 width 고정값일 경우 추가
+	$xsmall-padding:10px; // 버튼 양쪽 padding값
+	$xsmall-height:20px; // 버튼 높이
+	$xsmall-font-size:11px; // 버튼 글씨 크기
+	$xsmall-font-weight:normal; // 버튼 글꼴 두께
+	$xsmall-radius:0px; // 버튼 모서리 라운드처리
+
+	// $small-width:45px;
+	$small-padding:10px;
+	$small-height:25px;
+	$small-font-size:12px;
+	$small-font-weight:normal;
+	$small-radius:0px;
+
+	// $medium-width:50px;
+	$medium-padding:12px;
+	$medium-height:36px;
+	$medium-font-size:14px;
+	$medium-font-weight:normal;
+	$medium-radius:0px;
+
+	// $large-width:55px;
+	$large-padding:20px;
+	$large-height:48px;
+	$large-height-m:26px;
+	$large-font-size:14px;
+	$large-font-weight:normal;
+	$large-radius:0px;
+
+	// $xlarge-width:60px;
+	$xlarge-padding:20px;
+	$xlarge-height:66px;
+	$xlarge-font-size:18px;
+	$xlarge-font-weight:normal;
+	$xlarge-radius:0px;
+
+	// type color
+	$basic-color: #fff;
+	$basic-border-style : solid;
+	$basic-border-color: #b2b2b2;
+	$basic-background-color: #b2b2b2;
+
+	$slightly-color: #fff;
+	$slightly-border-style : solid;
+	$slightly-border-color: #3d3de2;
+	$slightly-background-color: #3d3de2;
+
+	$normal-color: #000;
+	$normal-border-style : solid;
+	$normal-border-color: #000;
+	$normal-background-color: #fff;
+
+	$weighty-color: #fff;
+	$weighty-border-style : solid;
+	$weighty-border-color: #000;
+	$weighty-background-color: #000;
+
+	$weightiest-color: #fff;
+	$weightiest-border-style : solid;
+	$weightiest-border-color: red;
+	$weightiest-background-color: red;
+
+
+// /* button reset */
+.btn {
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-appearance: none;
+	@include box-sizing();
+	@include clearfix();
+	border-width:$btn-all-border-width;
+	&[disabled]{
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	&[readonly]{
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+}
+
+
+// /* xsmall */
+.btn.xsmall {
+	padding: 0 $xsmall-padding;
+	height: $xsmall-height;
+	line-height: $xsmall-height - ($btn-all-border-width * 2);
+	font-size: $xsmall-font-size;
+	font-weight: $xsmall-font-weight;
+	@include border-radius($xsmall-radius);
+}
+
+
+// /* small */
+.btn.small {
+	padding: 0 $small-padding;
+	height: $small-height;
+	line-height: $small-height - ($btn-all-border-width * 2);
+	font-size: $small-font-size;
+	font-weight: $small-font-weight;
+	@include border-radius($small-radius);
+}
+
+
+
+// /* medium */
+.btn.medium {
+	padding: 0 $medium-padding;
+	height: $medium-height;
+	line-height: $medium-height - ($btn-all-border-width * 2);
+	font-size: $medium-font-size;
+	font-weight: $medium-font-weight;
+	@include border-radius($medium-radius);
+	// @include box-sizing(content-box);
+}
+
+
+
+// /* large */
+.btn.large {
+	padding: 0 $large-padding;
+	height: $large-height;
+	line-height: $large-height - ($btn-all-border-width * 2);
+	font-size: $large-font-size;
+	font-weight: $large-font-weight;
+	@include border-radius($large-radius);
+}
+
+
+// /* xlarge */
+.btn.xlarge {
+	padding: 0 $xlarge-padding;
+	height: $xlarge-height;
+	line-height: $xlarge-height - ($btn-all-border-width * 2);
+	font-size: $xlarge-font-size;
+	font-weight: $xlarge-font-weight;
+	@include border-radius($xlarge-radius);
+}
+
+
+// /* accent */
+.btn.basic {
+	color: $basic-color;
+	border-style: $basic-border-style;
+	border-color: $basic-border-color;
+	background-color: $basic-background-color;
+}
+
+.btn.slightly {
+	color: $slightly-color;
+	border-style: $slightly-border-style;
+	border-color: $slightly-border-color;
+	background-color: $slightly-background-color;
+}
+
+.btn.normal{
+	color: $normal-color;
+	border-style: $normal-border-style;
+	border-color: $normal-border-color;
+	background-color: $normal-background-color;
+}
+
+.btn.weighty {
+	color: $weighty-color;
+	border-style: $weighty-border-style;
+	border-color: $weighty-border-color;
+	background-color: $weighty-background-color;
+}
+
+.btn.weightiest {
+	color: $weightiest-color;
+	border-style: $weightiest-border-style;
+	border-color: $weightiest-border-color;
+	background-color: $weightiest-background-color;
+}
+
+
+// disable & readonly
+.btn.disable{
+	pointer-events: none;
+	cursor: not-allowed;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	opacity: .65;
+}
+.btn.readonly{
+	pointer-events: none;
+	cursor: not-allowed;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	opacity: .65;
+}
+
+// position
+.button-box {
+	@include cf;
+	font-size:0;
+	margin:0 -3px;
+	&.btn-center{
+		text-align:center;
+	}
+	&.btn-right{
+		text-align:right;
+	}
+	.btn-area{
+		display:inline-block;
+		padding:0 3px;
+		&.left{
+			float:left;
+		}
+		&.right{
+			float:right
+		}
+	}
+}
+
+// block
+.button-box.block{
+	.btn-area{
+		display:block;
+		float:left;
+		width:100%;
+		@include box-sizing;
+		.btn{
+			display:block;
+		}
+	}
+	&.col-2{
+		.btn-area{
+			width:50%;
+		}
+	}
+	&.col-3{
+		.btn-area{
+			width:33.333333%;
+		}
+	}
+	&.col-4{
+		.btn-area{
+			width:25%;
+		}
+	}
+}
+

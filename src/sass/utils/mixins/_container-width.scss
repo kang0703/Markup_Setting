@@ -1,0 +1,11 @@
+// container-width
+//
+// 가운데 정렬 레이아웃 width값 설정
+
+$cw : auto !default;
+
+@mixin cw($container-width: $cw) {
+	margin-left: auto;
+	margin-right: auto;
+	width: $container-width;
+}

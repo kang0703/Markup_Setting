@@ -1,0 +1,58 @@
+@include mq($mobile) {
+	.kcm-wrap{
+		ul{
+			@include cf;
+			li{
+				float:left;
+				width:33.3333%;
+				color:blue;
+			}
+		}
+	}
+}
+@include mq($tablet) {
+	.kcm-wrap{
+		ul{
+			li{
+				color:yellow;
+			}
+		}
+	}
+}
+
+@include mq($pc) {
+	.kcm-wrap{
+		ul{
+			@include cf;
+			li{
+				float:left;
+				width:33.3333%;
+				color:red;
+			}
+		}
+	}
+}
+
+.kcm_test112221{
+	display:block;
+	font-size:20px;
+	font-weight:bold;
+	color:blue;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:100px;
+	height:100px;
+	.kcm{
+		display:block;
+	}
+}
+
+
+.test-css{
+	display:block;
+	font-size:20px;
+}

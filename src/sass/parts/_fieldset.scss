@@ -1,0 +1,318 @@
+// fieldset
+	$field-block-padding : 0;
+	// 'border' 인 경우는 all, 개별적으로 지정할경우 (,)로 구분
+	// 예) border-left, border-bottom 을 주고싶을 땐 $field-block-line-type : left, bottom;
+	$field-block-line-type : bottom;  // $field-block-line-type : right, top;
+	// 위에 변수에 준 값에 맞게 스타일 설정.
+	// 단일값이면 원래 쓰던대로, 복수값이면 (), () 식으로
+	// 예) $field-block-line-Style : (1px #ccc solid), (2px #333 dashed);
+	$field-block-line-Style : 1px #ccc solid;
+	// field와 field 사이의 간격 (margin-top)
+	$field-to-field-gap : 30px;
+	$field-label-float : none;
+	$field-label-padding :  0 0 10px 0;
+	$field-label-width : auto;
+	$field-label-height : auto;
+	$field-label-line-height : 1.5;
+	$field-label-font-size : 1em;
+	$field-label-font-weight : normal;
+	$field-label-letter-spacing : -0.1em;
+	$field-label-dom-label-padding : 0;
+	$field-insert-padding-left : 0;
+	$field-insert-padding-right : 0px;
+	$field-insert-font-size : 1em;
+	$field-insert-input-width : 100%;
+	$field-insert-input-font-size : 1em;
+	$field-insert-row-vertical-gap : 4px;
+
+
+
+
+
+.fieldset {
+	legend {
+		@include blind;
+	}
+	.field {
+		@include cf;
+		padding: $field-block-padding;
+		@include border-factory($field-block-line-type, $field-block-line-Style);
+		&+.field {
+			margin-top: $field-to-field-gap;
+		}
+		>.label {
+			display: block;
+			float: $field-label-float;
+			padding: $field-label-padding;
+			width: $field-label-width;
+			height: $field-label-height;
+			line-height: $field-label-line-height;
+			font-size: $field-label-font-size;
+			font-weight: $field-label-font-weight;
+			letter-spacing: $field-label-letter-spacing;
+			label {
+				display: inline-block;
+				padding-top: $field-label-dom-label-padding;
+			}
+		}
+		>.insert {
+			display: block;
+			float: none;
+			padding-left: $field-insert-padding-left;
+			padding-right: $field-insert-padding-right;
+			// overflow: hidden;
+			font-size: $field-insert-font-size;
+			@include cf;
+			@include mmq {
+				.em {
+					display: block;
+				}
+			}
+		}
+		input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"], input[type="search"] {
+			width: $field-insert-input-width;
+			font-size: $field-insert-input-font-size;
+		}
+		.row+.row {
+			margin-top: $field-insert-row-vertical-gap;
+		}
+		.input-birthday {
+			.selectric-wrapper {
+				display: inline-block;
+				width: 143px;
+			}
+		}
+		.with-btn {
+			// vertical-align: top;
+			// @include cf;
+			input {
+				width: 260px;
+			}
+			.btn {
+				width: 174px;
+				vertical-align: top;
+			}
+			@include tmq {
+				.btn {
+					width: 100px;
+				}
+			}
+			@include pmq {
+				display: flex;
+				.btn, input {
+					width: 100%;
+					flex-grow: 1;
+				}
+				.btn {
+					margin-left: 4px;
+					padding: 0;
+					width: 86px;
+					font-size: 0.9rem;
+					flex-shrink: 0;
+				}
+			}
+		}
+		.with-select {
+			select, .selectric-wrapper {
+				display: inline-block;
+				width: 142px;
+			}
+			.selectric-wrapper, input {
+				vertical-align: top;
+			}
+			input {
+				width: 290px;
+			}
+			@include pmq {
+				display: flex;
+				input {
+					// margin-left: 4px;
+					width: auto;
+				}
+				.selectric-wrapper {
+					flex-basis: 100px;
+					flex-shrink: 0;
+					+ input {
+						margin-left: 4px;
+					}
+				}
+				input {
+					width: 100%;
+					flex-grow: 1;
+				}
+			}
+		}
+		.with-phone {
+			.selectric-wrapper, .corp {
+				display: inline-block;
+				width: 142px;
+				vertical-align: top;
+			}
+			input {
+				width: 290px;
+			}
+			.phone-number {
+				display: inline-block;
+				width: 260px;
+				height: 36px;
+				line-height: 36px;
+			}
+			@include pmq {
+				display: flex;
+				input {
+					// margin-left: 4px;
+					width: auto;
+				}
+				.selectric-wrapper {
+					flex-basis: 100px;
+					flex-shrink: 0;
+					+ input {
+						margin-left: 4px;
+					}
+				}
+				.selectric-wrapper, input {
+					width: 100%;
+					flex-grow: 1;
+				}
+			}
+		}
+		.with-email {
+			input {
+				width: 130px;
+			}
+			.selectric-wrapper {
+				display: inline-block;
+				width: 144px;
+				vertical-align: top;
+			}
+			.at {
+				display: inline-block;
+				width: 22px;
+				text-align: center;
+			}
+			.email-address {
+				display: inline-block;
+			}
+			@include mq($phone) {
+				.email-address {
+					margin-bottom: 4px;
+					display: flex;
+					align-items: center;
+					.at {
+						margin: 0 4px;
+					}
+					input {
+						display: block;
+						width: 100%;
+					}
+				}
+				.selectric-wrapper {
+					width: 100%;
+				}
+			}
+		}
+		.input-address {
+			> input {
+				margin-top: 4px;
+			}
+		}
+		.shipping-default-check {
+			margin-top: 4px;
+		}
+		.with-phone-already {
+			// display: flex;
+			input[type=text]{
+				width: 290px;
+				&.company {
+					// margin-right: 4px;
+					width: 142px;
+					// flex-basis: 142px;
+					// flex-shrink: 0;
+				}
+			}
+			@include pmq {
+				display: flex;
+				input[type=text] {
+					width: 100%;
+					// flex-grow: 1;
+					&.company {
+						width: 100%;
+						flex-basis: 100px;
+						flex-shrink: 0;
+						margin-right: 4px;
+					}
+				}
+			}
+		}
+	}
+	&.large {
+		border-bottom: 1px #e1e1e1 solid;
+		.field {
+			// @include cf;
+			display: table;
+			width: 100%;
+			border-top: 1px #e1e1e1 solid;
+			table-layout: fixed;
+			&:before, &:after {
+				display: none;
+			}
+			&+.field {
+				margin-top: 0;
+			}
+			> .label {
+				padding-top: 8px;
+				padding-left: 35px;
+				width: 195px;
+				display: table-cell;
+				vertical-align: middle;
+				background-color: #f7f7f7;
+				label {
+					display: inline-block;
+				}
+			}
+			> .insert {
+				padding: 10px 15px;
+				background-color: #fff;
+				display: table-cell;
+				width: auto;
+				height: 35px;
+				vertical-align: middle;
+				input[type="text"], input[type="password"] {
+				}
+			}
+			@include pmq {
+				> .label {
+					padding-left: 10px;
+					width: 120px;
+				}
+				> .insert {
+					padding: 10px;
+				}
+			}
+		}
+		input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"], input[type="search"] {
+					padding: 4px 10px;
+					height: 36px;
+					border-width: 1px;
+		}
+		.row+.row {
+		}
+		.select-wrap {
+			.asset {
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+		}
+		.field-double {
+			@include cf;
+			.field {
+				float: left;
+				width: 50%;
+				@include mmq {
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

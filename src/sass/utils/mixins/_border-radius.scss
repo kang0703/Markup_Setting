@@ -1,0 +1,33 @@
+// border-radius
+//
+// border-radius를 좀 더 편하게
+
+@mixin border-radius($border-radius : 5px) {
+	// vendor-prefix
+	// -moz-border-radius: $border-radius;
+	// -webkit-border-radius: $border-radius;
+	border-radius: $border-radius;
+}
+
+// Single side border-radius
+@mixin border-top-radius($border-radius : 5px) {
+	border-top-right-radius: $border-radius;
+	border-top-left-radius: $border-radius;
+}
+@mixin border-right-radius($border-radius : 5px) {
+	border-bottom-right-radius: $border-radius;
+	border-top-right-radius: $border-radius;
+}
+@mixin border-bottom-radius($border-radius : 5px) {
+	border-bottom-right-radius: $border-radius;
+	border-bottom-left-radius: $border-radius;
+}
+@mixin border-left-radius($border-radius : 5px) {
+	border-bottom-left-radius: $border-radius;
+	border-top-left-radius: $border-radius;
+}
+
+
+@mixin bdr ($border-radius : 5px) {
+	@include border-radius($border-radius);
+}

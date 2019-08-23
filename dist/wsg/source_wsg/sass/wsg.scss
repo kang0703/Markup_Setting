@@ -1,0 +1,29 @@
+// 변수 설정
+@import "../../../source_dev/sass/config";
+@import "../../../source_dev/sass/utils/mixins/clearfix";
+
+
+/* normalize(외부)
+ ========================= */
+@import "../../../source_dev/sass/base/normalize";
+
+
+/* base(외부)
+ ========================= */
+@import "../../../source_dev/sass/base/base";
+
+
+/* font 설정(외부)
+ ========================= */
+@import "https://fonts.googleapis.com/css?family=Scada";
+@import "https://fonts.googleapis.com/earlyaccess/notosanskr.css";
+
+
+/* WSG
+ ========================= */
+@import "./layout/base_wsg";
+@import "./layout/header";
+@import "./layout/contents";
+@import "./layout/footer";
+@import "./layout/etc";
+

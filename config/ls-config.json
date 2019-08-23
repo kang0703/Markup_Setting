@@ -1,0 +1,7 @@
+{
+	"port": 8798,
+	"files": ["./**/*.{html,htm,css,js}"],
+	"server": { "baseDir": "./" },
+	"startPath": "./dist/index.html",
+	"browser": "chrome"
+}

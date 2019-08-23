@@ -1,0 +1,642 @@
+@include mq($pc) {
+
+	/* module */
+/////상세 iframe 반응형 모듈//////////////////////////////////////////////////////////////////////////////////////////
+	.rwd-iframe-movie-wrap{
+		position: relative;
+		padding-top: 56%;
+		overflow: hidden;
+		margin:10px 0;
+		iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+	}
+/////리스트 영역 모듈//////////////////////////////////////////////////////////////////////////////////////////
+	.event-ban-lt-ul{
+		@include cf;
+		margin:-7.5px -6.5px;
+		.event-ban-lt-li{
+			padding:7.5px 6.5px;
+			@include box-sizing;
+			width:25%;
+			float:left;
+			.ban-link{
+				position:relative;
+				display:block;
+				.link-in{
+					img{
+						width:100%;
+					}
+					.e-ban-tt{
+						position:absolute;
+						bottom:0;
+						left:0;
+						@include box-sizing;
+						width:100%;
+						background:rgba(0, 0, 0, 0.7);
+						padding:12px 15px;
+						.e-ban-rela{
+							@include box-sizing;
+							position:relative;
+							font-size:rem(13px);
+							height:61px;
+							color:#fff;
+							.tt{
+								line-height:1.4;
+								overflow:hidden;
+								text-overflow:ellipsis;
+								display:-webkit-box;
+								-webkit-line-clamp:2;
+								-webkit-box-orient:vertical;
+								height:2.8em;
+								text-align:center;
+								&:hover{
+									text-decoration:underline;
+								}
+							}
+							.period{
+								position:absolute;
+								bottom:0;
+								left:0;
+								.ev-state{
+									font-size:rem(13px);
+									color:#fff;
+									padding:2px 8px;
+									margin-right:5px;
+									&.end{
+										background:#111;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&.list-none{
+				width:100%;
+				.eve-none-txt{
+					text-align:center;
+					font-size:rem(21px);
+					color:#7d7d7d;
+					padding:180px 0;
+					.eve-none-ico{
+						display:inline-block;
+						width:22px;
+						height:21px;
+						vertical-align:middle;
+						background:url($img + 'common/eve-none-ico.png') 0 0 no-repeat;
+						margin-right:9px;
+						margin-top:-4px;
+					}
+				}
+			}
+		}
+	}
+/////이벤트 당첨자 리스트 & 상세 모듈//////////////////////////////////////////////////////////////////////////////////////////
+	.eve-read-title-box{
+		.title-in{
+			.read-h2-tt{
+				// font-size:rem(90px);
+				font-size:rem(60px);
+				color:#000;
+				text-align:center;
+				line-height:1;
+				font-weight:lighter;
+				font-family:"Interstate Condensed", 'thebodyshop_jung_170', $body-font-family;
+			}
+		}
+	}
+
+	.eve-read-con-tt{
+		font-size:rem(28px);
+		color:#2b2b2b;
+		text-align:center;
+		line-height:1;
+		letter-spacing:-1px;
+	}
+
+	.our-read-con-tt{
+		font-size:rem(28px);
+		color:#2b2b2b;
+		text-align:center;
+		line-height:1;
+		letter-spacing:-1px;
+	}
+
+	.eve-con-write-day{
+		.day-end{
+			font-size:rem(12px);
+			color:#fff;
+			padding:2px 8px;
+			margin-right:5px;
+			background:#111;
+		}
+		.d-txt{
+			font-size:rem(14px);
+			color:#2b2b2b;
+			+ .d-txt {
+				position: relative;
+				margin-left: 10px;
+				padding-left: 11px;
+				&:before {
+					position: absolute;
+					display: block;
+					content: '';
+					top: 50%;
+					left: 0;
+					width: 1px;
+					height: 10px;
+					margin-top: -5px;
+					background-color: #e1e1e1;
+				}
+			}
+		}
+	}
+
+	.eve-read-contents-area{
+		//
+	}
+/////이벤트 상세 모듈//////////////////////////////////////////////////////////////////////////////////////////
+	.eve-read-admin-edit-box{
+		.edit-pc-view{
+			display:block;
+		}
+		.edit-mobile-view{
+			display:none;
+		}
+	}
+
+	.eve-detail-survey-box{
+		.gray-in-pd{
+			padding:40px 45px;
+			background:#f7f7f7;
+			.survey-num-check-list{
+				.num-check-li{
+					font-size:rem(14px);
+					color:#111;
+					margin-bottom:25px;
+					&:last-child{
+						margin-bottom:0;
+					}
+					.n-check-tt{
+						font-weight:normal;
+					}
+					.check-ul{
+						margin-top:15px;
+						.check-li{
+							margin-bottom:20px;
+							&:last-child{
+								margin-bottom:0;
+							}
+							.check-con{
+								.checker{
+									margin-right:10px;
+								}
+								.radio{
+									margin-right:9px;
+								}
+								.q-txt{
+									//
+								}
+							}
+							.etc-txt-write{
+								width:650px;
+								height:36px;
+								margin-left:16px;
+							}
+						}
+					}
+					.survey-alone-put{
+						margin-top:15px;
+						input[type=text]{
+							width:733px;
+							height: 36px;
+						}
+					}
+					.survey-radio-choice{
+						margin-top:15px;
+						ul{
+							@include cf;
+							margin:-10px 0;
+							li{
+								float:left;
+								width:407px;
+								margin:10px 0;
+								label{
+									.radio{
+										margin-right:13px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.d-survey-btn-wrap{
+				text-align:center;
+				margin-top:20px;
+				.survey-btn{
+					display:inline-block;
+					.btn{
+						width:192px;
+					}
+				}
+			}
+		}
+	}
+
+	.e-d-reply-search-area{
+		background:#f7f7f7;
+		padding:24px;
+		.reply-search-in{
+			position:relative;
+			.write-put{
+				padding-right:114px;
+				input[type=text]{
+					width:100%;
+					height:36px;
+					border-width:1px;
+					line-height:1;
+				}
+			}
+			.btn{
+				position:absolute;
+				top:0;
+				right:0;
+				width:109px;
+				&.disable{
+					cursor:default;
+					background:#888;
+				}
+			}
+		}
+	}
+
+	.reply-regist-list-area{
+		margin-top:10px;
+		.regist-list-ul{
+			.regist-list-li{
+				background:#f7f7f7;
+				padding:28px 45px;
+				+ .regist-list-li{
+					margin-top:10px;
+				}
+				.regist-list-div{
+					position:relative;
+					font-size:rem(13px);
+					color:#111;
+					@include cf;
+					.day{
+						position:absolute;
+						top:0;
+						right:0;
+						color:#7d7d7d;
+					}
+					.code{
+						font-weight:bold;
+						float:left;
+						margin-right:58px;
+					}
+					.reg-con-box{
+						width:auto;
+						overflow:hidden;
+						padding-right:100px;
+						.id{
+						}
+						.reg-txt{
+							margin-top:10px;
+							font-size:rem(14px);
+							line-height:1.4;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.product-exposure-list{
+		.product-exposure-li{
+			border:1px solid #e1e1e1;
+			padding:30px 0;
+			// min-height:465px;
+			height:443px;
+			margin-bottom:25px;
+			&:last-child{
+				margin-bottom:25px;
+			}
+			.product-exposure-in-div{
+				position:relative;
+				width:100%;
+				height:100%;
+				display:table;
+				.exposure-left-con{
+					display:table-cell;
+					margin-right:421px;
+					padding:0 330px 0 30px;
+					vertical-align:middle;
+					width:100%;
+					@include box-sizing;
+					@include cf;
+					.prod-pic{
+						position:relative;
+						// float:left;
+						width:322px;
+						// padding-right:65px;
+						display:table-cell;
+						img{
+							width:100%;
+						}
+						.product-issue{
+							top:-27px;
+						}
+					}
+					.prod-con{
+						position:relative;
+						width:auto;
+						overflow:hidden;
+						// height:255px;
+						height:100%;
+						display:table-cell;
+						vertical-align:top;
+						padding-left:65px;
+						@include box-sizing;
+						// padding-bottom:65px;
+						.prod-rela-in-box{
+							.submain-deta-title-wrap{
+								.detail-tt-h3{
+									// height:2em;
+									overflow:hidden;
+									text-overflow:ellipsis;
+									display:-webkit-box;
+									-webkit-line-clamp:2;
+									-webkit-box-orient:vertical;
+								}
+								.detail-sub-txt{
+									font-size:rem(16px);
+									margin-top:10px;
+								}
+							}
+							.capacity-total-num{
+								margin-top:20px;
+								display:inline-block;
+								vertical-align: bottom;
+								// margin-left:15px;
+								.aa-of-money{
+									font-size:rem(14px);
+									color:#7d7d7d;
+									text-decoration:line-through;
+								}
+								.total-money{
+									// display:block;
+									font-size:rem(24px);
+									color:#000;
+									line-height:1.1;
+									margin-left:5px;
+									margin-right:5px;
+								}
+							}
+							.purchasing-limit-guide{
+								min-width:auto;
+								display:block;
+								.day{
+									display:block;
+									min-width:auto;
+									max-width:320px;
+									margin-top:0;
+								}
+							}
+							.od-like-save{
+								// position:absolute;
+								// bottom:0;
+								// left:0;
+								// padding-left:65px;
+								width:100%;
+								@include box-sizing;
+								margin-top:14px;
+								.btn{
+									padding:0 10px;
+									width:40%;
+									min-width:53px;
+								}
+							}
+							.event-pro-detail-infor-area{
+								margin-top:20px;
+								.star-appraisal{
+									.product-appraisal{
+										display:inline-block;
+										vertical-align:middle;
+										margin-left:7px;
+										.appraisal-ico-link{
+											.appraisal-ico{
+												display:block;
+												width:17px;
+												height:16px;
+												background: url($img + 'common/ico-appraisal.png') 0 0 no-repeat;
+											}
+										}
+									}
+								}
+								.pro-detail-guide{
+									font-size:rem(14px);
+									color:#000;
+									margin-top:3px;
+								}
+								.capacity-total-num{
+									margin-top:8px;
+									.limit-sale{
+										display:block;
+										min-width:auto;
+										max-width:320px;
+										background:#f0f0f0;
+										padding:1px 60px;
+										font-size:rem(12px);
+										vertical-align:top;
+										margin-top:20px;
+									}
+								}
+							}
+						}
+					}
+				}
+				.exposure-right-con{
+					position:absolute;
+					top:0;
+					right:0;
+					border-left:1px solid #e1e1e1;
+					width:293px;
+					@include box-sizing;
+					padding:0 20px;
+					margin-top:25px;
+					.set-title{
+						text-align:center;
+						strong{
+							font-size:rem(21px);
+							color:#2d2d2d;
+							margin-top:-10px;
+						}
+					}
+					.set-slide-box{
+						//
+					}
+				}
+			}
+		}
+	}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+	/* layout */
+	.event-page-content-wrap{
+		/* 진행중인 이벤트 */
+		.sub-big-banner-case03-wrap{
+			//
+		}
+		.eventlist-select-choice-box{
+			margin-top:20px;
+			@include cf;
+			.left-select{
+				float:left;
+				.sort-by-select{
+					width:191px;
+				}
+			}
+			.right-btn{
+				float:right;
+				.e-bt{
+					display:inline-block;
+					vertical-align: middle;
+					.btn{
+						width:184px;
+					}
+				}
+			}
+		}
+		.event-banner-list-wrap{
+			margin-top:30px;
+		}
+		.list-up-ea-btn{
+			margin-top:48px;
+		}
+
+		/* 당첨자 발표(list) */
+		.search-p-write-area{
+			margin-top:27px;
+		}
+		.data-table{
+			margin-top:36px;
+			colgroup{
+				col{
+					&.column-wd-01{
+						width:8%;
+					}
+					&.column-wd-02{
+						width:6%;
+					}
+					&.column-wd-03{
+						width:auto;
+					}
+					&.column-wd-04{
+						width:10%;
+					}
+					&.column-wd-05{
+						width:8%;
+					}
+				}
+			}
+		}
+		.pagination{
+			margin-top:40px;
+		}
+		/* 당첨자 발표(read) */
+		.eve-read-title-box{
+			.title-in{
+				padding:70px 145px;
+			}
+			&.detail-tt{
+				.title-in{
+					padding:60px 0 30px;
+				}
+			}
+		}
+		.eve-read-contents-box{
+			.eve-read-con-tt{
+				// margin-bottom:40px;
+				padding:30px 0 50px;
+			}
+			.our-read-con-tt{
+				// margin-bottom:40px;
+				padding:30px 0 50px;
+			}
+			.eve-read-c-dayshare{
+				@include cf;
+				min-height:33px;
+				.detail-share-zone{
+					float:left;
+					width:auto;
+				}
+				.eve-con-write-day{
+					float:right;
+					padding-top:5px;
+				}
+			}
+		}
+		.eve-read-contents-area{
+			margin-top:10px;
+		}
+		.eve-read-paging-box{
+			margin-top:43px;
+			.board-navigation{
+				margin-top:0;
+			}
+		}
+		.eve-read-btn-box{
+			margin-top:40px;
+			.eve-read-btn-div{
+				text-align:center;
+				.btn{
+					width:192px;
+				}
+			}
+		}
+		/* 이벤트 상세 */
+		.eve-read-admin-edit-box{
+			margin-top:10px;
+		}
+		.eve-detail-survey-box{
+			margin-top:25px;
+		}
+		.eve-detail-whats-hot-wrap{
+			border-top: 1px solid #e1e1e1;
+			padding-top: 60px;
+			margin-top:48px;
+			.page-tt-h3{
+				text-align: center;
+				margin-bottom: 25px;
+			}
+		}
+		.eve-detail-reply-box{
+			margin-top:38px;
+		}
+		.eve-detail-product-exposure-wrap{
+			margin-top:25px;
+		}
+
+
+
+	}
+
+
+
+
+
+}

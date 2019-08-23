@@ -1,0 +1,450 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="ko" class="explorer v6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="explorer v7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="explorer v8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Web Standard Guide</title>
+<link type="text/css" rel="stylesheet" href="../resources/css/style.css" />
+<link type="text/css" rel="stylesheet" href="../wsg/res/css/wsg.css" />
+<script type="text/javascript" src="../res/js/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../res/js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/codemirror/codemirror.css" />
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/jqueryFileTree/jqueryFileTree.css" media="screen" />
+<script type="text/javascript" src="../wsg/plugin/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="../wsg/plugin/codemirror/xml.js"></script>
+<script type="text/javascript" src="../wsg/res/js/wsg.js"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="../res/js/libs/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrap">
+<!-- header -->
+<header id="header">
+	<h1><a href="index.html">PROJECT</a></h1>
+	<p class="skip-lnb"><a href="#lnb">메뉴</a></p>
+	<p class="history-back"><a href="index.html">BACK</a></p>
+</header>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container">
+	<!-- contentAside -->
+	<div id="contentAside" class="content-aside">
+		<!-- lnb -->
+		<nav id="lnb" class="lnb">
+			<h2>주요메뉴</h2>
+			<ul>
+			<li><strong>GUIDELINE</strong>
+				<ul>
+				<li><a href="information.html">PROJECT 기본정보</a></li>
+				<li><a href="naming.html">네이밍</a></li>
+				<li><a href="rule_html_code.html">HTML 코드 규칙</a></li>
+				<!--<li><a href="rule_html_mark.html">HTML 요소 작성 규칙</a></li>-->
+				<li><a href="rule_css_code.html">CSS 코드 규칙</a></li>
+				<li><a href="validation.html">테스트 및 검수</a></li>
+				</ul>
+			</li>
+			<li><strong>PROGRESS</strong>
+				<ul>
+				<li><a href="checklist.html">issue &amp; check list</a></li>
+				<li><a href="markup.html">markup</a></li>
+				</ul>
+			</li>
+			<li><strong><abbr title="User Interface">UI</abbr> LIBRARY</strong>
+				<ul>
+				<li><a href="typography.html">typography</a></li>
+				<li><a href="board.html">board</a></li>
+				<li><a href="form.html">form</a></li>
+				<li><a href="table.html">table</a></li>
+				<li><a href="tab.html">tab</a></li>
+				<li><a href="button.html">button</a></li>
+				<li><a href="panel.html">panel</a></li>
+				<li><a href="fieldset.html">fieldset</a></li>
+				<li><a href="list.html">list</a></li>
+				<li><a href="layer_popup.html">layer popup</a></li>
+				<li><a href="images.html">images</a></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+		<!-- //lnb -->
+	</div>
+	<!-- //contentAside -->
+	<!-- contentPrimary -->
+	<section id="contentPrimary" class="content-primary">
+		<h1>button</h1>
+		<section>
+			<h1>basic</h1>
+			<table class="data-table wsg medium" border="1">
+			<caption></caption>
+			<colgroup>
+				<col style="width: 120px;">
+				<col />
+				<col />
+				<col />
+				<col />
+			</colgroup>
+			<thead>
+			<tr>
+				<th>구분</th>
+				<th>xsmall</th>
+				<th>small</th>
+				<th>medium</th>
+				<th>large</th>
+				<th>xlarge</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<th>disable</th>
+				<td>
+					<a class="btn xsmall disable" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xsmall disable" type="submit" value="INPUT" />
+					<button class="btn xsmall disable" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn small disable" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn small disable" type="submit" value="INPUT" />
+					<button class="btn small disable" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn medium disable" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn medium disable" type="submit" value="INPUT" />
+					<button class="btn medium disable" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn large disable" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn large disable" type="submit" value="INPUT" />
+					<button class="btn large disable" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn xlarge disable" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xlarge disable" type="submit" value="INPUT" />
+					<button class="btn xlarge disable" type="button">BUTTON</button>
+				</td>
+			</tr>
+			<tr>
+				<th>slightly</th>
+				<td>
+					<a class="btn xsmall slightly" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xsmall slightly" type="submit" value="INPUT" />
+					<button class="btn xsmall slightly" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn small slightly" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn small slightly" type="submit" value="INPUT" />
+					<button class="btn small slightly" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn medium slightly" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn medium slightly" type="submit" value="INPUT" />
+					<button class="btn medium slightly" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn large slightly" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn large slightly" type="submit" value="INPUT" />
+					<button class="btn large slightly" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn xlarge slightly" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xlarge slightly" type="submit" value="INPUT" />
+					<button class="btn xlarge slightly" type="button">BUTTON</button>
+				</td>
+			</tr>
+			<tr>
+				<th>normal</th>
+				<td>
+					<a class="btn xsmall normal" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xsmall normal" type="submit" value="INPUT" />
+					<button class="btn xsmall normal" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn small normal" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn small normal" type="submit" value="INPUT" />
+					<button class="btn small normal" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn medium normal" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn medium normal" type="submit" value="INPUT" />
+					<button class="btn medium normal" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn large normal" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn large normal" type="submit" value="INPUT" />
+					<button class="btn large normal" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn xlarge normal" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xlarge normal" type="submit" value="INPUT" />
+					<button class="btn xlarge normal" type="button">BUTTON</button>
+				</td>
+			</tr>
+			<tr>
+				<th>weighty</th>
+				<td>
+					<a class="btn xsmall weighty" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xsmall weighty" type="submit" value="INPUT" />
+					<button class="btn xsmall weighty" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn small weighty" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn small weighty" type="submit" value="INPUT" />
+					<button class="btn small weighty" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn medium weighty" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn medium weighty" type="submit" value="INPUT" />
+					<button class="btn medium weighty" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn large weighty" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn large weighty" type="submit" value="INPUT" />
+					<button class="btn large weighty" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn xlarge weighty" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xlarge weighty" type="submit" value="INPUT" />
+					<button class="btn xlarge weighty" type="button">BUTTON</button>
+				</td>
+			</tr>
+			<tr>
+				<th>weightiest</th>
+				<td>
+					<a class="btn xsmall weightiest" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xsmall weightiest" type="submit" value="INPUT" />
+					<button class="btn xsmall weightiest" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn small weightiest" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn small weightiest" type="submit" value="INPUT" />
+					<button class="btn small weightiest" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn medium weightiest" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn medium weightiest" type="submit" value="INPUT" />
+					<button class="btn medium weightiest" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn large weightiest" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn large weightiest" type="submit" value="INPUT" />
+					<button class="btn large weightiest" type="button">BUTTON</button>
+				</td>
+				<td>
+					<a class="btn xlarge weightiest" href="javascript:void(0);">ANCHOR</a>
+					<input class="btn xlarge weightiest" type="submit" value="INPUT" />
+					<button class="btn xlarge weightiest" type="button">BUTTON</button>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+
+
+		</section>
+
+		<section>
+			<h1>btn etc</h1>
+			<div class="preview transparent">
+				<a class="btn large weighty next" href="javascript:void(0);">btn.next</a>
+				<a class="btn xlarge weightiest more" href="javascript:void(0);">btn.more</a>
+
+			</div>
+			<section class="code">
+				<h1>markup</h1>
+<pre class="brush: xml">
+&lt;!-- btn etc --&gt;
+&lt;a class="btn large weighty next" href="javascript:void(0);"&gt;btn.next&lt;/a&gt;
+&lt;a class="btn xlarge weightiest more" href="javascript:void(0);"&gt;btn.more&lt;/a&gt;
+</pre>
+			</section>
+
+		<section>
+			<h1>btn small example</h1>
+			<div class="preview transparent">
+				<a class="btn small normal" href="javascript:void(0);">ANCHOR</a>
+				<input class="btn small normal" type="submit" value="INPUT" />
+				<button class="btn small normal" type="button">BUTTON</button>
+			</div>
+			<section class="code">
+				<h1>markup</h1>
+<pre class="brush: xml">
+&lt;!-- btn small --&gt;
+&lt;a class="btn small normal" href="javascript:void(0);"&gt;ANCHOR&lt;/a&gt;
+&lt;input class="btn small normal" type="submit" value="INPUT" /&gt;
+&lt;button class="btn small normal" type="button"&gt;BUTTON&lt;/button&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>btn large example</h1>
+			<div class="preview transparent">
+				<a class="btn large normal" href="javascript:void(0);">ANCHOR</a>
+				<input class="btn large normal" type="submit" value="INPUT" />
+				<button class="btn large normal" type="button">BUTTON</button>
+			</div>
+			<section class="code">
+				<h1>markup</h1>
+<pre class="brush: xml">
+&lt;!-- btn large --&gt;
+&lt;a class="btn large normal" href="javascript:void(0);"&gt;ANCHOR&lt;/a&gt;
+&lt;input class="btn large normal" type="submit" value="INPUT" /&gt;
+&lt;button class="btn large normal" type="button"&gt;BUTTON&lt;/button&gt;
+</pre>
+			</section>
+		</section>
+
+		<section>
+			<h1>align center</h1>
+			<div class="preview transparent">
+				<!-- button-aera -->
+				<div class="button-area large">
+					<a class="btn medium normal" href="javascript:void(0);">중앙정렬</a>
+					<a class="btn medium normal" href="javascript:void(0);">중앙정렬</a>
+				</div>
+				<!-- //button-aera -->
+			</div>
+			<section class="preview code">
+				<h1>markup</h1>
+<pre class="brush: xml">
+&lt;!-- button-aera --&gt;
+&lt;div class="button-area large"&gt;
+	&lt;a class="btn medium normal" href="javascript:void(0);"&gt;중앙정렬&lt;/a&gt;
+	&lt;a class="btn medium normal" href="javascript:void(0);"&gt;중앙정렬&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- //button-aera --&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>align right</h1>
+			<div class="preview transparent">
+				<!-- button-aera -->
+				<div class="button-area large">
+					<span>
+						<a class="btn medium normal" href="javascript:void(0);">우측정렬</a>
+						<a class="btn medium normal" href="javascript:void(0);">우측정렬</a>
+					</span>
+				</div>
+				<!-- //button-aera -->
+			</div>
+			<section class="preview code">
+				<h1>markup</h1>
+<pre class="brush: xml">
+&lt;!-- button-aera --&gt;
+&lt;div class="button-area large"&gt;
+	&lt;span&gt;
+		&lt;a class="btn medium normal" href="javascript:void(0);"&gt;우측정렬&lt;/a&gt;
+		&lt;a class="btn medium normal" href="javascript:void(0);"&gt;우측정렬&lt;/a&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+&lt;!-- //button-aera --&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>align left</h1>
+			<div class="preview transparent">
+				<!-- button-aera -->
+				<div class="button-area large">
+					<span>
+						<a class="btn medium normal" href="javascript:void(0);">우측정렬</a>
+						<a class="btn medium normal" href="javascript:void(0);">우측정렬</a>
+					</span>
+					<span>
+						<a class="btn medium normal" href="javascript:void(0);">좌측정렬</a>
+						<a class="btn medium normal" href="javascript:void(0);">좌측정렬</a>
+					</span>
+				</div>
+				<!-- //button-aera -->
+			</div>
+			<section class="preview code">
+				<h1>markup</h1>
+<pre class="brush: xml">
+&lt;!-- button-aera --&gt;
+&lt;div class="button-area large"&gt;
+	&lt;span&gt;
+		&lt;a class="btn medium normal" href="javascript:void(0);"&gt;우측정렬&lt;/a&gt;
+		&lt;a class="btn medium normal" href="javascript:void(0);"&gt;우측정렬&lt;/a&gt;
+	&lt;/span&gt;
+	&lt;span&gt;
+		&lt;a class="btn medium normal" href="javascript:void(0);"&gt;좌측정렬&lt;/a&gt;
+		&lt;a class="btn medium normal" href="javascript:void(0);"&gt;좌측정렬&lt;/a&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+&lt;!-- //button-aera --&gt;
+</pre>
+			</section>
+		</section>
+
+		<section>
+			<h1>etc</h1>
+			<div class="preview">
+				<!-- button-aera -->
+				<div class="button-area sort">
+					<span>
+						<a class="btn register active univ-after" href="javascript:void(0);">등록순</a>
+						<a class="btn view univ-after" href="javascript:void(0);">조회순</a>
+						<a class="btn comment univ-after" href="javascript:void(0);">댓글순</a>
+					</span>
+				</div>
+				<!-- //button-aera -->
+				<!-- aside -->
+				<div class="aside sns">
+					<a class="btn export facebook univ-after" href="javascript:void(0);">페이스북 내보내기</a>
+					<a class="btn export twitter univ-after" href="javascript:void(0);">트위터 내보내기</a>
+					<a class="btn export blog univ-after" href="javascript:void(0);">블로그 내보내기</a>
+				</div>
+				<!-- //aside -->
+				<!-- aside -->
+				<div class="aside">
+					<a class="btn direct" href="javascript:void(0);">1:1 친절상담 바로 가기</a>
+				</div>
+				<!-- //aside -->
+				<a class="btn like univ-after" href="javascript:void(0);">좋아요</a>
+				<a class="btn like active univ-after" href="javascript:void(0);">좋아요</a>
+			</div>
+			<section class="preview code">
+				<h1>markup</h1>
+<pre class="brush: xml">
+&lt;!-- button-aera --&gt;
+&lt;div class="button-area sort"&gt;
+	&lt;span&gt;
+		&lt;a class="btn register active univ-after" href="javascript:void(0);"&gt;등록순&lt;/a&gt;
+		&lt;a class="btn view univ-after" href="javascript:void(0);"&gt;조회순&lt;/a&gt;
+		&lt;a class="btn comment univ-after" href="javascript:void(0);"&gt;댓글순&lt;/a&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+&lt;!-- //button-aera --&gt;
+&lt;!-- aside --&gt;
+&lt;div class="aside sns"&gt;
+	&lt;a class="btn export facebook univ-after" href="javascript:void(0);"&gt;페이스북 내보내기&lt;/a&gt;
+	&lt;a class="btn export twitter univ-after" href="javascript:void(0);"&gt;트위터 내보내기&lt;/a&gt;
+	&lt;a class="btn export blog univ-after" href="javascript:void(0);"&gt;블로그 내보내기&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- //aside --&gt;
+&lt;!-- aside --&gt;
+&lt;div class="aside"&gt;
+	&lt;a class="btn direct" href="javascript:void(0);"&gt;1:1 친절상담 바로 가기&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- //aside --&gt;
+&lt;a class="btn like univ-after" href="javascript:void(0);"&gt;좋아요&lt;/a&gt;
+&lt;a class="btn like active univ-after" href="javascript:void(0);"&gt;좋아요&lt;/a&gt;
+</pre>
+			</section>
+		</section>
+
+	</section>
+	<!-- //contentPrimary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<footer id="footer">
+	<small><span>Copyright &copy; 2013 <abbr title="Web Standard Guide">WSG</abbr></span> <span>made by <a target="_blank" href="http://www.braveinno.com/ver3/html/main.html">BRAVE INNOVATION</a> TX GROUP.</span></small>
+</footer>
+<!-- //footer -->
+</div>
+</body>
+</html>

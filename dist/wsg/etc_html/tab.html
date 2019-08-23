@@ -1,0 +1,284 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="ko" class="explorer v6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="explorer v7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="explorer v8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Web Standard Guide</title>
+<link type="text/css" rel="stylesheet" href="../resources/css/style.css" />
+<link type="text/css" rel="stylesheet" href="../wsg/res/css/wsg.css" />
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../wsg/res/js/wsg.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="../wsg/plugin/codemirror/codemirror.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="../wsg/plugin/jqueryFileTree/jqueryFileTree.css" media="screen" /> -->
+<!-- <script type="text/javascript" src="../wsg/plugin/codemirror/codemirror.js"></script> -->
+<!-- <script type="text/javascript" src="../wsg/plugin/codemirror/xml.js"></script> -->
+<!-- <script type="text/javascript" src="../wsg/res/js/wsg.js"></script> -->
+<!--[if lte IE 8]><script type="text/javascript" src="../res/js/libs/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrap">
+<!-- header -->
+<header id="header">
+	<h1><a href="index.html">PROJECT</a></h1>
+	<p class="skip-lnb"><a href="#lnb">메뉴</a></p>
+	<p class="history-back"><a href="index.html">BACK</a></p>
+</header>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container">
+	<!-- contentAside -->
+	<div id="contentAside" class="content-aside">
+		<!-- lnb -->
+		<nav id="lnb" class="lnb">
+			<h2>주요메뉴</h2>
+			<ul>
+			<li><strong>GUIDELINE</strong>
+				<ul>
+				<li><a href="information.html">PROJECT 기본정보</a></li>
+				<li><a href="naming.html">네이밍</a></li>
+				<li><a href="rule_html_code.html">HTML 코드 규칙</a></li>
+				<!--<li><a href="rule_html_mark.html">HTML 요소 작성 규칙</a></li>-->
+				<li><a href="rule_css_code.html">CSS 코드 규칙</a></li>
+				<li><a href="validation.html">테스트 및 검수</a></li>
+				</ul>
+			</li>
+			<li><strong>PROGRESS</strong>
+				<ul>
+				<li><a href="checklist.html">issue &amp; check list</a></li>
+				<li><a href="markup.html">markup</a></li>
+				</ul>
+			</li>
+			<li><strong><abbr title="User Interface">UI</abbr> LIBRARY</strong>
+				<ul>
+				<li><a href="typography.html">typography</a></li>
+				<li><a href="form.html">form</a></li>
+				<li><a href="table.html">table</a></li>
+				<li><a href="tab.html">tab</a></li>
+				<li><a href="button.html">button</a></li>
+				<li><a href="panel.html">panel</a></li>
+				<li><a href="fieldset.html">fieldset</a></li>
+				<li><a href="list.html">list</a></li>
+				<li><a href="images.html">images</a></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+		<!-- //lnb -->
+	</div>
+	<!-- //contentAside -->
+	<!-- contentPrimary -->
+	<section id="contentPrimary" class="content-primary">
+		<h1>tab</h1>
+		<p>content 내의 section간 이동 또는 page이동시 사용되며, 해당 항목에 class="active" 추가시 활성화 됩니다.</p>
+		<section>
+			<h1>tab x-small</h1>
+			<p>section 의 항목 분류에 사용하며, 활성화시 해당 항목에 class .active를 추가 합니다. <a target="_blank" href="/wsg/layout.html">레이아웃 보기</a></p>
+			<p>항목 개별의 녋이는 해당 항목의 글자 수에 따라 밀려 납니다.</p>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<!-- tab x-small -->
+					<ul class="tab x_small">
+					<li><a href="#">항목1</a></li>
+					<li><a href="#">항목2</a></li>
+					<li class="active"><a href="#">항목3</a></li>
+					<li><a href="#">항목4</a></li>
+					</ul>
+					<!-- //tab x-small -->
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;!-- tab x_small --&gt;
+&lt;ul class="tab small"&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목2&lt;/a&gt;&lt;/li&gt;
+&lt;li class="active"&gt;&lt;a href="#"&gt;항목3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //tab x_small --&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>tab small</h1>
+			<p>section 의 항목 분류에 사용하며, 활성화시 해당 항목에 class .active를 추가 합니다. <a target="_blank" href="/wsg/layout.html">레이아웃 보기</a></p>
+			<p>tab의 넓이는 부모 container의 넓이를 상속 받으며, 항목 개별의 녋이는 해당 항목의 글자 수에 따라 밀려 납니다.</p>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<!-- tab small -->
+					<ul class="tab small">
+					<li><a href="#">항목1</a></li>
+					<li><a href="#">항목2</a></li>
+					<li class="active"><a href="#">항목3</a></li>
+					<li><a href="#">항목4</a></li>
+					</ul>
+					<!-- //tab small -->
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;!-- tab small --&gt;
+&lt;ul class="tab small"&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목2&lt;/a&gt;&lt;/li&gt;
+&lt;li class="active"&gt;&lt;a href="#"&gt;항목3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //tab small --&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>tab medium</h1>
+			<p>section 의 항목 분류에 사용하며, 활성화시 해당 항목에 class .active를 추가 합니다. <a target="_blank" href="/wsg/layout.html">레이아웃 보기</a></p>
+			<p>tab의 넓이는 부모 container의 넓이를 상속 받으며, 항목 개별의 녋이는 해당 항목의 글자 수에 따라 밀려 납니다.</p>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<!-- tab small -->
+					<ul class="tab medium">
+					<li><a href="#">항목1</a></li>
+					<li><a href="#">항목2</a></li>
+					<li class="active"><a href="#">항목3</a></li>
+					<li><a href="#">항목4</a></li>
+					</ul>
+					<!-- //tab small -->
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;!-- tab medium --&gt;
+&lt;ul class="tab medium"&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목2&lt;/a&gt;&lt;/li&gt;
+&lt;li class="active"&gt;&lt;a href="#"&gt;항목3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //tab medium --&gt;
+</pre>
+			</section>
+		</section>
+		<section style="display: 1none;">
+			<h1>tab large</h1>
+			<!--p>content의 항목 분류에 사용합니다. <a target="_blank" href="/wsg/layout.html">레이아웃 보기</a></p>
+			<p>tab의 넓이는 부모 container의 넓이를 상속 받으며, 항목 개별의 넓이는 항목의 갯수에 따라 재 설정 됩니다. 이와 같은 방법은 오류를 줄이기 위함이며, 항목의 size는 해당 CSS에서 반드시 설정합니다.</p-->
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<!-- tab medium -->
+					<ul class="tab large">
+					<li><a href="#">항목1</a></li>
+					<li class="active"><a href="#">항목2</a></li>
+					<li><a href="#">항목3</a></li>
+					<li><a href="#">항목4</a></li>
+					</ul>
+					<!-- //tab medium -->
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;!-- tab large --&gt;
+&lt;ul class="tab large"&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목1&lt;/a&gt;&lt;/li&gt;
+&lt;li class="active"&gt;&lt;a href="#"&gt;항목2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;항목4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //tab medium --&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>skip-link example</h1>
+			<p>skip-link는 content 내의 section의 이동시 사용 할 수 있습니다. skip-link의 항목 중, 활성화 할 항목에 class .active를 추가 하면 해당 항목의 href를 제외한 나머지 content는 hidden처리 됩니다.</p>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<!-- tab medium -->
+					<ul class="tab small skip_link">
+					<li><a href="#example1">항목1</a></li>
+					<li class="active"><a href="#example2">항목2</a></li>
+					<li><a href="#example3">항목3</a></li>
+					<li><a href="#example4">항목4</a></li>
+					</ul>
+					<!-- //tab medium -->
+					<div class="wrap">
+						<section class="content" id="example1">
+							<h1>서울 숭례문</h1>
+							<p>정면 5칸, 측면 2칸, 중층(重層)의 우진각지붕 다포(多包)집이다. 서울 도성의 남쪽 정문이라서 통칭 남대문(南大門)이라고 불린다. 1395년(태조 4)에 짓기 시작하여 1398년(태조 7)에 완성되었고, 1447년(세종 29)에 개축하였다. 그러나 1961∼1963년에 있었던 해체, 수리에 의한 조사에서 1479년(성종 10)에도 비교적 대규모의 보수공사가 있었던 것이 밝혀졌다.</p>
+						</section>
+						<section class="content" id="example2">
+							<h1>원각사지 십층석탑</h1>
+							<p>1962년 12월 20일 국보 제2호로 지정되었다. 높이 약 12m이다. 이 탑보다 약 120년 전에 만들어진 고려시대 경천사(敬天寺) 십층석탑(국보 86)을 모방하여 만든 탑이다. '아(亞)' 자형의 3층 기단, 이와 같은 평면의 3층 탑신, 네모꼴로 된 4층 이상의 탑신이 경천사 십층석탑과 기본적으로 같다.</p>
+						</section>
+						<section class="content" id="example3">
+							<h1>신라진흥왕순수비</h1>
+							<p>1962년 12월 20일 국보 제3호로 지정되었다. 비신(碑身)의 높이 1.54m, 너비 0.69m, 두께 0.16m이다. 파손이 우려되어 현재는 국립중앙박물관에서 소장하고 있다.</p>
+							<p>지금까지 발견된 4기(基)의 진흥왕순수비 중 하나로, 화강암으로 된 이 비석의 형태는 다른 비와는 달리 직사각형으로 가공된 석재를 사용하여 자연암반 위에 2단의 층을 만들고 세웠다. 비신의 상단(上端)에 1단의 촉을 만든 것으로 보아 원래는 개석(蓋石)을 덮었던 것으로 추정된다.</p>
+						</section>
+						<section class="content" id="example4">
+							<h1>신라진흥왕순수비</h1>
+							<p>1962년 12월 20일 국보 제3호로 지정되었다. 비신(碑身)의 높이 1.54m, 너비 0.69m, 두께 0.16m이다. 파손이 우려되어 현재는 국립중앙박물관에서 소장하고 있다.</p>
+							<p>지금까지 발견된 4기(基)의 진흥왕순수비 중 하나로, 화강암으로 된 이 비석의 형태는 다른 비와는 달리 직사각형으로 가공된 석재를 사용하여 자연암반 위에 2단의 층을 만들고 세웠다. 비신의 상단(上端)에 1단의 촉을 만든 것으로 보아 원래는 개석(蓋石)을 덮었던 것으로 추정된다.</p>
+						</section>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;!-- tab medium --&gt;
+&lt;ul class="tab medium skip_link"&gt;
+&lt;li&gt;&lt;a href="#example1"&gt;항목1&lt;/a&gt;&lt;/li&gt;
+&lt;li class="active"&gt;&lt;a href="#example2"&gt;항목2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#example3"&gt;항목3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#example3"&gt;항목4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //tab medium --&gt;
+&lt;div class="wrap"&gt;
+	&lt;section class="content" id="example1"&gt;
+		&lt;h1&gt;서울 숭례문&lt;/h1&gt;
+		&lt;p&gt;정면 5칸, 측면 2칸, 중층(重層)의 우진각지붕 다포(多包)집이다. 서울 도성의 남쪽 정문이라서 통칭 남대문(南大門)이라고 불린다. 1395년(태조 4)에 짓기 시작하여 1398년(태조 7)에 완성되었고, 1447년(세종 29)에 개축하였다. 그러나 1961∼1963년에 있었던 해체, 수리에 의한 조사에서 1479년(성종 10)에도 비교적 대규모의 보수공사가 있었던 것이 밝혀졌다.&lt;/p&gt;
+	&lt;/section&gt;
+	&lt;section class="content" id="example2"&gt;
+		&lt;h1&gt;원각사지 십층석탑&lt;/h1&gt;
+		&lt;p&gt;1962년 12월 20일 국보 제2호로 지정되었다. 높이 약 12m이다. 이 탑보다 약 120년 전에 만들어진 고려시대 경천사(敬天寺) 십층석탑(국보 86)을 모방하여 만든 탑이다. '아(亞)' 자형의 3층 기단, 이와 같은 평면의 3층 탑신, 네모꼴로 된 4층 이상의 탑신이 경천사 십층석탑과 기본적으로 같다.&lt;/p&gt;
+	&lt;/section&gt;
+	&lt;section class="content" id="example3"&gt;
+		&lt;h1&gt;신라진흥왕순수비&lt;/h1&gt;
+		&lt;p&gt;1962년 12월 20일 국보 제3호로 지정되었다. 비신(碑身)의 높이 1.54m, 너비 0.69m, 두께 0.16m이다. 파손이 우려되어 현재는 국립중앙박물관에서 소장하고 있다.&lt;/p&gt;
+		&lt;p&gt;지금까지 발견된 4기(基)의 진흥왕순수비 중 하나로, 화강암으로 된 이 비석의 형태는 다른 비와는 달리 직사각형으로 가공된 석재를 사용하여 자연암반 위에 2단의 층을 만들고 세웠다. 비신의 상단(上端)에 1단의 촉을 만든 것으로 보아 원래는 개석(蓋石)을 덮었던 것으로 추정된다.&lt;/p&gt;
+	&lt;/section&gt;
+	&lt;section class="content" id="example4"&gt;
+		&lt;h1&gt;신라진흥왕순수비&lt;/h1&gt;
+		&lt;p&gt;1962년 12월 20일 국보 제3호로 지정되었다. 비신(碑身)의 높이 1.54m, 너비 0.69m, 두께 0.16m이다. 파손이 우려되어 현재는 국립중앙박물관에서 소장하고 있다.&lt;/p&gt;
+		&lt;p&gt;지금까지 발견된 4기(基)의 진흥왕순수비 중 하나로, 화강암으로 된 이 비석의 형태는 다른 비와는 달리 직사각형으로 가공된 석재를 사용하여 자연암반 위에 2단의 층을 만들고 세웠다. 비신의 상단(上端)에 1단의 촉을 만든 것으로 보아 원래는 개석(蓋石)을 덮었던 것으로 추정된다.&lt;/p&gt;
+	&lt;/section&gt;
+&lt;/div&gt;
+</pre>
+			</section>
+		</section>
+	</section>
+	<!-- //contentPrimary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<footer id="footer">
+	<small><span>Copyright &copy; 2013 <abbr title="Web Standard Guide">WSG</abbr></span> <span>made by <a target="_blank" href="http://www.braveinno.com/ver3/html/main.html">BRAVE INNOVATION</a> TX GROUP.</span></small>
+</footer>
+<!-- //footer -->
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@@ 한줄 압축명령
+sass -w -E utf-8 -t compact wsg.scss:../css/wsg.css
+
+
+@@ 전체 압축명령
+sass -w -E utf-8 -t compressed wsg.scss:../css/wsg.css

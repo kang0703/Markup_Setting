@@ -1,0 +1,338 @@
+@include mq($pc) {
+
+	/* module */
+	.shop-sear-search-box{
+		background:#f7f7f7;
+		padding:24px;
+		.ss-search-in{
+			position:relative;
+			@include cf;
+			.shop-all-sel-cate{
+				float:left;
+				// max-width:608px;
+				font-size:0;
+				width:50%;
+				margin:0 -2px;
+				.area-cate-sel{
+					display:inline-block;
+					width:33.333333%;
+					padding:0 2px;
+					@include box-sizing;
+					.sort-by-select{
+						.selectric-wrapper{
+							.selectric{
+								border:0;
+							}
+						}
+					}
+				}
+			}
+			.shop-all-put-write{
+				float:right;
+				width:50%;
+				// max-width:615px;
+				@include box-sizing;
+				padding-left:24px;
+				.search-write-pd{
+					display:inline-block;
+					padding-right:170px;
+					width:100%;
+					@include box-sizing;
+					.search-write-put{
+						position:relative;
+						.search-ico{
+							display:block;
+							width:46px;
+							height:46px;
+							position:absolute;
+							top:0;
+							left:0;
+							background:url($img + 'svg/icon-search.svg') center center no-repeat;
+							background-size:18px;
+						}
+						.sc-word-put{
+							width:100%;
+							border-width:1px;
+							padding:10px 40px 10px 44px;
+							&::-ms-clear{
+								display:none;
+							}
+						}
+						.sc-word-del{
+							display:none;
+							width:46px;
+							height:46px;
+							position:absolute;
+							top:0;
+							right:0;
+							background:url($img + 'svg/icon-close.svg') center center no-repeat;
+							background-size:18px;
+							&.on{
+								display:block;
+							}
+						}
+					}
+				}
+				.btn{
+					position:absolute;
+					top:0;
+					right:0;
+					width:150px;
+				}
+			}
+		}
+	}
+
+	.shop-sear-map-box{
+		height:580px;
+		@include cf;
+		.ssm-detail-box{
+			display:block !important;
+			position:relative;
+			float:left;
+			height:100%;
+			@include box-sizing;
+			.ssm-detail-place-overbox{
+				height:100%;
+				overflow:hidden;
+				.ssm-detail-place-list{
+					position:relative;
+					width:380px;
+					height:100%;
+					border:2px solid #e1e1e1;
+					@include box-sizing;
+					.detail-place-tt{
+						position:absolute;
+						top:0;
+						left:0;
+						font-size:rem(14px);
+						color:#111;
+						width:100%;
+						height:48px;
+						line-height:48px;
+						background:#e1e1e1;
+						padding:0 20px;
+						@include box-sizing;
+					}
+					.detail-place-over-sc{
+						height:100%;
+						padding-top:46px;
+						@include box-sizing;
+						.detail-place-zone{
+							height:100%;
+							overflow:hidden;
+							overflow-y:auto;
+							li{
+								border-bottom:1px solid #e1e1e1;
+								&:last-child{
+									border-bottom:0;
+								}
+								.d-place-con-box{
+									display:block;
+									text-decoration:none;
+									padding:15px 23px;
+									.d-place-con-in-div{
+										@include cf;
+										.here-place-ico{
+											float:left;
+											display:block;
+											color:#fff;
+											font-style:normal;
+											width:30px;
+											height:40px;
+											background:url($img + 'common/map-place-ico.png') 0 0 no-repeat;
+											text-align:center;
+											line-height:30px;
+										}
+										.de-infor-txt{
+											width:auto;
+											overflow:hidden;
+											color:#111;
+											padding-left:15px;
+											.tt{
+												font-size:rem(14px);
+											}
+											.con-txt{
+												// margin-top:5px;
+												font-size:rem(13px);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.ssm-detail-place-infobox{
+				height:100%;
+				overflow:hidden;
+				.ssm-detail-place-list{
+					position:relative;
+					width:380px;
+					height:100%;
+					border:2px solid #e1e1e1;
+					padding:46px 0;
+					@include box-sizing;
+					.ssm-detail-infor-scroll{
+						overflow:hidden;
+						overflow-y:auto;
+						height:100%;
+						padding:0 23px;
+						.d-place-con-in-div{
+							@include cf;
+							.here-place-ico{
+								float:left;
+								display:block;
+								color:#fff;
+								font-style:normal;
+								width:30px;
+								height:40px;
+								background:url($img + 'common/map-place-ico.png') 0 0 no-repeat;
+								text-align:center;
+								line-height:30px;
+							}
+							.de-infor-txt{
+								width:auto;
+								overflow:hidden;
+								color:#111;
+								padding-left:15px;
+								.tt{
+									font-size:rem(14px);
+								}
+								.con-txt{
+									font-size:rem(13px);
+								}
+							}
+						}
+						.d-place-pic{
+							margin-top:15px;
+							img{
+								max-width:100%;
+							}
+						}
+						.d-place-number-infor{
+							margin-top:20px;
+							li{
+								font-size:rem(13px);
+								color:#111;
+								margin-bottom:20px;
+								.dp-number-ico{
+									display:inline-block;
+									vertical-align: middle;
+									width:24px;
+									height:24px;
+									background-position: center;
+									margin-right:20px;
+									&.tell{
+										background-image:url($img + 'common/dp-number-ico-tell.gif');
+									}
+									&.clock{
+										background-image:url($img + 'common/dp-number-ico-clock.gif');
+									}
+								}
+							}
+						}
+						.d-place-txt-infor{
+							li{
+								font-size:rem(13px);
+								color:#111;
+								margin-bottom:13px;
+								&:last-child{
+									margin-bottom:0;
+								}
+								strong{
+									//
+								}
+								p{
+									line-height:1.4;
+								}
+							}
+						}
+					}
+					.back-to-results-btn{
+						z-index:6;
+						position:absolute;
+						top:0;
+						right:0;
+						// width:100%;
+						text-align:center;
+						a{
+							display:block;
+							width:46px;
+							height:46px;
+							background:#e1e1e1 url($img + 'svg/icon-close.svg') center no-repeat;
+							background-size:35%;
+
+							position:relative;
+							font-size:rem(14px);
+							font-weight:500;
+							color:#000;
+							text-decoration:none;
+
+							// &:after{
+							// 	content:"";
+							// 	display:block;
+							// 	height:2px;
+							// 	width:100%;
+							// 	background:#000;
+							// 	position:absolute;
+							// 	bottom:-3px;
+							// 	left:0;
+							// }
+						}
+					}
+				}
+			}
+			.place-list-toggle-btn{
+				position:absolute;
+				top:0;
+				right:0;
+				border:0;
+				background:#e1e1e1 url($img + 'svg/icon-arrow-left.svg') center center no-repeat;
+				background-size:9px;
+				width:48px;
+				height:48px;
+				cursor:pointer;
+				z-index:5;
+				&.close{
+					@include box-sizing;
+					border:1px solid #fff;
+					right:-48px;
+					background:#e1e1e1 url($img + 'svg/icon-arrow-right.svg') center center no-repeat;
+					background-size:9px;
+				}
+			}
+		}
+
+		.ssm-map-box{
+			display:block !important;
+			height:100%;
+			width:auto;
+			overflow:hidden;
+		}
+	}
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+	/* layout */
+	.shop-search-page-wrap{
+		.shop-sear-search-box{
+			//
+		}
+		.shop-mobile-tab{
+			display:none;
+		}
+		.shop-sear-map-box{
+			margin-top:35px;
+		}
+	}
+
+
+}

@@ -1,0 +1,216 @@
+@include mq($pc) {
+	/* module */
+	.gift-con-tt{
+		font-size:rem(28px);
+		color:#111;
+		text-align:center;
+		line-height:1.2;
+	}
+
+	.gift-normal-center-txt{
+		font-size:rem(14px);
+		color:#2b2b2b;
+		line-height:1.8;
+		text-align:center;
+	}
+
+	.gift-card-list-box{
+		.cd-if-area{
+			text-align:center;
+			margin-bottom:45px;
+			&:last-child{
+				margin-bottom:0;
+			}
+			.cd-tt{
+				font-size:rem(18px);
+				color:#111;
+			}
+			.cd-guide{
+				font-size:rem(14px);
+				color:#2d2d2d;
+				margin-top:5px;
+			}
+			.cd-img{
+				font-size:0;
+				margin-top:20px;
+				li{
+					display:inline-block;
+					width:411px;
+					padding:0 6.5px;
+					div{
+						border:1px solid #d7d7d7;
+						img{
+							width:100%;
+						}
+					}
+				}
+			}
+		}
+		.gift-card-list-guide{
+			text-align:center;
+			font-size:rem(14px);
+			color:#2d2d2d;
+		}
+	}
+
+	.gift-bnc-dash-list{
+		margin-bottom:15px;
+		&:last-child{
+			margin-bottom:0;
+		}
+		.dash-list-ul{
+			li{
+				position:relative;
+				font-size:rem(14px);
+				color:#2d2d2d;
+				line-height:1.6;
+				margin-bottom:5px;
+				padding-left:9px;
+				&:after{
+					content:"";
+					display:block;
+					width:5px;
+					height:1px;
+					background:#2d2d2d;
+					position:absolute;
+					top:9px;
+					left:0;
+				}
+				&:last-child{
+					margin-bottom:0;
+				}
+			}
+		}
+		.g-strong-bold{
+			display:block;
+			font-size:rem(14px);
+			color:#2d2d2d;
+			margin-bottom:10px;
+		}
+		.g-nor-txt{
+			font-size:rem(14px);
+			color:#2d2d2d;
+			margin-bottom:15px;
+		}
+	}
+
+	.access-list-ul-zone{
+		// padding-left:15px;
+		.access-list-li{
+			font-size:rem(14px);
+			color:#2d2d2d;
+			margin-bottom:35px;
+			&:last-child{
+				margin-bottom:0;
+			}
+			.access-tt{
+				display:block;
+				font-size:rem(18px);
+				color:#111;
+			}
+			.access-st-txt{
+				margin-top:13px;
+			}
+			.access-st-txt{
+				margin-top:13px;
+			}
+			.access-lis-num{
+				margin-top:13px;
+				list-style:decimal;
+				padding-left:18px;
+				.access-lis-li{
+					.number-st{
+						//
+					}
+					.txt-st{
+						//
+					}
+					.access-in-lis{
+						margin-top:5px;
+						margin-bottom:8px;
+						list-style:lower-roman;
+						padding-left:18px;
+						li{
+							//
+						}
+					}
+					.number-in-lis{
+						margin-top:5px;
+						li{
+							position:relative;
+							padding-left:28px;
+							.nb-span{
+								position:absolute;
+								top:0;
+								left:0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+	/* layout */
+	.gift-page-content-wrap{
+		.sub-big-banner-case03-wrap{
+			.big-banner-cell{
+				// padding:40px 8px;
+			}
+		}
+		.tab{
+			margin-top:18px;
+		}
+		.gift-contents-area{
+			padding-top:45px;
+			.gift-con-tt{
+				//
+			}
+			.gift-normal-center-txt{
+				margin-top:40px;
+			}
+			.gift-card-list-box{
+				margin-top:45px;
+			}
+
+			.gift-bnc-board{
+				margin-top:45px;
+				.data-table{
+					colgroup{
+						col{
+							&.first-col{
+								width:290px;
+							}
+							&.last-col{
+								width:auto;
+							}
+						}
+					}
+					tbody{
+						tr{
+							th{
+								.gift-bnc-th-sub{
+									color:#7d7d7d;
+								}
+							}
+							td{
+								padding:14px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+}

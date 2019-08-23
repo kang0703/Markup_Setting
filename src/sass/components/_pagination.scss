@@ -1,0 +1,90 @@
+/* pagination medium */
+$page-sizeW: 25px;
+$page-sizeH: 28px;
+$page-size-m: 16px;
+
+.pagination.medium {
+	font-size:0;
+	position: relative;
+	// margin-top: 40px;
+	// margin: 0 auto;
+	// height: $page-size + 2px;
+	// line-height: $page-size + 2px;
+	// font-family: tahoma, dotum,'돋움', sans-serif;
+	text-align: center;
+	a,strong {
+		margin:0 3px;
+		// margin-left: -5px;
+		// margin: 0 5px;
+		// padding: 0 1px;
+		display: inline-block;
+		width: $page-sizeW;
+		height: $page-sizeH;
+		line-height: $page-sizeH - 2px;
+		font-size: rem(12px);
+		// text-decoration: none;
+		vertical-align: top;
+		@include box-sizing(border-box);
+		// @include border-radius(2px);
+		// margin-right: 4px;
+	}
+	a {
+		color: #000;
+		// border: 1px solid #fff;
+	}
+	strong {
+		color: #000;
+		border: 1px solid #000;
+		// background-color: #595f6a;
+	}
+	.btn {
+		&.prev, &.next, &.first, &.last {
+			position: relative;
+			// margin: 0;
+			width: auto;
+			text-decoration: underline;
+			// background-color: #fff;
+			// @include ir;
+			.arrow {
+				font-size: 0.9em;
+			}
+			.word {
+				// @include ir;
+			}
+			&:after, .after {
+				// display: block;
+				// content: '';
+				// position: absolute;
+				// top: 0;
+				// left: 0;
+				// width: 100%;
+				// height: 100%;
+				// background-color: #fff;
+				// background-position: center center;
+				// background-repeat: no-repeat;
+			}
+		}
+		// &.prev {
+		// 	margin-right: 20px;
+		// 	&:after, .after {
+		// 		background-image: url('../common/ico_pagination_prev.png');
+		// 	}
+		// }
+		// &.next {
+		// 	margin-left: 20px;
+		// 	&:after, .after {
+		// 		background-image: url('../common/ico_pagination_next.png');
+		// 	}
+		// }
+		// &.first {
+		// 	&:after, .after {
+		// 		background-image: url('../common/ico_pagination_first.png');
+		// 	}
+		// }
+		// &.last {
+		// 	&:after, .after {
+		// 		background-image: url('../common/ico_pagination_last.png');
+		// 	}
+		// }
+	}
+}

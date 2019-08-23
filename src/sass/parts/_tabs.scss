@@ -1,0 +1,127 @@
+/* tab */
+
+
+/**********************************************************************************
+ * standard
+ * 일반 규격
+ **********************************************************************************/
+.tab{
+	ul{
+		@include cf;
+		display:table;
+		table-layout:fixed;
+		width:100%;
+		border-collapse:collapse;
+		li{
+			display:table-cell;
+			border:1px solid #000;
+			width:50%;
+			a{
+				display:block;
+				font-size:1rem;
+				color:#333;
+				text-align:center;
+				span{
+					display:block;
+					white-space: nowrap;
+					overflow:hidden;
+					text-overflow:ellipsis;
+				}
+			}
+			&.on{
+				a{
+					color:#fff;
+					font-weight:bold;
+					background:orange;
+				}
+			}
+		}
+	}
+}
+
+
+/**********************************************************************************
+ * size
+ * 크기 - 3 type
+ **********************************************************************************/
+.tab.small{
+	ul{
+		//
+	}
+	li{
+		//
+	}
+	a{
+		font-size:1rem;
+		padding:5px;
+	}
+}
+
+.tab.medium{
+	ul{
+		//
+	}
+	li{
+		//
+	}
+	a{
+		font-size:1.1rem;
+		padding:10px;
+	}
+}
+
+.tab.large{
+	ul{
+		//
+	}
+	li{
+		//
+	}
+	a{
+		font-size:1.2rem;
+		padding:15px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

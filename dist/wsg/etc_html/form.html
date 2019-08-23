@@ -1,0 +1,283 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="ko" class="explorer v6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="explorer v7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="explorer v8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Web Standard Guide</title>
+<link type="text/css" rel="stylesheet" href="../res/css/common.css" />
+<link type="text/css" rel="stylesheet" href="../wsg/res/css/wsg.css" />
+<script type="text/javascript" src="../res/js/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../res/js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/codemirror/codemirror.css" />
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/jqueryFileTree/jqueryFileTree.css" media="screen" />
+<script type="text/javascript" src="../wsg/plugin/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="../wsg/plugin/codemirror/xml.js"></script>
+<script type="text/javascript" src="../wsg/res/js/wsg.js"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="../res/js/libs/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrap">
+<!-- header -->
+<header id="header">
+	<h1><a href="index.html">PROJECT</a></h1>
+	<p class="skip-lnb"><a href="#lnb">메뉴</a></p>
+	<p class="history-back"><a href="index.html">BACK</a></p>
+</header>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container">
+	<!-- contentAside -->
+	<div id="contentAside" class="content-aside">
+		<!-- lnb -->
+		<nav id="lnb" class="lnb">
+			<h2>주요메뉴</h2>
+			<ul>
+			<li><strong>GUIDELINE</strong>
+				<ul>
+				<li><a href="information.html">PROJECT 기본정보</a></li>
+				<li><a href="naming.html">네이밍</a></li>
+				<li><a href="rule_html_code.html">HTML 코드 규칙</a></li>
+				<!--<li><a href="rule_html_mark.html">HTML 요소 작성 규칙</a></li>-->
+				<li><a href="rule_css_code.html">CSS 코드 규칙</a></li>
+				<li><a href="validation.html">테스트 및 검수</a></li>
+				</ul>
+			</li>
+			<li><strong>PROGRESS</strong>
+				<ul>
+				<li><a href="checklist.html">issue &amp; check list</a></li>
+				<li><a href="markup.html">markup</a></li>
+				</ul>
+			</li>
+			<li><strong><abbr title="User Interface">UI</abbr> LIBRARY</strong>
+				<ul>
+				<li><a href="typography.html">typography</a></li>
+				<li><a href="form.html">form</a></li>
+				<li><a href="table.html">table</a></li>
+				<li><a href="tab.html">tab</a></li>
+				<li><a href="button.html">button</a></li>
+				<li><a href="panel.html">panel</a></li>
+				<li><a href="fieldset.html">fieldset</a></li>
+				<li><a href="list.html">list</a></li>
+				<li><a href="images.html">images</a></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+		<!-- //lnb -->
+	</div>
+	<!-- //contentAside -->
+	<!-- contentPrimary -->
+	<section id="contentPrimary" class="content-primary">
+		<h1>form</h1>
+		<section>
+			<h1>basic</h1>
+			<!-- data-table -->
+			<table border="1" class="data-table wsg">
+			<colgroup>
+				<col style="width: 120px;" />
+				<col />
+			</colgroup>
+			<thead>
+			<tr>
+				<th>구분</th>
+				<th scope="col">PREVIEW</th>
+			</tr>
+			</thead>
+			<tbody class="align_left">
+			<tr>
+				<th>input text</th>
+				<td><input type="text" class="input_text small" title="이름을 입력해주세요" style="width: 260px;" /></td>
+			</tr>
+			<tr>
+				<th>input password</th>
+				<td><input type="password" class="input_password small" title="비밀번호를 입력해주세요" style="width: 260px;" /></td>
+			</tr>
+			<tr>
+				<th>input search</th>
+				<td><input type="text" class="input_search small" title="검색어 입력" /></td>
+			</tr>
+			<tr>
+				<th>input file</th>
+				<td><input type="file" class="input_file" title="파일 업로드" /></td>
+			</tr>
+			<tr>
+				<th>input radio</th>
+				<td class="align-left">
+					<label for="radio0201"><input type="radio" class="radio" id="radio0201" name="radio0200" title="항목1 선택" checked="checked" /> 항목1</label>
+					<label for="radio0202"><input type="radio" class="radio" id="radio0202" name="radio0200" title="항목2 선택" checked="checked" /> 항목2</label>
+				</td>
+			</tr>
+			<tr>
+				<th>input checkbox</th>
+				<td class="align-left">
+					<label for="checkbox0101"><input type="checkbox" class="checkbox" id="checkbox0101" title="항목1 선택" checked="checked" /> 항목1</label>
+				</td>
+			</tr>
+			<tr>
+				<th>select</th>
+				<td class="align-left">
+					<select class="select">
+					<option>select</option>
+					<option>select2</option>
+					<option>select3select3</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>textarea</th>
+				<td><textarea class="textarea" id="textarea01" name="" cols="30" rows="10" placeholder="작성해 주세요."></textarea></td>
+			</tr>
+			</tbody>
+			</table>
+			<!-- //data-table -->
+		</section>
+		<section>
+			<h1>input[type="text"]</h1>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<input type="text" class="input_text small" title="아이디를 입력해주세요" style="width: 260px;" />
+					<input type="text" class="input_text medium" title="아이디를 입력해주세요" style="width: 260px;" />
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;input type="text" class="input_text small" title="아이디를 입력해주세요" /&gt;
+&lt;input type="text" class="input_text medium" title="아이디를 입력해주세요" /&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>input[type="password"]</h1>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<input type="password" class="input_password small" title="비밀번호를 입력해주세요" style="width: 260px;" />
+					<input type="password" class="input_password medium" title="비밀번호를 입력해주세요" style="width: 260px;" />
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;input type="password" class="input_password small" title="비밀번호를 입력해주세요" /&gt;
+&lt;input type="password" class="input_password medium" title="비밀번호를 입력해주세요" /&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>input[type="search"]</h1>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<input type="text" class="input_search small" title="검색어 입력" style="width: 260px;" />
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;input type="text" class="input_search small" title="검색어 입력" /&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>input[type="file"]</h1>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<input type="file" class="input_file small" title="파일 업로드" />
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt; type="file" class="input_file small" title="파일 업로드" /&gt;
+</pre>
+			</section>
+Individual
+		</section>
+		<section>
+			<h1>input[type="radio"]</h1>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<label for="radio0101"><input type="radio" class="radio" id="radio0101" name="radio0100" title="옵션1 선택" checked="checked" /> 옵션1</label>
+					<label for="radio0102"><input type="radio" class="radio" id="radio0102" name="radio0100" title="옵션2 선택" /> 옵션2</label>
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;label for=""&gt;&lt;input type="radio" class="radio" id="" name="" title="옵션1 선택" checked="checked" /&gt; 옵션1&lt;/label&gt;
+&lt;label for=""&gt;&lt;input type="radio" class="radio" id="" name="" title="옵션2 선택" /&gt; 옵션2&lt;/label&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>input[type="checkbox"]</h1>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<label for=""><input type="checkbox" class="checkbox" id="" title="항목 선택" checked="checked" /> 항목</label>
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;label for=""&gt;&lt;input type="checkbox" class="checkbox" id="" title="항목 선택" checked="checked" /&gt; 항목&lt;/label&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>selectbox</h1>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<select class="select">
+					<option>옵션1</option>
+					<option>옵션2</option>
+					</select>
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;select class="select"&gt;
+&lt;option&gt;옵션1&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+			</section>
+		</section>
+		<section>
+			<h1>textarea - placeholder 기능 미정</h1>
+			<section>
+				<h1>PREVIEW</h1>
+				<div class="preview code-preview">
+					<textarea class="textarea" id="" name="" cols="30" rows="10" placeholder="작성해 주세요."></textarea>
+				</div>
+			</section>
+			<section>
+				<h1>CODE</h1>
+<pre class="code-editor">
+&lt;textarea class="textarea" id="" name="" cols="30" rows="10" placeholder="작성해 주세요."&gt;&lt;/textarea&gt;
+</pre>
+			</section>
+		</section>
+	</section>
+	<!-- //contentPrimary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<footer id="footer">
+	<small><span>Copyright &copy; 2013 <abbr title="Web Standard Guide">WSG</abbr></span> <span>made by <a target="_blank" href="http://www.braveinno.com/ver3/html/main.html">BRAVE INNOVATION</a> TX GROUP.</span></small>
+</footer>
+<!-- //footer -->
+</div>
+</body>
+</html>

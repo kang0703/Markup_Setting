@@ -1,0 +1,135 @@
+@include mq($pc) {
+
+	/* module */
+	.our-comm-small-contents{
+		text-align:center;
+		strong{
+			font-size:rem(28px);
+			color:#111;
+		}
+		p{
+			margin-top:10px;
+			font-size:rem(14px);
+			color:#2d2d2d;
+		}
+	}
+
+	.floating-zig-content-wrap{
+		.flo-zig-con-ul{
+			.flo-zig-con-li{
+				.flo-zig-in-div{
+					font-size:0;
+					.pic-zone{
+						display: inline-block;
+						vertical-align: middle;
+						width:50%;
+						img{
+							width:100%;
+						}
+					}
+					.con-zone{
+						display: inline-block;
+						vertical-align: middle;
+						width:50%;
+						.con-in-zig{
+							text-align:center;
+							padding:0 24px;
+							.zig-tt{
+								font-size:rem(21px);
+								color:#111;
+								font-weight:bold;
+							}
+							.zig-con{
+								font-size:rem(14px);
+								color:#2d2d2d;
+								margin-top:13px;
+								letter-spacing:0.2px;
+								.zig-ul-list{
+									margin-top:20px;
+									li{
+										margin-bottom:12px;
+										strong{
+											font-weight:normal;
+										}
+										p{
+											//
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.reverse{
+					.flo-zig-in-div{
+						.pic-zone{
+							margin-left:50%;
+							margin-right:-50%;
+						}
+						.con-zone{
+							position:relative;
+							margin-left:-50%;
+						}
+					}
+				}
+				&.verti-top{
+					.flo-zig-in-div{
+						.pic-zone{
+							vertical-align:top;
+						}
+						.con-zone{
+							margin-top:20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.campaign-banner-list{
+		.cam-ban-li{
+			margin-bottom:48px;
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+	/* layout */
+	.our-commitment-page-wrap{
+		.title-sale-save{
+			.page-tt-h3{
+				margin-bottom:25px;
+				margin-top:25px;
+			}
+		}
+		// 선언문
+		.manifesto-detail-img-zone{
+			margin-top:48px;
+			img{
+				width:100%;
+			}
+		}
+
+		// 지구를 풍요롭게
+		.sub-big-banner-case03-wrap{
+			//
+		}
+		.our-comm-bdt-wrap{
+			padding-top: 40px;
+			border-top: 1px solid #e1e1e1;
+		}
+
+		// 윤리 무역
+
+	}
+
+
+}

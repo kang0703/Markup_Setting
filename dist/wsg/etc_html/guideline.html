@@ -1,0 +1,502 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="ko" class="explorer v6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="explorer v7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="explorer v8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="explorer v9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Web Standard Guide</title>
+<link type="text/css" rel="stylesheet" href="../res/css/common.css" />
+<link type="text/css" rel="stylesheet" href="../wsg/res/css/wsg.css" />
+<script type="text/javascript" src="../res/js/libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../res/js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/codemirror/codemirror.css" />
+<link rel="stylesheet" type="text/css" href="../wsg/plugin/jqueryFileTree/jqueryFileTree.css" media="screen" />
+<script type="text/javascript" src="../wsg/plugin/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="../wsg/plugin/codemirror/xml.js"></script>
+<script type="text/javascript" src="../wsg/res/js/wsg.js"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="../res/js/libs/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrap">
+<!-- header -->
+<header id="header">
+	<h1><a href="index.html">PROJECT</a></h1>
+	<p class="skip-lnb"><a href="#lnb">메뉴</a></p>
+	<p class="history-back"><a href="index.html">BACK</a></p>
+</header>
+<!-- //header -->
+<hr />
+<!-- container -->
+<div id="container">
+	<!-- contentAside -->
+	<div id="contentAside" class="content-aside">
+		<!-- lnb -->
+		<nav id="lnb" class="lnb">
+			<h2>주요메뉴</h2>
+			<ul>
+			<li><strong>GUIDELINE</strong>
+				<ul>
+				<li><a href="information.html">PROJECT 기본정보</a></li>
+				<li><a href="naming.html">네이밍</a></li>
+				<li><a href="rule_html_code.html">HTML 코드 규칙</a></li>
+				<!--<li><a href="rule_html_mark.html">HTML 요소 작성 규칙</a></li>-->
+				<li><a href="rule_css_code.html">CSS 코드 규칙</a></li>
+				<li><a href="validation.html">테스트 및 검수</a></li>
+				</ul>
+			</li>
+			<li><strong>PROGRESS</strong>
+				<ul>
+				<li><a href="checklist.html">issue &amp; check list</a></li>
+				<li><a href="markup.html">markup</a></li>
+				</ul>
+			</li>
+			<li><strong><abbr title="User Interface">UI</abbr> LIBRARY</strong>
+				<ul>
+				<li><a href="typography.html">typography</a></li>
+				<li><a href="form.html">form</a></li>
+				<li><a href="table.html">table</a></li>
+				<li><a href="tab.html">tab</a></li>
+				<li><a href="button.html">button</a></li>
+				<li><a href="panel.html">panel</a></li>
+				<li><a href="fieldset.html">fieldset</a></li>
+				<li><a href="list.html">list</a></li>
+				<li><a href="images.html">images</a></li>
+				</ul>
+			</li>
+			</ul>
+		</nav>
+		<!-- //lnb -->
+	</div>
+	<!-- //contentAside -->
+	<!-- contentPrimary -->
+	<section id="contentPrimary" class="content-primary">
+		<h1>guideline</h1>
+		<section>
+			<h1>Baseline 계산</h1>
+			<p>일반적인 웹브라우저의 폰트 크기인 16px을 기준으로 12px의 본문 텍스트를 사용할 경우 16-12 = 4 * 4, 의 Baseline 을 얻을 수 있습니다. <br />즉 12px &gt; 16px(1em) &gt; 20px &gt; 24px 순으로 증가 할 수 있습니다.</p>
+			<p>12px 폰트 사이즈 기준으로 input box 의 사이즈를 계산하면, 폰트 사이즈 12px 과  Baseline 8px(상하 4px 씩), 즉 가장 20px &gt; 28px &gt; 36px 의 순으로 증가 할 수 있습니다.</p>
+			<p>16px 폰트 사이즈 기준으로 input box 의 사이즈를 계산하면, 폰트 사이즈 16px 과  Baseline 8px(상하 4px 씩), 즉 가장 24px &gt; 32px &gt; 40px 의 순으로 증가 할 수 있습니다.</p>
+			<p>(신규로 계정이 추가될 경우 brave_이메일로 생성되며 초기 비밀번호는 123456입니다.)</p>
+			<table class="data-table wsg">
+			<colgroup>
+				<col style="width: 80px;" />
+				<col />
+			</colgroup>
+			<tbody>
+			<tr>
+				<th>주소</th>
+				<td>https://175.125.20.78:2016/svn/0222_scom</td>
+			</tr>
+			<tr>
+				<th>계정</th>
+				<td>brave_메일계정, <em>예)brave_tx</em></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td>123456</td>
+			</tr>
+			<tr>
+				<th>담당자</th>
+				<td>김용상, <a href="mailto:eefo@braveinno.com">eefo@braveinno.com</a>, <a href="tel:010-2000-6560">010-2000-6560</a></td>
+			</tr>
+			</tbody>
+			</table>
+		</section>
+		<section>
+			<h1>Configuration Management</h1>
+			<p>프로젝트의 원활한 진행을 위하여 SVN으로 형상관리를 합니다.</p>
+			<p>(신규로 계정이 추가될 경우 brave_이메일로 생성되며 초기 비밀번호는 123456입니다.)</p>
+			<table class="data-table wsg">
+			<colgroup>
+				<col style="width: 80px;" />
+				<col />
+			</colgroup>
+			<tbody>
+			<tr>
+				<th>주소</th>
+				<td>https://175.125.20.78:2016/svn/0222_scom</td>
+			</tr>
+			<tr>
+				<th>계정</th>
+				<td>brave_메일계정, <em>예)brave_tx</em></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td>123456</td>
+			</tr>
+			<tr>
+				<th>담당자</th>
+				<td>김용상, <a href="mailto:eefo@braveinno.com">eefo@braveinno.com</a>, <a href="tel:010-2000-6560">010-2000-6560</a></td>
+			</tr>
+			</tbody>
+			</table>
+		</section>
+		<section>
+			<h1>HTML</h1>
+			<p>
+				신규 페이지 생성시 html은 <strong>XHTML 1.0 Transitional</strong>, 파일 인코딩은 <strong>UTF-8</strong>로 생성합니다.<br />
+				CSS와 javascript는 공통이 상위에 위치하나, javascript가 CSS보다 상위에 위치할 순 없습니다.
+			</p>
+<pre class="brush: xml">
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"&gt;
+&lt;head&gt;
+&lt;title&gt;에스닷컴&lt;/title&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+&lt;meta http-equiv="Content-Script-Type" content="text/javascript" /&gt;
+&lt;meta http-equiv="Content-Style-Type" content="text/css" /&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+&lt;meta name="author" content="신세계" /&gt;
+&lt;meta name="description" content="에스닷컴" /&gt;
+&lt;meta name="keywords" content="에스닷컴" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="../css/default.css" /&gt;
+&lt;script type="text/javascript" src="../js/jquery-latest.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../js/layout.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+</pre>
+		</section>
+		<section>
+			<h1>Code</h1>
+			<section>
+				<h1>HTML</h1>
+				<p>section의 시작은 반드시 hedding으로 시작 되어야 합니다. 디자인 상에 제목이 없을 경우 hidden처리 합니다.</p>
+				<p>
+					또한 section의 시작에는 반드시 주석처리 하며, 주석에는 불필요한 내용을 삼가하고 예시와 같이 간략하게 표현합니다.<br />
+				</p>
+<pre class="brush: xml">
+&lt;!-- 전문가방송 --&gt;
+&lt;element id="myCart" class="my-cart"&gt;
+	&lt;hx&gt;heading&lt;/hx&gt;
+	&lt;p&gt;content&lt;/p&gt;
+&lt;/element&gt;
+&lt;!-- //전문가방송 --&gt;
+</pre>
+			</section>
+			<section>
+				<h1>CSS</h1>
+				<p>class명은 문서의 의미와 시각적 분리를시키며, 최대한 약어를 사용하지 않습니다.</p>
+<pre class="brush: xml">
+&lt;!-- 의미와 시각적 분리 및 약어를 사용한 잘못된 예 --&gt;
+&lt;div class="con_01"&gt;
+&lt;div class="box_01"&gt;
+&lt;div class="mt_10"&gt;
+&lt;div class="pd_10"&gt;
+&lt;div class="txt_blue"&gt;
+</pre>
+				<p>CSS속성 선언순서을 통일 합니다.</p>
+<pre class="brush: css">
+/* 전문가방송 */
+.example {display: value; overflow: value; float: value; position: value; z-index: value; width: value; height: value; margin: value; padding: value; font: value; border: value; background: value; etc...}
+</pre>
+	</section>
+	<section>
+		<h1>JAVASCRIPT</h1>
+		<p>function의 사용목적을 반드시 주석처리 하며, <strong>call function</strong>에서 호출 하여 사용합니다.</p>
+<pre class="brush: js">
+// 전문가방송 토글 메뉴
+fucntion example() {
+	$('#expertBroadcasting') ...
+}
+// call function
+jQuery(function($){
+	example();
+});
+</pre>
+		</section>
+	</section>
+	<section>
+		<h1>Directory</h1>
+		<p>컨텐츠 항목의 성격에 따라 디렉터리를 분리합니다. </p>
+		<p>만약 회원가입일 경우 <strong>signup.css</strong>, <strong>/images/signup</strong>, <strong>/html/signup</strong> 과 같이 항목별로 분리해 관리합니다. 이와 같은 방법은 향후 유지관리에도 많은 도움이 됩니다.</p>
+			<div class="example">
+				<ul class="jqueryFileTree">
+				<li class="directory">
+					res
+					<ul class="jqueryFileTree">
+					<li class="directory">
+						css
+						<ul class="jqueryFileTree">
+						<li class="directory">
+							common
+							<ul class="jqueryFileTree">
+							<li class="file ext_txt">basic.css</li>
+							<li class="file ext_txt">global.css</li>
+							<li class="file ext_txt">button.css</li>
+							<li class="file ext_txt">table.css</li>
+							<li class="file ext_txt">layout.css</li>
+							</ul>
+						</li>
+						<li class="file ext_txt">intro.css</li>
+						<li class="file ext_txt">signup.css</li>
+						</ul>
+					</li>
+					<li class="directory">
+						images
+						<ul class="jqueryFileTree">
+						<li class="directory">common</li>
+						<li class="directory">intro</li>
+						<li class="directory">signup</li>
+						</ul>
+					</li>
+					<li class="directory">js</li>
+					</ul>
+				</li>
+				<li class="directory">
+					html
+					<ul class="jqueryFileTree">
+					<li class="directory">@temp</li>
+					<li class="directory">
+						intro
+						<ul class="jqueryFileTree">
+						<li class="file ext_txt">intro_01.html</li>
+						</ul>
+					</li>
+					<li class="directory">
+						signup
+						<ul class="jqueryFileTree">
+						<li class="file ext_txt">signup_01.html</li>
+						<li class="file ext_txt">signup_02.html</li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+				<li class="directory">wsg</li>
+				</ul>
+			</div>
+		</section>
+		<section class="naming-list">
+			<h1>Casing Notation</h1>
+			<p>표기법의 기준은 단어와 단어사이의 구분을 ID(Camel Casing Notation), class(hyphen notation)으로 통일화 합니다.</p>
+			<p>id와 class의 구분은 렌더링 되는 모든 오브젝트의 셀렉팅은 class를, 동작를 위한 셀렉팅은 id로 사용합니다. 만약 해당 오브젝트에 이미 id가 존재 하여도 해당 id를 시각적 표현을 위한 셀렉터로 사용하지 않습니다.</p>
+			<section>
+				<h1>example</h1>
+<pre class="brush: xml">
+&lt;!-- example --&gt;
+&lt;element id="myCart" class="my-cart"&gt;
+	&lt;hx&gt;heading&lt;/hx&gt;
+	&lt;p&gt;content&lt;/p&gt;
+&lt;/element&gt;
+&lt;!-- //example --&gt;
+</pre>
+			</section>
+			<section>
+				<h1>class 네이밍 룰</h1>
+				<p>해당 오브젝트의 <strong>사용목적</strong> &gt; <strong>중요도</strong> &gt; <strong>상태</strong> 순으로 네이밍합니다. <a target="_blank" href="/wsg/layout.html">레이아웃 보기</a></p>
+<pre class="brush: xml">
+&lt;!-- button-area --&gt;
+&lt;div class="button-area"&gt;
+	&lt;a href="#" class="btn large normal"&gt;example&lt;/a&gt;
+	&lt;a href="#" class="btn large weighty"&gt;example&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- //button-area --&gt;
+</pre>
+			</section>
+			<section>
+				<h1>class set</h1>
+				<p>해당 오브젝트의 <strong>활용목적</strong> &gt; <strong>중요도</strong> &gt; <strong>상태</strong> 순으로 네이밍합니다. <a target="_blank" href="/wsg/layout.html">레이아웃 보기</a></p>
+				<!-- data-table small -->
+				<table class="data-table wsg">
+				<colgroup>
+					<col style="width: 160px;" />
+					<col style="width: 160px;" />
+					<col style="width: 240px;" />
+					<col style="width: 240px;" />
+					<col />
+				</colgroup>
+				<thead>
+				<tr>
+					<th>분류</th>
+					<th>사용목적</th>
+					<th>구조</th>
+					<th>중요도</th>
+					<th>내용</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td rowspan="7">layout</td>
+					<td>.content-aside</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.content-primary</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.content-secondary</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.section</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.aside</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.wrap</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.content</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="10">global</td>
+					<td>.button-area</td>
+					<td>.small, .medium, .large</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.btn</td>
+					<td>.small, .medium, .large</td>
+					<td>.slightly, .normal, .weighty, .weightiest</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.data-table</td>
+					<td>.small, .medium, .large</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.option-panel</td>
+					<td>.small, .medium, .large</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.pagination</td>
+					<td>.small, .medium, .large</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.page-control</td>
+					<td>.small, .medium, .large</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.direction</td>
+					<td>.small, .medium, .large</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.data-list</td>
+					<td>.small, .medium, .large</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.item-list</td>
+					<td>.small, .medium, .large</td>
+					<td>.simple, .detail</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.tab</td>
+					<td>.small, .medium, .large</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">interactive</td>
+					<td>.skip-link</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.toggle-switch</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.switch-toggle</td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td><span class="em slightly">dispensable</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="7">board</td>
+					<td>.board-list</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.board-read</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.board-write</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.board-modify</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.comment</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.comment-header</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>.comment-list</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				</tbody>
+				</table>
+				<!-- //data-table small -->
+			</section>
+		</section>
+	</section>
+	<!-- //contentPrimary -->
+</div>
+<!-- //container -->
+<hr />
+<!-- footer -->
+<footer id="footer">
+	<small><span>Copyright &copy; 2013 <abbr title="Web Standard Guide">WSG</abbr></span> <span>made by <a target="_blank" href="http://www.braveinno.com/ver3/html/main.html">BRAVE INNOVATION</a> TX GROUP.</span></small>
+</footer>
+<!-- //footer -->
+</div>
+</body>
+</html>
