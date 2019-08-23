@@ -1,0 +1,25 @@
+{
+  "name": "markup_setting",
+  "version": "1.0.0",
+  "description": "My Project Setting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markup",
+    "npm"
+  ],
+  "author": "kang chang min",
+  "license": "MIT",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "lite-server": "^2.5.4",
+    "node-cli": "^0.1.0",
+    "node-sass": "^4.12.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "node-sass-globbing": "0.0.23",
+    "npm-run-all": "^4.1.5"
+  }
+}

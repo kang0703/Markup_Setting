@@ -1,0 +1,11 @@
+## 제외파일 ##
+#############
+## 파일무시
+source_dev/css/*.map
+source_dev/css/vendors/*.map
+
+
+## 폴더무시
+.vscode/
+.sass-cache/
+node_modules/
