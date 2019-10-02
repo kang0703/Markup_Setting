@@ -8,11 +8,9 @@
     "clear": "rm -rf dist/assets/css/*.map dist/assets/css/**/*.map",
     "server": "lite-server -c ./config/ls-config.json",
     "sass": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js src/sass/ -o dist/assets/css/",
-
     "dev:watch": "npm run dev:sass -- -w",
     "dev:sass": "npm run sass -- --output-style expanded --source-map true --indent-type tab --indent-width 1",
     "build:sass": "npm run sass -- --output-style compact",
-
     "dev": "npm-run-all -p dev:sass dev:watch server",
     "build": "npm-run-all -p clear build:sass"
   },
