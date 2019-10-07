@@ -94,6 +94,17 @@ function globalNavigation() {
 	});
 }
 
+function escPopupClose() {
+	$('body').keydown(function(e) {
+		var keyEnter = e.keyCode;
+
+		if( keyEnter == 27 ){
+			$('.wsg-all-sitemap-wrap').removeClass('on');
+		}
+	});
+}
+
+
 /**
  * String.trim()
  * trim method가 없는 경우 구현해줌
@@ -176,6 +187,7 @@ jQuery(function(){
 	progressList();
 	imageList();
 	globalNavigation();
+	escPopupClose();
 });
 
 //접속 핸드폰 정보
