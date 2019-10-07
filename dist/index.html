@@ -11,24 +11,22 @@
 	<link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon:400" rel="stylesheet">
 
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 	<style>
-		*{margin:0; padding:0; border:0;}
-
+		*{
+			margin:0; padding:0; border:0;
+		}
 		html, body{
 			height:100%;
 		}
-
 		body{
-			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8d00a0+0,1f00ad+100 */
-			background: rgb(141,0,160); /* Old browsers */
-			background: -moz-linear-gradient(-45deg,  rgba(141,0,160,1) 0%, rgba(31,0,173,1) 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(-45deg,  rgba(141,0,160,1) 0%,rgba(31,0,173,1) 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(135deg,  rgba(141,0,160,1) 0%,rgba(31,0,173,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d00a0', endColorstr='#1f00ad',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+			background: rgb(141,0,160);
+			background: -moz-linear-gradient(-45deg,  rgba(141,0,160,1) 0%, rgba(31,0,173,1) 100%);
+			background: -webkit-linear-gradient(-45deg,  rgba(141,0,160,1) 0%,rgba(31,0,173,1) 100%);
+			background: linear-gradient(135deg,  rgba(141,0,160,1) 0%,rgba(31,0,173,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d00a0', endColorstr='#1f00ad',GradientType=1 );
 		}
-
 		.wsg-version{
 			width:100%;
 			position: absolute;
@@ -40,41 +38,69 @@
 			box-sizing: border-box;
 			padding:20px;
 		}
-
 		.wsg-intro-page-wrap{
 			position:absolute;
 			top:0;
 			bottom:0;
 			left:0;
 			right:0;
-			max-width:600px;
-			height:600px;
 			border-radius:300px;
 			margin:auto;
 			text-align:center;
-			/*border:7px dashed #333;*/
-			/*background-color:#f5f5f5;*/
 		}
-
-		.wsg-intro-page-table{display:table; width:100%; height:100%;}
-		.wsg-intro-page-table .wsg-intro-page-cell{display:table-cell; vertical-align:middle;}
-
-		.wsg-intro-page-wrap .w-i-p-h1{transition: .4s; font-family: 'Do Hyeon', 'Noto Sans KR', sans-serif; color:#fff; font-size: 50px; display: inline-block; line-height: 1;}
+		.wsg-intro-page-table{
+			display:table;
+			width:100%;
+			height:100%;
+		}
+		.wsg-intro-page-table .wsg-intro-page-cell{
+			display:table-cell;
+			vertical-align:middle;
+		}
+		.wsg-intro-page-wrap .w-i-p-h1{
+			transition: .4s;
+			font-family: 'Do Hyeon', 'Noto Sans KR', sans-serif;
+			color:#fff;
+			font-size: 50px;
+			display: inline-block;
+			line-height: 1;
+		}
+		@media screen and (max-width: 760px){
+			.wsg-intro-page-wrap .w-i-p-h1{
+				font-size: 30px;
+			}
+		}
 		.wsg-intro-page-wrap .w-i-p-h1:hover{
 			transform:scale(1.5,1.5);
 		}
-		.wsg-intro-page-wrap .w-i-p-section-wrap{font-family:'Kaushan Script', cursive;}
-		.wsg-intro-page-wrap .w-i-p-section-wrap .w-i-p-h2{margin: 10px 0 60px;}
-		.wsg-intro-page-wrap .w-i-p-section-wrap .w-i-p-h2 p{font-size:30px; color:#e63500;}
-
+		.wsg-intro-page-wrap .w-i-p-section-wrap{
+			font-family:'Kaushan Script', cursive;
+		}
+		.wsg-intro-page-wrap .w-i-p-section-wrap .w-i-p-h2{
+			margin: 10px 0 60px;
+		}
+		.wsg-intro-page-wrap .w-i-p-section-wrap .w-i-p-h2 p{
+			font-size:30px;
+			color:#e63500;
+		}
 		.wsg-intro-page-wrap .w-i-p-section-wrap .w-i-p-h2 p span{
 			position: relative;
 			font-size:70px;
 			color:#fff;
 		}
-
-
-		.wsg-intro-page-wrap .w-i-p-section-wrap .w-i-p-link{display:inline-block; min-width:100px; font-size:20px; font-weight:bold; color:#fff; border-radius:20px; background-color:#b7b7b7; text-decoration:none; padding:5px 10px; transition:.4s; letter-spacing:2px;}
+		.wsg-intro-page-wrap .w-i-p-section-wrap .w-i-p-link{
+			display:inline-block;
+			min-width:100px;
+			font-size:20px;
+			font-weight:bold;
+			color:#fff;
+			border-radius:20px;
+			background-color:#b7b7b7;
+			text-decoration:none;
+			padding:5px 10px;
+			transition:.4s;
+			letter-spacing:2px;
+		}
 		.wsg-intro-page-wrap .w-i-p-section-wrap .w-i-p-link:hover{
 			animation-duration: 3s;
 			animation-name: rainbowLink;
@@ -91,6 +117,19 @@
 			100% { background-color: #e82aff; }
 		}
 	</style>
+
+	<script>
+		$(document).ready(function(){
+			$('body').keydown(function(e) {
+				var keyEnter = e.keyCode;
+				var link = $('#listGo').attr('href');
+
+				if( keyEnter == 13 ){
+					$(location).attr("href", link);
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 
@@ -111,11 +150,8 @@
 							<span>G</span>uide
 						</p>
 					</h2>
-					<!--
-					enter 를 누르면 a 링크가 눌릴수 있게 작업 하기.
-					https://haanddam.tistory.com/7
-					-->
-					<a href="./wsg/html/markup.html" class="w-i-p-link">List GO</a>
+
+					<a href="./wsg/html/markup.html" id="listGo" class="w-i-p-link">List GO</a>
 				</section>
 			</div>
 		</div>
