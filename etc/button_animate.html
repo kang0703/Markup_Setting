@@ -1,0 +1,987 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>http://www.blueb.co.kr</title>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+a {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.links {
+  *zoom: 1;
+  padding: 50px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  background: #313131;
+}
+.links:before, .links:after {
+  content: "";
+  display: table;
+}
+.links:after {
+  clear: both;
+}
+
+.link-effect-1 {
+  text-align: center;
+}
+.link-effect-1 a {
+  -moz-perspective: 900px;
+  -webkit-perspective: 900px;
+  perspective: 900px;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  line-height: 44px;
+}
+.link-effect-1 a span {
+  position: relative;
+  padding: 0 14px;
+  background: #797878;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -moz-transform-origin: 50% 0 50%;
+  -ms-transform-origin: 50% 0 50%;
+  -webkit-transform-origin: 50% 0 50%;
+  transform-origin: 50% 0 50%;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.link-effect-1 a span::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #565555;
+  content: attr(data-hover);
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  -moz-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -moz-transform-origin: 50% 0 50%;
+  -ms-transform-origin: 50% 0 50%;
+  -webkit-transform-origin: 50% 0 50%;
+  transform-origin: 50% 0 50%;
+}
+.link-effect-1 a:hover span, .link-effect-1 a:focus span {
+  -moz-transform: rotateX(90deg) translateY(-22px);
+  -ms-transform: rotateX(90deg) translateY(-22px);
+  -webkit-transform: rotateX(90deg) translateY(-22px);
+  transform: rotateX(90deg) translateY(-22px);
+}
+.link-effect-1 a:hover span::before, .link-effect-1 a:focus span::before {
+  background: #666464;
+}
+
+/* Effect 5: same word slide in */
+.link-effect-2 {
+  overflow: hidden;
+}
+.link-effect-2 a {
+  overflow: hidden;
+  padding: 20px;
+  height: 1em;
+  color: #797878;
+  font-weight: 400;
+}
+.link-effect-2 a span {
+  position: relative;
+  display: inline-block;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-2 a span::before {
+  color: white;
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  font-weight: 800;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.link-effect-2 a:hover span {
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.link-effect-3 a {
+  padding: 10px 0;
+  margin: 0 20px;
+  color: #797878;
+  text-shadow: none;
+  position: relative;
+}
+.link-effect-3 a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 10px 0;
+  max-width: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  content: attr(data-hover);
+  -webkit-transition: max-width 0.5s;
+  -moz-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+}
+.link-effect-3 a:hover::before {
+  max-width: 100%;
+}
+
+.link-effect-4 a {
+  padding: 0 10px;
+  margin: 0 20px;
+  color: #797878;
+  text-shadow: none;
+  position: relative;
+}
+.link-effect-4 a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  max-height: 0;
+  color: #fff;
+  content: attr(data-hover);
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+.link-effect-4 a:hover::before {
+  max-height: 100%;
+}
+
+.link-effect-5 a {
+  padding: 0 10px;
+  margin: 0 20px;
+  color: #797878;
+  text-shadow: none;
+  position: relative;
+}
+.link-effect-5 a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  color: #fff;
+  content: attr(data-hover);
+  -moz-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  -moz-transform: scale(1.4, 1.4);
+  -ms-transform: scale(1.4, 1.4);
+  -webkit-transform: scale(1.4, 1.4);
+  transform: scale(1.4, 1.4);
+  opacity: 0;
+}
+.link-effect-5 a:hover::before {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.link-effect-6 a {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  text-shadow: none;
+  margin: 0 20px;
+}
+.link-effect-6 a::before {
+  color: #797878;
+  content: attr(data-hover);
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.link-effect-6 a:hover::before {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.link-effect-7 {
+  -moz-perspective: 900px;
+  -webkit-perspective: 900px;
+  perspective: 900px;
+}
+.link-effect-7 a {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  text-shadow: none;
+  margin: 0 20px;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-7 a::before {
+  color: white;
+  content: attr(data-hover);
+  position: absolute;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -moz-transform-origin: 50% 0 50%;
+  -ms-transform-origin: 50% 0 50%;
+  -webkit-transform-origin: 50% 0 50%;
+  transform-origin: 50% 0 50%;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.link-effect-7 a:hover {
+  color: #797878;
+}
+.link-effect-7 a:hover::before {
+  -moz-transform: translateY(22px) rotateX(-90deg);
+  -ms-transform: translateY(22px) rotateX(-90deg);
+  -webkit-transform: translateY(22px) rotateX(-90deg);
+  transform: translateY(22px) rotateX(-90deg);
+}
+
+.link-effect-8 a {
+  color: #797878;
+  margin: 0 20px;
+  padding: 5px 0;
+  position: relative;
+  -moz-transition: ease-out 0.3s 0.1s;
+  -o-transition: ease-out 0.3s 0.1s;
+  -webkit-transition: ease-out 0.3s;
+  -webkit-transition-delay: 0.1s;
+  transition: ease-out 0.3s 0.1s;
+}
+.link-effect-8 a::before {
+  height: 2px;
+  width: 100%;
+  background: #797878;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-8 a::after {
+  height: 2px;
+  width: 100%;
+  background: #797878;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  visibility: hidden;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-8 a:hover {
+  color: white;
+}
+.link-effect-8 a:hover::before {
+  visibility: visible;
+  top: 100%;
+  background: white;
+}
+.link-effect-8 a:hover::after {
+  visibility: visible;
+  top: 0;
+  background: white;
+}
+
+.link-effect-9 a {
+  color: #797878;
+  margin: 0 20px;
+  padding: 10px 0;
+  position: relative;
+  -moz-transition: ease-out 0.3s 0.1s;
+  -o-transition: ease-out 0.3s 0.1s;
+  -webkit-transition: ease-out 0.3s;
+  -webkit-transition-delay: 0.1s;
+  transition: ease-out 0.3s 0.1s;
+}
+.link-effect-9 a::after {
+  height: 2px;
+  width: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-9 a:hover::after {
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.link-effect-10 a {
+  color: #797878;
+  margin: 0 20px;
+  padding: 10px;
+  position: relative;
+  -moz-transition: ease-out 0.3s 0.1s;
+  -o-transition: ease-out 0.3s 0.1s;
+  -webkit-transition: ease-out 0.3s;
+  -webkit-transition-delay: 0.1s;
+  transition: ease-out 0.3s 0.1s;
+}
+.link-effect-10 a span::before {
+  height: 100%;
+  width: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-10 a span::after {
+  height: 100%;
+  width: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-10 a::before {
+  height: 2px;
+  width: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-10 a::after {
+  height: 2px;
+  width: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-10 a:hover {
+  color: white;
+}
+.link-effect-10 a:hover::before, .link-effect-10 a:hover::after {
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.link-effect-10 a:hover span::before, .link-effect-10 a:hover span::after {
+  -moz-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.link-effect-11 a {
+  color: #797878;
+  margin: 0 20px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  -moz-transition: ease-out 0.3s 0.1s;
+  -o-transition: ease-out 0.3s 0.1s;
+  -webkit-transition: ease-out 0.3s;
+  -webkit-transition-delay: 0.1s;
+  transition: ease-out 0.3s 0.1s;
+}
+.link-effect-11 a span::before {
+  width: 100%;
+  height: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.link-effect-11 a span::after {
+  width: 100%;
+  height: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.link-effect-11 a::before {
+  width: 2px;
+  height: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-11 a::after {
+  width: 2px;
+  height: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-11 a:hover {
+  color: white;
+}
+.link-effect-11 a:hover::before, .link-effect-11 a:hover::after {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.link-effect-11 a:hover span::before, .link-effect-11 a:hover span::after {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.link-effect-12 a {
+  color: #797878;
+  margin: 0 20px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  -moz-transition: ease-out 0.3s 0.1s;
+  -o-transition: ease-out 0.3s 0.1s;
+  -webkit-transition: ease-out 0.3s;
+  -webkit-transition-delay: 0.1s;
+  transition: ease-out 0.3s 0.1s;
+}
+.link-effect-12 a span::before {
+  width: 100%;
+  height: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.link-effect-12 a span::after {
+  width: 100%;
+  height: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -moz-transition: 0.1s 0.2s;
+  -o-transition: 0.1s 0.2s;
+  -webkit-transition: 0.1s;
+  -webkit-transition-delay: 0.2s;
+  transition: 0.1s 0.2s;
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.link-effect-12 a::before {
+  width: 2px;
+  height: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -moz-transition: 0.1s 0.3s;
+  -o-transition: 0.1s 0.3s;
+  -webkit-transition: 0.1s;
+  -webkit-transition-delay: 0.3s;
+  transition: 0.1s 0.3s;
+}
+.link-effect-12 a::after {
+  width: 2px;
+  height: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -moz-transition: 0.1s 0.1s;
+  -o-transition: 0.1s 0.1s;
+  -webkit-transition: 0.1s;
+  -webkit-transition-delay: 0.1s;
+  transition: 0.1s 0.1s;
+}
+.link-effect-12 a:hover {
+  color: white;
+}
+.link-effect-12 a:hover::before, .link-effect-12 a:hover::after {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.link-effect-12 a:hover span::before, .link-effect-12 a:hover span::after {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.link-effect-13 a {
+  color: #797878;
+  margin: 0 20px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  -moz-transition: ease-out 0.3s 0.3s;
+  -o-transition: ease-out 0.3s 0.3s;
+  -webkit-transition: ease-out 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition: ease-out 0.3s 0.3s;
+}
+.link-effect-13 a span::before {
+  width: 100%;
+  height: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-13 a span::after {
+  width: 100%;
+  height: 2px;
+  background: white;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-13 a::before {
+  width: 2px;
+  height: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-13 a::after {
+  width: 2px;
+  height: 100%;
+  background: white;
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-13 a:hover {
+  color: white;
+}
+.link-effect-13 a:hover::before, .link-effect-13 a:hover::after {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.link-effect-13 a:hover span::before, .link-effect-13 a:hover span::after {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.link-effect-14 a {
+  color: #797878;
+  margin: 0 20px;
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  -moz-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.link-effect-14 a span::before {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+.link-effect-14 a span::after {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+.link-effect-14 a::before {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+.link-effect-14 a::after {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+.link-effect-14 a:hover {
+  color: white;
+}
+.link-effect-14 a:hover::before {
+  opacity: 1;
+  right: 5px;
+  top: 5px;
+}
+.link-effect-14 a:hover::after {
+  opacity: 1;
+  left: 5px;
+  bottom: 5px;
+}
+.link-effect-14 a:hover span::before {
+  opacity: 1;
+  left: 5px;
+  top: 5px;
+}
+.link-effect-14 a:hover span::after {
+  opacity: 1;
+  right: 5px;
+  bottom: 5px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="content">
+            <section class="links">
+                <nav class="link-effect-1">
+                    <a href="#"><span data-hover="Ironman">Ironman</span></a>
+                    <a href="#"><span data-hover="Batman">Batman</span></a>
+                    <a href="#"><span data-hover="Deadpool">Deadpool</span></a>
+                    <a href="#"><span data-hover="Wolverine">Wolverine</span></a>
+                    <a href="#"><span data-hover="Superman">Superman</span></a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-2" id="link-effect-2">
+                    <a href="#link-effect-2"><span data-hover="Ironman">Ironman</span></a>
+                    <a href="#link-effect-2"><span data-hover="Batman">Batman</span></a>
+                    <a href="#link-effect-2"><span data-hover="Deadpool">Deadpool</span></a>
+                    <a href="#link-effect-2"><span data-hover="Wolverine">Wolverine</span></a>
+                    <a href="#link-effect-2"><span data-hover="Superman">Superman</span></a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-3" id="link-effect-3">
+                    <a href="#link-effect-4" data-hover="Ironman">Ironman</a>
+                    <a href="#link-effect-4" data-hover="Batman">Batman</a>
+                    <a href="#link-effect-4" data-hover="Deadpool">Deadpool</a>
+                    <a href="#link-effect-4" data-hover="Wolverine">Wolverine</a>
+                    <a href="#link-effect-4" data-hover="Superman">Superman</a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-4" id="link-effect-4">
+                    <a href="#link-effect-3" data-hover="Ironman">Ironman</a>
+                    <a href="#link-effect-3" data-hover="Batman">Batman</a>
+                    <a href="#link-effect-3" data-hover="Deadpool">Deadpool</a>
+                    <a href="#link-effect-3" data-hover="Wolverine">Wolverine</a>
+                    <a href="#link-effect-3" data-hover="Superman">Superman</a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-5" id="link-effect-5">
+                    <a href="#link-effect-5" data-hover="Ironman">Ironman</a>
+                    <a href="#link-effect-5" data-hover="Batman">Batman</a>
+                    <a href="#link-effect-5" data-hover="Deadpool">Deadpool</a>
+                    <a href="#link-effect-5" data-hover="Wolverine">Wolverine</a>
+                    <a href="#link-effect-5" data-hover="Superman">Superman</a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-6" id="link-effect-6">
+                    <a href="#link-effect-6" data-hover="Ironman">Ironman</a>
+                    <a href="#link-effect-6" data-hover="Batman">Batman</a>
+                    <a href="#link-effect-6" data-hover="Deadpool">Deadpool</a>
+                    <a href="#link-effect-6" data-hover="Wolverine">Wolverine</a>
+                    <a href="#link-effect-6" data-hover="Superman">Superman</a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-7" id="link-effect-7">
+                    <a href="#link-effect-7" data-hover="Ironman">Ironman</a>
+                    <a href="#link-effect-7" data-hover="Batman">Batman</a>
+                    <a href="#link-effect-7" data-hover="Deadpool">Deadpool</a>
+                    <a href="#link-effect-7" data-hover="Wolverine">Wolverine</a>
+                    <a href="#link-effect-7" data-hover="Superman">Superman</a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-8" id="link-effect-8">
+                    <a href="#link-effect-8">Ironman</a>
+                    <a href="#link-effect-8">Batman</a>
+                    <a href="#link-effect-8">Deadpool</a>
+                    <a href="#link-effect-8">Wolverine</a>
+                    <a href="#link-effect-8">Superman</a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-9" id="link-effect-9">
+                    <a href="#link-effect-9">Ironman</a>
+                    <a href="#link-effect-9">Batman</a>
+                    <a href="#link-effect-9">Deadpool</a>
+                    <a href="#link-effect-9">Wolverine</a>
+                    <a href="#link-effect-9">Superman</a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-10" id="link-effect-10">
+                    <a href="#link-effect-10"><span>Ironman</span></a>
+                    <a href="#link-effect-10"><span>Batman</span></a>
+                    <a href="#link-effect-10"><span>Deadpool</span></a>
+                    <a href="#link-effect-10"><span>Wolverine</span></a>
+                    <a href="#link-effect-10"><span>Superman</span></a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-11" id="link-effect-11">
+                    <a href="#link-effect-11"><span>Ironman</span></a>
+                    <a href="#link-effect-11"><span>Batman</span></a>
+                    <a href="#link-effect-11"><span>Deadpool</span></a>
+                    <a href="#link-effect-11"><span>Wolverine</span></a>
+                    <a href="#link-effect-11"><span>Superman</span></a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-12" id="link-effect-12">
+                    <a href="#link-effect-12"><span>Ironman</span></a>
+                    <a href="#link-effect-12"><span>Batman</span></a>
+                    <a href="#link-effect-12"><span>Deadpool</span></a>
+                    <a href="#link-effect-12"><span>Wolverine</span></a>
+                    <a href="#link-effect-12"><span>Superman</span></a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-13" id="link-effect-13">
+                    <a href="#link-effect-13"><span>Ironman</span></a>
+                    <a href="#link-effect-13"><span>Batman</span></a>
+                    <a href="#link-effect-13"><span>Deadpool</span></a>
+                    <a href="#link-effect-13"><span>Wolverine</span></a>
+                    <a href="#link-effect-13"><span>Superman</span></a>
+                </nav>
+            </section>
+            <section class="links">
+                <nav class="link-effect-14" id="link-effect-14">
+                    <a href="#link-effect-14"><span>Ironman</span></a>
+                    <a href="#link-effect-14"><span>Batman</span></a>
+                    <a href="#link-effect-14"><span>Deadpool</span></a>
+                    <a href="#link-effect-14"><span>Wolverine</span></a>
+                    <a href="#link-effect-14"><span>Superman</span></a>
+                </nav>
+            </section>
+
+        </div>
+</body>
+</html>

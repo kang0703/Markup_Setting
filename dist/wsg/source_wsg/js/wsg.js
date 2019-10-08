@@ -104,6 +104,16 @@ function escPopupClose() {
 	});
 }
 
+function wsgBgThema() {
+	$('#themaBgBtn').on('click', 'li a',  function(e){
+		e.preventDefault();
+		var bgStyle = $(this).attr('style');
+		var bgColor = bgStyle.split('background-color:');
+
+		$('body').css('background-color', bgColor[1]);
+	});
+}
+
 
 /**
  * String.trim()
@@ -188,6 +198,7 @@ jQuery(function(){
 	imageList();
 	globalNavigation();
 	escPopupClose();
+	wsgBgThema();
 });
 
 //접속 핸드폰 정보

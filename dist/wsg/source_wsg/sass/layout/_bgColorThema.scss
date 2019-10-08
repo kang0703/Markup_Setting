@@ -1,0 +1,58 @@
+/* bgColorThema */
+body{
+	transition: .4s;
+}
+.wsg-total-category{
+	position: fixed;
+	top:15px;
+	right:0;
+	z-index: 100;
+	hr{
+		display: block;
+		width:30px;
+		height:30px;
+		border:0;
+		margin:0;
+	}
+	.wtc-menu{
+		text-align: right;
+		li{
+			transition:.4s;
+			&:hover{
+				a{
+					padding-left:0;
+					width:100px;
+					span{
+						transition:opacity .4s;
+						opacity:1;
+					}
+				}
+			}
+			a{
+				padding-left:10px;
+				box-sizing: border-box;
+				overflow: hidden;
+				transition:.4s;
+				display: inline-block;
+				width:30px;
+				height:30px;
+				line-height:30px;
+				text-align: center;
+				color:#fff;
+				// -moz-box-shadow: 2px 3px 5px #000000;
+				// -webkit-box-shadow: 2px 3px 5px #000000;
+				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+				span{
+					transition:opacity .4s;
+					opacity: 0;
+				}
+			}
+		}
+		&.quick-top{
+			position: fixed;
+			right:0;
+			bottom:0;
+		}
+	}
+}
+
