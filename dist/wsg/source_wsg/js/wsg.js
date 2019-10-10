@@ -114,6 +114,28 @@ function wsgBgThema() {
 	});
 }
 
+function aniScrollTop() {
+	var w_Height = $(window).height();
+	var w_Height_Division = w_Height / 2;
+
+	$(window).scroll(function(e) {
+		var scr_Position = $(window).scrollTop();
+		// console.log(scr_Position);
+		if( w_Height_Division <= scr_Position ){
+			// console.log('스크롤이 더 크다');
+			$('.quick-top').addClass('on');
+		}else{
+			$('.quick-top').removeClass('on');
+		}
+	});
+
+	$('.quick-top').on('click', 'li a', function(){
+		$('html, body').animate({
+			scrollTop: 0
+		}, 400);
+	});
+}
+
 
 /**
  * String.trim()
@@ -199,6 +221,7 @@ jQuery(function(){
 	globalNavigation();
 	escPopupClose();
 	wsgBgThema();
+	aniScrollTop();
 });
 
 //접속 핸드폰 정보

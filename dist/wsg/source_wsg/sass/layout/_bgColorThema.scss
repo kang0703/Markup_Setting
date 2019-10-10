@@ -29,6 +29,7 @@ body{
 				}
 			}
 			a{
+				font-size:16px;
 				padding-left:10px;
 				box-sizing: border-box;
 				overflow: hidden;
@@ -39,8 +40,8 @@ body{
 				line-height:30px;
 				text-align: center;
 				color:#fff;
-				// -moz-box-shadow: 2px 3px 5px #000000;
-				// -webkit-box-shadow: 2px 3px 5px #000000;
+				-moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 				span{
 					transition:opacity .4s;
@@ -49,10 +50,56 @@ body{
 			}
 		}
 		&.quick-top{
+			transition:opacity .4s;
 			position: fixed;
+			top:-9999999999px;
+			left:-9999999999px;
 			right:0;
 			bottom:0;
+			opacity:0;
+			&.on{
+				transition:opacity .4s;
+				top:auto;
+				left:auto;
+				transition:.4s;
+				opacity:1;
+			}
+			li{
+				a{
+					animation-duration: 3s;
+					animation-name: rainbowLink;
+					animation-iteration-count: infinite;
+				}
+
+			}
+		}
+
+		&.home{
+			li{
+				a{
+					padding-left:2px;
+				}
+			}
+		}
+
+		&.sns{
+			li{
+				a{
+					padding-left:2px;
+				}
+			}
 		}
 	}
+}
+
+@keyframes rainbowLink {
+	0% { background-color: #ff2a2a; }
+	15% { background-color: #ff7a2a; }
+	30% { background-color: #ffc52a }
+	45% { background-color: #43ff2a; }
+	60% { background-color: #2a89ff; }
+	75% { background-color: #202082; }
+	90% { background-color: #6b2aff; }
+	100% { background-color: #e82aff; }
 }
 
