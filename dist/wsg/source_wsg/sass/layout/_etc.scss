@@ -246,12 +246,22 @@
 		font-size: 0;
 		visibility: hidden;
 	}
+	colgroup{
+		col{
+			&.none{
+				display:none;
+			}
+		}
+	}
 	th, td {
 		padding: 5px 4px;
 		font-size: 1em;
 		color: #333333;
 		// border-right: 1px solid #e2e2e2;
 		border-bottom: 1px solid #e2e2e2;
+		&.none{
+			display:none;
+		}
 	}
 	th {
 		color: #fff;

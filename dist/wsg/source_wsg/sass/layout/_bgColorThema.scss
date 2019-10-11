@@ -89,6 +89,20 @@ body{
 				}
 			}
 		}
+
+		&.top{
+			li{
+				a{
+					padding-left:0px;
+					svg{
+						vertical-align: middle;
+					}
+					span{
+						vertical-align: middle;
+					}
+				}
+			}
+		}
 	}
 }
 
