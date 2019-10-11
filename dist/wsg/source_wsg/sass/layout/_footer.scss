@@ -1,12 +1,20 @@
 /* footer */
 .wsg-footer {
+	position:relative;
 	padding: 12px 0 30px 0;
 	border-top: 1px solid #c7c7c7;
 	text-align: center;
 	color: #444;
 	background-color: #fff;
-	p{
+	.here-time{
+		font-size: 1.6rem;
+		animation-duration: 3s;
+		animation-name: rainbowTime;
+		animation-iteration-count: infinite;
+	}
+	address{
 		font-size:12px;
+		font-style:normal;
 		strong{
 			font-size:15px;
 			a{
@@ -15,4 +23,15 @@
 			}
 		}
 	}
+}
+
+@keyframes rainbowTime {
+	0% { color: #ff2a2a; }
+	15% { color: #ff7a2a; }
+	30% { color: #ffc52a }
+	45% { color: #43ff2a; }
+	60% { color: #2a89ff; }
+	75% { color: #202082; }
+	90% { color: #6b2aff; }
+	100% { color: #e82aff; }
 }

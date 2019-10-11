@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -7,7 +8,6 @@
 
 	<title>WSG :: Markup List</title>
 
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<link type="text/css" rel="stylesheet" href="../../assets/css/style.css">
 	<link type="text/css" rel="stylesheet" href="../source_wsg/css/wsg.css">
 
@@ -16,42 +16,72 @@
 	<script type="text/javascript" src="../source_wsg/js/wsg.js"></script>
 	<script type="text/javascript" src="../../assets/js/common-ui.js"></script>
 </head>
-<body>
-	<!-- total-category -->
-	<div class="wsg-total-category">
-		<ul class="wtc-menu home">
-			<li><a href="https://kcmschool.com/" target="_blank" style="background-color:#d22a2a"><i class="fas fa-home"></i> <span>Home</span></a></li>
-		</ul>
-		<hr>
-		<ul class="wtc-menu sns">
-			<li><a href="https://kcmschool.com/" target="_blank" style="background-color:#f34a00"><i class="fas fa-blog"></i> <span>Blog</span></a></li>
 
-			<li><a href="https://www.instagram.com/easysocks_company" target="_blank" style="
+<body onload="realtimeClock()">
+	<!-- wsg-side-quick -->
+	<nav class="wsg-side-quick">
+		<ul class="wtc-menu home">
+			<li>
+				<a href="https://kcmschool.com/" target="_blank" style="background-color:#d22a2a">
+					<i class="fas fa-home"></i> <span>Home</span>
+				</a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="wtc-menu home">
+			<li>
+				<a href="javascript:bookmarksite('WSG :: Markup List', this.href)" id="bookmark_bt" style="background-color:#d8d708">
+					<i class="fas fa-star"></i> <span>BookMark</span>
+				</a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="wtc-menu sns">
+			<li>
+				<a href="https://kcmschool.com/" target="_blank" style="background-color:#f34a00"><i class="fas fa-blog"></i> <span>Blog</span></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/easysocks_company" target="_blank" style="
 				background: rgb(247,201,113); /* Old browsers */
 				background: -moz-linear-gradient(45deg,  rgba(247,201,113,1) 0%, rgba(224,25,106,1) 51%, rgba(92,87,205,1) 100%); /* FF3.6-15 */
 				background: -webkit-linear-gradient(45deg,  rgba(247,201,113,1) 0%,rgba(224,25,106,1) 51%,rgba(92,87,205,1) 100%); /* Chrome10-25,Safari5.1-6 */
 				background: linear-gradient(45deg,  rgba(247,201,113,1) 0%,rgba(224,25,106,1) 51%,rgba(92,87,205,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c971', endColorstr='#5c57cd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-			"><i class="fab fa-instagram"></i> <span>Instagram</span></a></li>
+			"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/kcmschool" target="_blank" style="background-color:#1d4c9c"><i class="fab fa-facebook"></i> <span>Facebook</span></a>
+			</li>
+			<li>
+				<a href="#none" target="_blank" style="background-color:#00abf0"><i class="fab fa-twitter"></i> <span>Twitter</span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/channel/UC3hlzQCk6somz_tHY3QRA6A?view_as=subscriber" target="_blank" style="background-color:#ff0000"><i class="fab fa-youtube"></i> <span>Youtube</span></a>
+			</li>
+		</ul>
 
-			<li><a href="https://www.facebook.com/kcmschool" target="_blank" style="background-color:#1d4c9c"><i class="fab fa-facebook"></i> <span>Facebook</span></a></li>
-			<li><a href="#none" target="_blank" style="background-color:#00abf0"><i class="fab fa-twitter"></i> <span>Twitter</span></a></li>
-			<li><a href="https://www.youtube.com/channel/UC3hlzQCk6somz_tHY3QRA6A?view_as=subscriber" target="_blank" style="background-color:#ff0000"><i class="fab fa-youtube"></i> <span>Youtube</span></a></li>
-		</ul>
 		<hr>
-		<ul id="themaBgBtn" class="wtc-menu">
-			<li><a href="#none" style="background-color:#d5e5f4">B<span>g color</span></a></li>
-			<li><a href="#none" style="background-color:#a2cba1">B<span>g color</span></a></li>
-			<li><a href="#none" style="background-color:#b4d491">B<span>g color</span></a></li>
-			<li><a href="#none" style="background-color:#ededed">B<span>g color</span></a></li>
-			<li><a href="#none" style="background-color:#454545">B<span>g color</span></a></li>
+
+		<ul id="themaBgBtn" class="wtc-menu bg">
+			<li><a href="#none" style="background-color:#d5e5f4"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+			<li><a href="#none" style="background-color:#a2cba1"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+			<li><a href="#none" style="background-color:#b4d491"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+			<li><a href="#none" style="background-color:#ededed"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+			<li><a href="#none" style="background-color:#454545"><i class="fas fa-palette"></i> <span>BG</span></a></li>
 		</ul>
+
 		<hr>
+
 		<ul class="wtc-menu top quick-top">
-			<li><a href="#"><i class="fas fa-arrow-up"></i> <span>Top</span></a></li>
+			<li><a href="#none"><i class="fas fa-arrow-up"></i> <span>Top</span></a></li>
 		</ul>
-	</div>
-	<!-- //total-category -->
+	</nav>
+	<!-- //wsg-side-quick -->
+
 
 
 	<div id="wrap" class="wsg-wrap">
@@ -108,15 +138,15 @@
 		<hr>
 
 		<ul style="padding-left:20px;">
-			<li>1. 1Depth Part Label 오른쪽 따리다니게 만들기 <!-- <span style="font-size:100px">🙂</span> --></li>
-			<li>2. table line 컬러 색상 찾기</li>
-			<li>3. code hight 찾기 <a href="https://colorscripter.com/info" style="background-color:#a4ef52" target="_blank">Color Scripter</a></li>
+			<li><span style="font-size:100px">🙂</span></li>
+			<li>1. table line 컬러 색상 찾기</li>
+			<li>2. code hight 찾기 <a href="https://colorscripter.com/info" style="background-color:#a4ef52" target="_blank">Color Scripter</a></li>
 			<li>
-				4. 내용복사하기 만들기.
+				3. 내용복사하기 만들기.
 				<a href="https://velog.io/@godori/js-clipboard-copy" style="background-color:#a4ef52" target="_blank">참고1</a>
 				<a href="https://macinjune.com/all-posts/web-developing/problem-solving/javascript%EB%A1%9C-clipboard-%EB%B3%B5%EC%82%AC-%EB%B2%84%ED%8A%BC-%EB%A7%8C%EB%93%A4%EA%B8%B0/" style="background-color:#52ef62" target="_blank">참고2</a>
 			</li>
-			<li>5. font awesome5 <a href="https://www.codingfactory.net/10140" style="background-color:#a4ef52" target="_blank">참고</a></li>
+			<li>4. font awesome5 <a href="https://www.codingfactory.net/10140" style="background-color:#a4ef52" target="_blank">참고</a></li>
 		</ul>
 
 		<div id="depth-cont" style="padding-left:20px; margin-top:20px">
@@ -154,6 +184,100 @@
 				tableColunmCtr();
 			});
 		</script>
+
+
+
+
+		<script type="text/javascript">
+			function realtimeClock() {
+				$('#timeSet').text(getTimeStamp());
+				// document.rtcForm.rtcInput.value = getTimeStamp();
+				setTimeout("realtimeClock()", 1000);
+			}
+
+
+			function getTimeStamp() { // 24시간제
+				var d = new Date();
+
+				var s =
+				leadingZeros(d.getFullYear(), 4) + '-' +
+				leadingZeros(d.getMonth() + 1, 2) + '-' +
+				leadingZeros(d.getDate(), 2) + ' ' +
+
+				leadingZeros(d.getHours(), 2) + ':' +
+				leadingZeros(d.getMinutes(), 2) + ':' +
+				leadingZeros(d.getSeconds(), 2);
+
+				return s;
+			}
+
+
+			function leadingZeros(n, digits) {
+				var zero = '';
+				n = n.toString();
+
+				if (n.length < digits) {
+					for (i = 0; i < digits - n.length; i++)
+						zero += '0';
+				}
+				return zero + n;
+			}
+		</script>
+
+
+		<script type="text/javascript">
+			$("#bookmark_bt").click(function (event) {
+				var title = document.title; //현재 보고 있는 페이지의 Title
+				var url = location.href; //현재 보고 있는 페이지의 Url
+				if (window.sidebar && window.sidebar.addPanel) { //firefox
+					window.sidebar.addPanel(title, url, "");
+				} else if (window.opera && window.print) { //opera
+					var elem = document.createElement('a');
+					elem.setAttribute('href', url);
+					elem.setAttribute('title', title);
+					elem.setAttribute('rel', 'sidebar');
+					elem.click();
+				} else if (document.all) { //msie
+					window.external.AddFavorite(url, title);
+				} else {
+					alert("해당브라우저는 즐겨찾기 추가기능이 지원되지 않습니다.\n\n수동으로 즐겨찾기에 추가해주세요.");
+					return true;
+				}
+			});
+
+			function bookmarksite(title,url) {
+			   // Internet Explorer
+			   if(document.all)
+			   {
+			   	window.external.AddFavorite(url, title);
+			   }
+			   // Google Chrome
+			   else if(window.chrome){
+			   	alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+			   }
+			   // Firefox
+			   else if (window.sidebar) // firefox
+			   {
+			   	window.sidebar.addPanel(title, url, "");
+			   }
+			   // Opera
+			   else if(window.opera && window.print)
+			   { // opera
+			   	var elem = document.createElement('a');
+			   	elem.setAttribute('href',url);
+			   	elem.setAttribute('title',title);
+			   	elem.setAttribute('rel','sidebar');
+			   	elem.click();
+			   }
+			}
+
+
+		</script>
+
+
+		<span style="font-size: 12pt;">
+			<a href="javascript:location.href='http://translate.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=%25s&hl=KO&ie=UTF-8&oe=UTF-8&prev=%2Flanguage_tools'">asdfasdf</a>
+		</span>
 
 		<!-- container -->
 		<div class="wsg-contents-wrap">
@@ -573,9 +697,12 @@
 
 		<!-- footer -->
 		<footer class="wsg-footer">
-			<p>ⓒ 2018. <strong><a href="http://kcmschool.com/" target="_blank" title="새창으로 열림">kcmschool</a></strong> all rights reserved.</p>
+			<p id="timeSet" class="here-time"></p>
+
+			<address>ⓒ 2018. <strong><a href="http://kcmschool.com/" target="_blank" title="새창으로 열림">kcmschool</a></strong> all rights reserved.</address>
 		</footer>
 		<!-- //footer -->
 	</div>
 </body>
+
 </html>
