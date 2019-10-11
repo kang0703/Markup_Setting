@@ -142,9 +142,6 @@
 					var here_depth = Number(eqNum) + 1;
 					var tr_length = $tbody_Tr.length + 1;
 
-					console.log(here_depth);
-					console.log(tr_length);
-
 					$colgroup.children('col').eq(eqNum).toggleClass('none');
 					$thead_Tr.children('th').eq(eqNum).toggleClass('none');
 					for (var i=0; i<tr_length; i++){
