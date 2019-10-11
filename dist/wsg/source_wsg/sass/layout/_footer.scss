@@ -7,10 +7,16 @@
 	color: #444;
 	background-color: #fff;
 	.here-time{
+		// position: absolute;
+		// left: 16px;
+		// top: 0;
+
 		font-size: 1.6rem;
-		animation-duration: 3s;
-		animation-name: rainbowTime;
-		animation-iteration-count: infinite;
+		color:#fff;
+		text-shadow:2px 2px 3px rgba(0, 0, 0, 0.8);
+		// animation-duration: 3s;
+		// animation-name: rainbowTime;
+		// animation-iteration-count: infinite;
 	}
 	address{
 		font-size:12px;
