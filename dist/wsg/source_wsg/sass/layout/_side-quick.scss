@@ -88,6 +88,12 @@ body{
 			li{
 				a{
 					padding-left:2px;
+					svg{
+						vertical-align: middle;
+					}
+					span{
+						vertical-align: middle;
+					}
 				}
 			}
 		}
@@ -96,6 +102,37 @@ body{
 			li{
 				a{
 					padding-left:2px;
+				}
+			}
+		}
+
+		&.search{
+			li{
+				a{
+					padding-left:2px;
+					i{
+						vertical-align: middle;
+						display:inline-block;
+						background-position: center center;
+						background-repeat: no-repeat;
+						background-size: 100%;
+						&.naver{
+							width:15px;
+							height:15px;
+							background-image: url(../img/naver-icon.png);
+						}
+						&.google{
+							width:15px;
+							height:15px;
+							background-image: url(../img/google-icon.png);
+							+ span{
+								color:#4285f4;
+							}
+						}
+					}
+					span{
+						vertical-align: middle;
+					}
 				}
 			}
 		}

@@ -13,11 +13,13 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../../assets/fontawesome-free-5.11.2-web/js/all.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/table-fold.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/foot-time.js"></script>
 	<script type="text/javascript" src="../source_wsg/js/wsg.js"></script>
 	<script type="text/javascript" src="../../assets/js/common-ui.js"></script>
 </head>
 
-<body onload="realtimeClock()">
+<body>
 	<!-- wsg-side-quick -->
 	<nav class="wsg-side-quick">
 		<ul class="wtc-menu home">
@@ -32,7 +34,7 @@
 
 		<ul class="wtc-menu home">
 			<li>
-				<a href="javascript:bookmarksite('WSG :: Markup List', this.href)" id="bookmark_bt" style="background-color:#d8d708">
+				<a href="#none" id="bookmark_bt" style="background-color:#d8d708">
 					<i class="fas fa-star"></i> <span>BookMark</span>
 				</a>
 			</li>
@@ -61,6 +63,21 @@
 			</li>
 			<li>
 				<a href="https://www.youtube.com/channel/UC3hlzQCk6somz_tHY3QRA6A?view_as=subscriber" target="_blank" style="background-color:#ff0000"><i class="fab fa-youtube"></i> <span>Youtube</span></a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="wtc-menu search">
+			<li>
+				<a href="javascript:s=prompt('%EA%B2%80%EC%83%89');if(!s=='')%7Blocation.href='http://search.naver.com/search.naver?query='+encodeURIComponent(s);%7Delse%7Balert('%EA%B2%80%EC%83%89%EC%96%B4%EA%B0%80%20%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4.');%7D" style="background-color:#03cf5d">
+					<i class="naver"></i> <span>Naver</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:s=prompt('%EA%B2%80%EC%83%89');if(!s=='')%7Blocation.href='http://www.google.com/search?where=m_ldic&sm=mtb_jum&query='+encodeURIComponent(s);%7Delse%7Balert('%EA%B2%80%EC%83%89%EC%96%B4%EA%B0%80%20%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4.');%7D" style="background-color:#fff">
+					<i class="google"></i> <span>Google</span>
+				</a>
 			</li>
 		</ul>
 
@@ -138,7 +155,7 @@
 		<hr>
 
 		<ul style="padding-left:20px;">
-			<li><span style="font-size:100px">🙂</span></li>
+			<!-- <li><span style="font-size:100px">🙂</span></li> -->
 			<li>1. table line 컬러 색상 찾기</li>
 			<li>2. code hight 찾기 <a href="https://colorscripter.com/info" style="background-color:#a4ef52" target="_blank">Color Scripter</a></li>
 			<li>
@@ -147,143 +164,49 @@
 				<a href="https://macinjune.com/all-posts/web-developing/problem-solving/javascript%EB%A1%9C-clipboard-%EB%B3%B5%EC%82%AC-%EB%B2%84%ED%8A%BC-%EB%A7%8C%EB%93%A4%EA%B8%B0/" style="background-color:#52ef62" target="_blank">참고2</a>
 			</li>
 			<li>4. font awesome5 <a href="https://www.codingfactory.net/10140" style="background-color:#a4ef52" target="_blank">참고</a></li>
+			<li>5. table line 컬러 색상 찾기</li>
 		</ul>
 
-		<div id="depth-cont" style="padding-left:20px; margin-top:20px">
+		<!-- <div id="depth-cont" style="padding-left:20px; margin-top:20px">
 			<button type="button" data-depth="2">2 DEPTH toggle</button>
 			<button type="button" data-depth="3">3 DEPTH toggle</button>
 			<button type="button" data-depth="4">4 DEPTH toggle</button>
 			<button type="button" data-depth="5">TYPE toggle</button>
 			<button type="button" data-depth="6">DIRECTORY toggle</button>
 			<button type="button" data-depth="7">PAGE ID toggle</button>
-		</div>
+		</div> -->
 
-		<script>
-			function tableColunmCtr() {
-				$('#depth-cont').on('click', 'button', function(){
-					var eqNum = $(this).attr('data-depth');
-					var $table = $('.data-table.wsg');
-					var $colgroup = $('.data-table.wsg colgroup');
-					var $thead = $table.children('thead');
-					var $tbody = $table.children('tbody');
-					var $thead_Tr = $thead.find('tr');
-					var $tbody_Tr = $tbody.find('tr');
-
-					var here_depth = Number(eqNum) + 1;
-					var tr_length = $tbody_Tr.length + 1;
-
-					$colgroup.children('col').eq(eqNum).toggleClass('none');
-					$thead_Tr.children('th').eq(eqNum).toggleClass('none');
-					for (var i=0; i<tr_length; i++){
-						$tbody_Tr.eq(i).children('td:nth-child(' + here_depth + ')').toggleClass('none');;
-					}
-				});
-			}
-
-			$(document).ready(function(){
-				tableColunmCtr();
-			});
-		</script>
-
-
-
-
+		<!-- <a href="javascript:window.external.AddFavorite('url,title')"></a> -->
 		<script type="text/javascript">
-			function realtimeClock() {
-				$('#timeSet').text(getTimeStamp());
-				// document.rtcForm.rtcInput.value = getTimeStamp();
-				setTimeout("realtimeClock()", 1000);
-			}
 
+			$("#bookmark_bt").click(function (e) {
+				e.preventDefault();
 
-			function getTimeStamp() { // 24시간제
-				var d = new Date();
-
-				var s =
-				leadingZeros(d.getFullYear(), 4) + '-' +
-				leadingZeros(d.getMonth() + 1, 2) + '-' +
-				leadingZeros(d.getDate(), 2) + ' ' +
-
-				leadingZeros(d.getHours(), 2) + ':' +
-				leadingZeros(d.getMinutes(), 2) + ':' +
-				leadingZeros(d.getSeconds(), 2);
-
-				return s;
-			}
-
-
-			function leadingZeros(n, digits) {
-				var zero = '';
-				n = n.toString();
-
-				if (n.length < digits) {
-					for (i = 0; i < digits - n.length; i++)
-						zero += '0';
-				}
-				return zero + n;
-			}
-		</script>
-
-
-		<script type="text/javascript">
-			$("#bookmark_bt").click(function (event) {
 				var title = document.title; //현재 보고 있는 페이지의 Title
 				var url = location.href; //현재 보고 있는 페이지의 Url
-				if (window.sidebar && window.sidebar.addPanel) { //firefox
-					window.sidebar.addPanel(title, url, "");
-				} else if (window.opera && window.print) { //opera
-					var elem = document.createElement('a');
-					elem.setAttribute('href', url);
-					elem.setAttribute('title', title);
-					elem.setAttribute('rel', 'sidebar');
-					elem.click();
-				} else if (document.all) { //msie
+				var agent = navigator.userAgent.toLowerCase(); // 접속 브라우저 확인
+
+				var browser_IE = (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1);
+				var browser_Chrome = agent.indexOf("chrome") != -1;
+				var browser_Firefox = agent.indexOf("firefox") != -1;
+				var browser_Safari = agent.indexOf("safari") != -1;
+				var browser_Opera = agent.indexOf('opr') > -1;
+
+				// console.log(agent.indexOf("chrome")); // 브라우저 내용에서 chrome index 넘버값 찾기
+
+				if ( browser_IE ) {
 					window.external.AddFavorite(url, title);
-				} else {
-					alert("해당브라우저는 즐겨찾기 추가기능이 지원되지 않습니다.\n\n수동으로 즐겨찾기에 추가해주세요.");
-					return true;
+				} else if( browser_Chrome ){
+					alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+				} else if( browser_Firefox ){
+					alert("Firefox 입니다");
+				} else if( browser_Safari ){
+					alert("Safari 입니다");
+				} else if( browser_Opera ){
+					alert("Opera 입니다");
 				}
 			});
-
-			function bookmarksite(title,url) {
-			   // Internet Explorer
-			   if(document.all)
-			   {
-			   	window.external.AddFavorite(url, title);
-			   }
-			   // Google Chrome
-			   else if(window.chrome){
-			   	alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
-			   }
-			   // Firefox
-			   else if (window.sidebar) // firefox
-			   {
-			   	window.sidebar.addPanel(title, url, "");
-			   }
-			   // Opera
-			   else if(window.opera && window.print)
-			   { // opera
-			   	var elem = document.createElement('a');
-			   	elem.setAttribute('href',url);
-			   	elem.setAttribute('title',title);
-			   	elem.setAttribute('rel','sidebar');
-			   	elem.click();
-			   }
-			}
-
-
 		</script>
-
-
-		<span style="font-size: 12pt;">
-			<a href="javascript:s=prompt('%EA%B2%80%EC%83%89');if(!s=='')%7Blocation.href='http://search.naver.com/search.naver?query='+encodeURIComponent(s);%7Delse%7Balert('%EA%B2%80%EC%83%89%EC%96%B4%EA%B0%80%20%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4.');%7D">네이버 검색</a>
-
-			<a href="javascript:s=prompt('%EA%B2%80%EC%83%89');if(!s=='')%7Blocation.href='http://search.naver.com/search.naver?query='+encodeURIComponent(s);%7Delse%7Balert('%EA%B2%80%EC%83%89%EC%96%B4%EA%B0%80%20%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4.');%7D">네이버 영어사전</a>
-
-			<a href="javascript:s=prompt('%EA%B2%80%EC%83%89');if(!s=='')%7Blocation.href='http://www.google.com/search?where=m_ldic&sm=mtb_jum&query='+encodeURIComponent(s);%7Delse%7Balert('%EA%B2%80%EC%83%89%EC%96%B4%EA%B0%80%20%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4.');%7D">구글 검색</a>
-		</span>
-
-
 
 		<!-- container -->
 		<div class="wsg-contents-wrap">
@@ -291,9 +214,9 @@
 			<section class="wsg-contents-in">
 				<!-- <h1>Markup List</h1> -->
 				<section class="progress-list" id="progressList">
-					<p><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제</p>
+					<p class="situation-cate"><strong>진행상황 표현 : </strong>미정, 진행, 완료, 수정, 대기, 삭제</p>
 					<!-- data-table small -->
-					<table class="data-table wsg">
+					<table id="depth-cont-fold" class="data-table wsg">
 						<colgroup>
 							<col style="width: 60px;">
 							<col>
@@ -307,14 +230,59 @@
 						</colgroup>
 						<thead>
 							<tr>
-								<th>번호</th>
+								<th>
+									번호
+									<button class="tb-open-btn" title="모두 펼치기">All Open</button>
+								</th>
 								<th>1 DEPTH</th>
-								<th>2 DEPTH</th>
-								<th>3 DEPTH</th>
-								<th>4 DEPTH</th>
-								<th>TYPE</th>
-								<th>DIRECTORY</th>
-								<th>PAGE ID</th>
+								<th>
+									2 DEPTH
+									<button class="tb-toggle-btn" data-depth="2" title="접을수 있어요!">
+										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+										<span class="gage"></span>
+									</button>
+								</th>
+								<th>
+									3 DEPTH
+									<button class="tb-toggle-btn" data-depth="3" title="접을수 있어요!">
+										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+										<span class="gage"></span>
+									</button>
+								</th>
+								<th>
+									4 DEPTH
+									<button class="tb-toggle-btn" data-depth="4" title="접을수 있어요!">
+										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+										<span class="gage"></span>
+									</button>
+								</th>
+								<th>
+									TYPE
+									<button class="tb-toggle-btn" data-depth="5" title="접을수 있어요!">
+										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+										<span class="gage"></span>
+									</button>
+								</th>
+								<th>
+									DIRECTORY
+									<button class="tb-toggle-btn" data-depth="6" title="접을수 있어요!">
+										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+										<span class="gage"></span>
+									</button>
+								</th>
+								<th>
+									PAGE ID
+									<button class="tb-toggle-btn" data-depth="7" title="접을수 있어요!">
+										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+										<span class="gage"></span>
+									</button>
+								</th>
 								<th>코딩</th>
 							</tr>
 						</thead>

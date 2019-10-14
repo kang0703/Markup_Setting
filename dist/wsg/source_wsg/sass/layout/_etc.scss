@@ -43,12 +43,13 @@
 /* progress */
 
 .progress-list {
-	p {
+	.situation-cate {
 		text-align: right;
+		margin-bottom:15px;
 	}
 	th {
 		white-space: nowrap;
-		overflow: hidden;
+		// overflow: hidden;
 		text-overflow: ellipsis;
 		-webkit-text-overflow: ellipsis;
 		-o-text-overflow: ellipsis;
@@ -248,8 +249,13 @@
 	}
 	colgroup{
 		col{
+			transition:.4s;
 			&.none{
 				display:none;
+			}
+			&.small{
+				transition:.4s;
+				width:25px !important;
 			}
 		}
 	}
@@ -266,6 +272,85 @@
 	th {
 		color: #fff;
 		background-color: #333;
+	}
+	thead{
+		th{
+			position:relative;
+			&:hover{
+				.tb-toggle-btn{
+					transition:.4s;
+					opacity:1;
+				}
+			}
+			.tb-open-btn{
+				position: absolute;
+				top:-40px;
+				left:0;
+				padding: 3px 10px;
+				font-size: 15px;
+				text-align: center;
+				cursor: pointer;
+				outline: none;
+				color: #fff;
+				background-color: #d61a1a;
+				border: none;
+				border-radius: 5px;
+				box-shadow: 0 5px #999;
+				&:hover{
+					background-color: #980101;
+				}
+				&:active{
+					background-color: #980101;
+					box-shadow: 0 0px #666;
+					transform: translateY(4px);
+				}
+			}
+			.tb-toggle-btn{
+				transition:.4s;
+				opacity:0;
+				outline: 0;
+				position: absolute;
+				top:-15px;
+				left:0;
+				width:100%;
+				height:15px;
+				border:0;
+				box-sizing: border-box;
+				padding: 0 12px;
+				background-color: transparent;
+				&.on{
+					opacity:1;
+					.arrow{
+						&.left{
+							transform:rotate(-180deg);
+						}
+						&.right{
+							transform:rotate(180deg);
+						}
+					}
+				}
+				.arrow{
+					transition:.4s;
+					vertical-align: middle;
+					color:red;
+					font-size:12px;
+					position: absolute;
+					top:1px;
+					&.left{
+						left:0;
+					}
+					&.right{
+						right:0;
+					}
+				}
+				.gage{
+					display:block;
+					width:100%;
+					height:1px;
+					background-color:red;
+				}
+			}
+		}
 	}
 }
 
