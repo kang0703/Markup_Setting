@@ -318,6 +318,12 @@
 				box-sizing: border-box;
 				padding: 0 12px;
 				background-color: transparent;
+				&:hover{
+					.arrow{
+						transition:.4s;
+						transform:scale(1.5,1.5);
+					}
+				}
 				&.on{
 					opacity:1;
 					.arrow{
