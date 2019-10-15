@@ -34,6 +34,7 @@ function tableColunmCtrFold() {
 
 
 function allFoldOpen() {
+	// 접은 컬럼 전체 열기
 	$('.tb-open-btn').on('click', function(){
 		var $colgroup = $('.data-table.wsg colgroup');
 

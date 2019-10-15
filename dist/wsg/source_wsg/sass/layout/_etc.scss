@@ -260,6 +260,7 @@
 		}
 	}
 	th, td {
+		transition:.4s;
 		padding: 5px 4px;
 		font-size: 1em;
 		color: #333333;
@@ -284,7 +285,7 @@
 			}
 			.tb-open-btn{
 				position: absolute;
-				top:-40px;
+				top:-49px;
 				left:0;
 				padding: 3px 10px;
 				font-size: 15px;
@@ -375,27 +376,28 @@
 
 /* layout */
 
-// #overflow {
-// 	position: relative;
-// 	min-height: 100%;
-// 	overflow: hidden;
-// 	#wrap {
-// 		position: static;
-// 	}
-// 	&.active {
-// 		// background: url('../../../wsg/res/images/bg_overflow.png') repeat-y 0 0;
-// 		#wrap {
-// 			position: relative;
-// 			left: $aside-width;
-// 			.content-aside {
-// 				position: relative;
-// 			}
-// 		}
-// 		#header, #container {
-// 			border-left: 1px #999 solid;
-// 		}
-// 	}
-// }
+#overflow {
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+	padding-right:30px;
+	#wrap {
+		position: static;
+	}
+	&.active {
+		// background: url('../../../wsg/res/images/bg_overflow.png') repeat-y 0 0;
+		#wrap {
+			position: relative;
+			left: $aside-width;
+			.content-aside {
+				position: relative;
+			}
+		}
+		#header, #container {
+			border-left: 1px #999 solid;
+		}
+	}
+}
 
 section .wrap .content {
 	padding: 1em;
