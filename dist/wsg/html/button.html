@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
 
 	<title>WSG :: button</title>
 
@@ -10,10 +11,93 @@
 	<link type="text/css" rel="stylesheet" href="../source_wsg/css/wsg.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../../assets/fontawesome-free-5.11.2-web/js/all.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/book_mark.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/table-fold.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/foot-time.js"></script>
 	<script type="text/javascript" src="../source_wsg/js/wsg.js"></script>
 	<script type="text/javascript" src="../../assets/js/ui/common-ui.js"></script>
 </head>
 <body>
+	<!-- wsg-side-quick -->
+	<nav class="wsg-side-quick">
+		<ul class="wtc-menu home">
+			<li>
+				<a href="markup.html" style="background-color:#d22a2a">
+					<i class="fas fa-home"></i> <span>Home</span>
+				</a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="wtc-menu home">
+			<li>
+				<a href="#none" id="bookmark_bt" style="background-color:#d8d708">
+					<i class="fas fa-star"></i> <span>BookMark</span>
+				</a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="wtc-menu sns">
+			<li>
+				<a href="https://kcmschool.com/" target="_blank" style="background-color:#f34a00"><i class="fas fa-blog"></i> <span>Blog</span></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/easysocks_company" target="_blank" style="
+				background: rgb(247,201,113); /* Old browsers */
+				background: -moz-linear-gradient(45deg,  rgba(247,201,113,1) 0%, rgba(224,25,106,1) 51%, rgba(92,87,205,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(45deg,  rgba(247,201,113,1) 0%,rgba(224,25,106,1) 51%,rgba(92,87,205,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(45deg,  rgba(247,201,113,1) 0%,rgba(224,25,106,1) 51%,rgba(92,87,205,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7c971', endColorstr='#5c57cd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/kcmschool" target="_blank" style="background-color:#1d4c9c"><i class="fab fa-facebook"></i> <span>Facebook</span></a>
+			</li>
+			<li>
+				<a href="#none" target="_blank" style="background-color:#00abf0"><i class="fab fa-twitter"></i> <span>Twitter</span></a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/channel/UC3hlzQCk6somz_tHY3QRA6A?view_as=subscriber" target="_blank" style="background-color:#ff0000"><i class="fab fa-youtube"></i> <span>Youtube</span></a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul class="wtc-menu search">
+			<li>
+				<a href="javascript:s=prompt('%EA%B2%80%EC%83%89');if(!s=='')%7Blocation.href='http://search.naver.com/search.naver?query='+encodeURIComponent(s);%7Delse%7Balert('%EA%B2%80%EC%83%89%EC%96%B4%EA%B0%80%20%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4.');%7D" style="background-color:#03cf5d">
+					<i class="naver"></i> <span>Naver</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:s=prompt('%EA%B2%80%EC%83%89');if(!s=='')%7Blocation.href='http://www.google.com/search?where=m_ldic&sm=mtb_jum&query='+encodeURIComponent(s);%7Delse%7Balert('%EA%B2%80%EC%83%89%EC%96%B4%EA%B0%80%20%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4.');%7D" style="background-color:#fff">
+					<i class="google"></i> <span>Google</span>
+				</a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<ul id="themaBgBtn" class="wtc-menu bg">
+			<li><a href="#none" style="background-color:#d5e5f4"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+			<li><a href="#none" style="background-color:#a2cba1"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+			<li><a href="#none" style="background-color:#b4d491"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+			<li><a href="#none" style="background-color:#ededed"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+			<li><a href="#none" style="background-color:#454545"><i class="fas fa-palette"></i> <span>BG</span></a></li>
+		</ul>
+
+		<hr>
+
+		<ul class="wtc-menu top quick-top">
+			<li><a href="#none"><i class="fas fa-arrow-up"></i> <span>Top</span></a></li>
+		</ul>
+	</nav>
+	<!-- //wsg-side-quick -->
+
 	<div id="wrap" class="wsg-wrap">
 		<!-- header -->
 		<header class="wsg-header">
@@ -27,7 +111,7 @@
 						<div class="stick-bar bar3"></div>
 					</a>
 				</div>
-				<div class="wsg-h-list-quick-btn"><a href="markup.html">markup list 바로가기</a></div>
+				<!-- <div class="wsg-h-list-quick-btn"><a href="markup.html">markup list 바로가기</a></div> -->
 			</div>
 		</header>
 		<!-- //header -->
@@ -240,7 +324,9 @@
 
 		<!-- footer -->
 		<footer class="wsg-footer">
-			<p>ⓒ 2018. <strong><a href="http://kcmschool.com/" target="_blank" title="새창으로 열림">kcmschool</a></strong> all rights reserved.</p>
+			<p id="timeSet" class="here-time"></p>
+
+			<address>ⓒ 2018. <strong><a href="http://kcmschool.com/" target="_blank" title="새창으로 열림">kcmschool</a></strong> all rights reserved.</address>
 		</footer>
 		<!-- //footer -->
 	</div>
