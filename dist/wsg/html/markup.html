@@ -13,6 +13,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../../assets/fontawesome-free-5.11.2-web/js/all.js"></script>
+	<script type="text/javascript" src="../source_wsg/js/book_mark.js"></script>
 	<script type="text/javascript" src="../source_wsg/js/table-fold.js"></script>
 	<script type="text/javascript" src="../source_wsg/js/foot-time.js"></script>
 	<script type="text/javascript" src="../source_wsg/js/wsg.js"></script>
@@ -99,8 +100,6 @@
 	</nav>
 	<!-- //wsg-side-quick -->
 
-
-
 	<div id="wrap" class="wsg-wrap">
 		<!-- header -->
 		<header class="wsg-header">
@@ -176,38 +175,6 @@
 			<button type="button" data-depth="6">DIRECTORY toggle</button>
 			<button type="button" data-depth="7">PAGE ID toggle</button>
 		</div> -->
-
-		<!-- <a href="javascript:window.external.AddFavorite('url,title')"></a> -->
-		<script type="text/javascript">
-
-			$("#bookmark_bt").click(function (e) {
-				e.preventDefault();
-
-				var title = document.title; //현재 보고 있는 페이지의 Title
-				var url = location.href; //현재 보고 있는 페이지의 Url
-				var agent = navigator.userAgent.toLowerCase(); // 접속 브라우저 확인
-
-				var browser_IE = (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1);
-				var browser_Chrome = agent.indexOf("chrome") != -1;
-				var browser_Firefox = agent.indexOf("firefox") != -1;
-				var browser_Safari = agent.indexOf("safari") != -1;
-				var browser_Opera = agent.indexOf('opr') > -1;
-
-				// console.log(agent.indexOf("chrome")); // 브라우저 내용에서 chrome index 넘버값 찾기
-
-				if ( browser_IE ) {
-					window.external.AddFavorite(url, title);
-				} else if( browser_Chrome ){
-					alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
-				} else if( browser_Firefox ){
-					alert("Firefox 입니다");
-				} else if( browser_Safari ){
-					alert("Safari 입니다");
-				} else if( browser_Opera ){
-					alert("Opera 입니다");
-				}
-			});
-		</script>
 
 		<!-- container -->
 		<div class="wsg-contents-wrap">
@@ -383,10 +350,6 @@
 								<td>FOMA0100</td>
 								<td class="state">삭제</td>
 							</tr>
-
-
-
-
 						</tbody>
 					</table>
 					<!-- //data-table small -->
