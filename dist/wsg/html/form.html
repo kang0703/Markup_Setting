@@ -426,7 +426,7 @@
 						<div class="wsg-blank-line"></div>
 
 						<h4>file</h4>
-						<div class="form-box block file">
+						<div class="form-box block file form-file-js">
 							<div class="formcon-area">
 								<input type="text" placeholder="파일을 첨부해 주세요." readonly>
 							</div>
@@ -438,7 +438,7 @@
 
 						<div class="wsg-blank-line"></div>
 
-						<h4>radio, checkbox vertical</h4>
+						<h4>radio, checkbox vertical (id)</h4>
 						<ul class="checking-form-list vertical">
 							<li>
 								<span class="mk-fromput">
@@ -485,7 +485,7 @@
 
 						<div class="wsg-blank-line"></div>
 
-						<h4>radio, checkbox horizontal</h4>
+						<h4>radio, checkbox horizontal (id)</h4>
 						<ul class="checking-form-list horizontal">
 							<li>
 								<span class="mk-fromput">
@@ -529,9 +529,216 @@
 								</span>
 							</li>
 						</ul>
+
+
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>radio, checkbox vertical (none id 미정)</h4>
+						<ul class="checking-form-list vertical checkModify-js">
+							<li>
+								<span class="mk-fromput label-radio checked">
+									<label>
+										<input type="radio" name="rad-put-ver-none" checked>
+										라디오1
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput label-radio">
+									<label>
+										<input type="radio" name="rad-put-ver-none">
+										라디오1
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput label-radio">
+									<label>
+										<input type="radio" name="rad-put-ver-none">
+										라디오1
+									</label>
+								</span>
+							</li>
+						</ul>
+
+						<div class="wsg-blank-line"></div>
+
+						<ul class="checking-form-list vertical checkModify-js">
+							<li>
+								<span class="mk-fromput label-check checked">
+									<label>
+										<input type="checkbox" checked>
+										체크박스1
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput label-check">
+									<label>
+										<input type="checkbox">
+										체크박스2
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput label-check">
+									<label>
+										<input type="checkbox">
+										체크박스3
+									</label>
+								</span>
+							</li>
+						</ul>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>radio, checkbox horizontal (none id 작업중)</h4>
+						<ul class="checking-form-list horizontal checkModify-js">
+							<li>
+								<span class="mk-fromput label-radio checked">
+									<label>
+										<input type="radio" name="rad-put-hor-none" checked>
+										라디오1
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput label-radio">
+									<label>
+										<input type="radio" name="rad-put-hor-none">
+										라디오2
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput label-radio">
+									<label>
+										<input type="radio" name="rad-put-hor-none">
+										라디오3
+									</label>
+								</span>
+							</li>
+						</ul>
+
+						<div class="wsg-blank-line"></div>
+
+						<ul class="checking-form-list horizontal checkModify-js">
+							<li>
+								<span class="mk-fromput label-check checked">
+									<label>
+										<input type="checkbox" checked>
+										체크박스1
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput label-check">
+									<label>
+										<input type="checkbox">
+										체크박스2
+									</label>
+								</span>
+							</li>
+							<li>
+								<span class="mk-fromput label-check">
+									<label>
+										<input type="checkbox">
+										체크박스3
+									</label>
+								</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<!-- //part_components -->
+
+				<!-- part_block -->
+				<div class="wsg-con-part-wrap">
+					<h3>datdpicker</h3>
+					<div class="real-code-box">
+
+						<h4>
+							참고 :
+							<p><a href="https://zetawiki.com/wiki/JQuery_UI_%EB%82%A0%EC%A7%9C%EC%84%A0%ED%83%9D%EA%B8%B0_datepicker" target="_blank">https://zetawiki.com/wiki/JQuery_UI_%EB%82%A0%EC%A7%9C%EC%84%A0%ED%83%9D%EA%B8%B0_datepicker</a></p>
+							<p><a href="https://jqueryui.com/datepicker/" target="_blank">https://jqueryui.com/datepicker/</a></p>
+						</h4>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="form-box block calendar-form">
+							<div class="formcon-area">
+								<input type="text" name="start_period" class="datepicker" placeholder="시작일">
+								<i class="fas fa-calendar-alt"></i>
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<div class="form-box block col-2 calendar-form">
+							<div class="formcon-area">
+								<input type="text" name="start_period" class="datepicker" placeholder="시작일">
+								<i class="fas fa-calendar-alt"></i>
+							</div>
+							<div class="formcon-area">
+								<input type="text" name="start_period" class="datepicker" placeholder="종료일">
+								<i class="fas fa-calendar-alt"></i>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- //part_variable -->
+
+				<!-- part_block -->
+				<div class="wsg-con-part-wrap">
+					<h3>validation</h3>
+					<div class="real-code-box">
+						<h4>전화번호 4자리 입력 제한</h4>
+						<div class="form-box block tel type-01">
+							<div class="formcon-area">
+								<div class="mk-select block">
+									<select class="select" id="mkSel">
+										<option value="">010</option>
+										<option value="">017</option>
+										<option value="">018</option>
+										<option value="">019</option>
+									</select>
+									<label for="mkSel">010</label>
+								</div>
+							</div>
+							<div class="formcon-area">
+								<input type="text" class="js-tel-check" placeholder="중간번호" title="중간번호" maxlength="4">
+							</div>
+							<div class="formcon-area">
+								<input type="text" class="js-tel-check" placeholder="끝번호" title="끝번호" maxlength="4">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>영문만 입력 가능</h4>
+						<div class="form-box block">
+							<div class="formcon-area">
+								<input type="text" class="js-eng-check" placeholder="text">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+						<h4>한글만 입력 가능</h4>
+						<div class="form-box block">
+							<div class="formcon-area">
+								<input type="text" class="js-kor-check" placeholder="text">
+							</div>
+						</div>
+
+						<div class="wsg-blank-line"></div>
+
+
+					</div>
+				</div>
+				<!-- //part_variable -->
 			</section>
 		</div>
 		<!-- //container -->

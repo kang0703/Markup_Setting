@@ -1,90 +1,154 @@
-/* pagination medium */
-$page-sizeW: 25px;
-$page-sizeH: 28px;
-$page-size-m: 16px;
+/* 컨트롤 버튼 제어 */
 
-.pagination.medium {
-	font-size:0;
-	position: relative;
-	// margin-top: 40px;
-	// margin: 0 auto;
-	// height: $page-size + 2px;
-	// line-height: $page-size + 2px;
-	// font-family: tahoma, dotum,'돋움', sans-serif;
+// 공통
+$page-common-border-width:1px;
+$page-common-border-style:solid;
+$page-common-border-color:#999;
+
+$page-common-paging-size: 25px;
+
+
+// 숫자형
+$page-number-text: false;
+$page-number-font-size: 13px;
+$page-number-color: #000;
+$page-num-bg-color: #000;
+
+
+// 버튼형
+$page-button-font: 13px;
+$page-button-radius: 3px;
+
+
+.list-paging-wrap{
 	text-align: center;
-	a,strong {
-		margin:0 3px;
-		// margin-left: -5px;
-		// margin: 0 5px;
-		// padding: 0 1px;
-		display: inline-block;
-		width: $page-sizeW;
-		height: $page-sizeH;
-		line-height: $page-sizeH - 2px;
-		font-size: rem(12px);
-		// text-decoration: none;
-		vertical-align: top;
-		@include box-sizing(border-box);
-		// @include border-radius(2px);
-		// margin-right: 4px;
+	a, strong{
+		display:inline-block;
+		@include box-sizing;
+		line-height:$page-common-paging-size - 2;
 	}
-	a {
-		color: #000;
-		// border: 1px solid #fff;
+	.pg-wrap{
+		font-size:0;
 	}
-	strong {
-		color: #000;
-		border: 1px solid #000;
-		// background-color: #595f6a;
+	.pg-cont, .num-page{
+		display:inline-block;
+		vertical-align: middle;
 	}
-	.btn {
-		&.prev, &.next, &.first, &.last {
-			position: relative;
-			// margin: 0;
-			width: auto;
-			text-decoration: underline;
-			// background-color: #fff;
-			// @include ir;
-			.arrow {
-				font-size: 0.9em;
+	.pg-cont{
+		a{
+			margin:0 2px;
+			background-color:#fff;
+			font-size: $page-number-font-size;
+			color: $page-number-color;
+			border-width: $page-common-border-width;
+			border-style: $page-common-border-style;
+			border-color: $page-common-border-color;
+			svg{
+				vertical-align: middle;
 			}
-			.word {
-				// @include ir;
+			i.fas{
+				&:before{
+					display:none;
+					@if false == $page-number-text {
+						display:inline-block;
+						font-size:13px;
+						vertical-align: middle;
+					}
+				}
 			}
-			&:after, .after {
-				// display: block;
-				// content: '';
-				// position: absolute;
-				// top: 0;
-				// left: 0;
-				// width: 100%;
-				// height: 100%;
-				// background-color: #fff;
-				// background-position: center center;
-				// background-repeat: no-repeat;
+			@if false == $page-number-text {
+				position: relative;
+				width:$page-common-paging-size;
+				height:$page-common-paging-size;
+			}
+			span{
+				@if false == $page-number-text {
+					border: 0 !important;
+					clip: rect(0 0 0 0) !important;
+					height: 1px !important;
+					margin: -1px !important;
+					overflow: hidden !important;
+					padding: 0 !important;
+					position: absolute !important;
+					width: 1px !important;
+				}
 			}
 		}
-		// &.prev {
-		// 	margin-right: 20px;
-		// 	&:after, .after {
-		// 		background-image: url('../common/ico_pagination_prev.png');
-		// 	}
-		// }
-		// &.next {
-		// 	margin-left: 20px;
-		// 	&:after, .after {
-		// 		background-image: url('../common/ico_pagination_next.png');
-		// 	}
-		// }
-		// &.first {
-		// 	&:after, .after {
-		// 		background-image: url('../common/ico_pagination_first.png');
-		// 	}
-		// }
-		// &.last {
-		// 	&:after, .after {
-		// 		background-image: url('../common/ico_pagination_last.png');
-		// 	}
-		// }
+		&.previous{
+			a{
+				&.prev{
+					i.fas{
+						//
+					}
+					span{
+						//
+					}
+				}
+				&.max-prev{
+					i.fas{
+						//
+					}
+					span{
+						//
+					}
+				}
+			}
+		}
+		&.next{
+			a{
+				&.nex{
+					i.fas{
+						//
+					}
+					span{
+						//
+					}
+				}
+				&.max-nex{
+					i.fas{
+						//
+					}
+					span{
+						//
+					}
+				}
+			}
+		}
+	}
+	.num-page{
+		a, strong{
+			// display:inline-block;
+			font-size: $page-number-font-size;
+			width:$page-common-paging-size;
+			height:$page-common-paging-size;
+			margin:0 2px;
+		}
+		a{
+			background-color:yellow;
+			border-width: $page-common-border-width;
+			border-style: $page-common-border-style;
+			border-color: $page-common-border-color;
+		}
+		strong{
+			color:#fff;
+			background-color:green;
+			border:1px solid red;
+			font-weight:bold;
+		}
+	}
+
+
+	// 더보기
+	.plus-list-btn{
+		text-align:center;
+		margin-top:30px;
+		@include mq($mobile) {
+			margin-top:20px;
+		}
+		.btn{
+			width:200px;
+			font-size: $page-button-font;
+			border-radius: $page-button-radius;
+		}
 	}
 }

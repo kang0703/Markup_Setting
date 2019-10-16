@@ -1,0 +1,15 @@
+/* box-shadow */
+
+// Variables ===============================
+$box-shadow-value: 0px 1px 5px rgba(0, 0, 0, 0.2);
+
+
+
+
+// SCSS ===============================
+.shadowbox{
+	@include box-sizing;
+	-moz-box-shadow: $box-shadow-value;
+	-webkit-box-shadow: $box-shadow-value;
+	box-shadow: $box-shadow-value;
+}

@@ -108,7 +108,6 @@ function keydownESC() {
 	});
 }
 
-// Background 테
 function wsgBgThema() {
 	$('#themaBgBtn').on('click', 'li a',  function(e){
 		e.preventDefault();
@@ -119,7 +118,6 @@ function wsgBgThema() {
 	});
 }
 
-// 상단으로 가기 버
 function aniScrollTop() {
 	var w_Height = $(window).height();
 	var w_Height_Division = w_Height / 2;
