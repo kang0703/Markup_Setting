@@ -14,8 +14,38 @@ jQuery.fn.load = $.fn.ready;
 
 
 	$(document).ready(function() {
+		/*
+		 * _________form 유효성체크
+		 * 정규식과 keyup 을 이용한 텍스트 박스에 특정 문자만 입력받을 수 있도록 처리
+		 */
+		// 전화번호 체크
+		telNum_check();
+
+		// 영문만 입력 가능
+		eng_check();
+
+		// 한글만 입력 가능 (예 : 이름입력)
+		kor_check();
+
+
+
+
+		/*
+		 * _________UI Script.
+		 */
+		// datepicker JS
+		datepicker_js();
+
 		// select 꾸며주는 JS
 		select_Make_js();
+
+		// radio, checkbox JS
+		formCheck_Modify_js();
+
+		// file_name js
+		file_name_js();
+
+
 
 
 
@@ -166,10 +196,86 @@ jQuery.fn.load = $.fn.ready;
 
 
 	/****************
-	 ****************
-	 * 공통함수 JS
-	 ****************
-	 ****************/
+	****************
+	* 공통함수 JS
+	****************
+	****************/
+
+	/*
+	 * _________form 유효성체크.
+	 */
+	// 전화번호 체크.
+	function telNum_check() {
+		$(".js-tel-check").keyup(function (event) {
+			var regexp = /[^0-9]/gi; // 한글입력 시.
+			var regexp_f = /\d\d\d\d{2,4}/gi; // 숫자 4자리 넘게 기입 시.
+
+			var v = $(this).val(); // formBox 입력값.
+
+			// 숫자입력 가능하도록 처리.
+			if (regexp.test(v)) {
+				alert("숫자만 입력가능 합니다.\n-(하이픈)을 제외한 숫자만 입력하여 주세요.");
+				$(this).val(v.replace(regexp, ''));
+			}
+
+			// 숫자입력 제한 (4자리) - maxlength로도 제한 가능.
+			if (regexp_f.test(v)) {
+				alert("숫자는 4자리까지만 입력가능 합니다.");
+				$(this).val(v.replace(regexp_f, ''));
+			}
+		});
+	}
+
+	// 영문만 입력 가능
+	function eng_check() {
+		$(".js-eng-check").keyup(function(e) {
+			reg = /[^a-zA-Z]/gi;
+			v = $(this).val();
+			if (reg.test(v)) {
+				$(this).val(v.replace(reg, ''));
+				$(this).focus();
+			}
+		});
+	}
+
+	// 한글만 입력 가능 (예 : 이름입력)
+	function kor_check() {
+		$(".js-kor-check").keyup(function(e) {
+			regexp = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
+			v = $(this).val();
+			if (regexp.test(v)) {
+				alert("실명을 입력하여 주세요\n한글만 입력가능 합니다.");
+				$(this).val(v.replace(regexp, ''));
+			}
+		});
+	}
+
+
+
+
+	/*
+	 * _________UI Script.
+	 */
+	// datepicker JS
+	function datepicker_js() {
+		console.log('asdfasdf');
+		/* 기본 달력 */
+		$( ".datepicker" ).datepicker({
+			dateFormat: 'yy.mm.dd',
+			prevText: '이전 달',
+			nextText: '다음 달',
+			monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			dayNames: ['일','월','화','수','목','금','토'],
+			dayNamesShort: ['일','월','화','수','목','금','토'],
+			dayNamesMin: ['일','월','화','수','목','금','토'],
+			showMonthAfterYear: true,
+			changeMonth: false,
+			changeYear: false,
+			yearSuffix: '년'
+		});
+	}
+
 
 	// select 꾸며주는 JS
 	function select_Make_js() {
@@ -180,6 +286,42 @@ jQuery.fn.load = $.fn.ready;
 		});
 	}
 
+	// radio, checkbox JS
+	function formCheck_Modify_js() {
+		$('.checkModify-js').on('change', 'input', function() {
+			var type = $(this).attr('type');
+			var thisCheck = $(this).is(':checked');
+
+			switch (type) {
+				case "radio":
+					// radio
+					$(this).parents('.checkModify-js').find('.mk-fromput').removeClass('checked');
+					if (thisCheck == true) {
+						$(this).parents('.mk-fromput').addClass('checked');
+					}
+					break;
+
+
+				case "checkbox":
+					// checkbox script
+					if (thisCheck == true) {
+						$(this).parents('.mk-fromput').addClass('checked');
+					}else{
+						$(this).parents('.mk-fromput').removeClass('checked');
+					}
+					break;
+			}
+		});
+	}
+
+	// file_name js
+	function file_name_js() {
+		$('.form-file-js input[type=file]').change(function(e){
+			$(this).parents('.form-file-js').find('input[type=text]').val(e.target.files[0].name);
+
+			console.log(e.target.files[0].name);
+		});
+	}
 
 
 

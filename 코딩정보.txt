@@ -1,0 +1,20 @@
+## 자주사용 코드
+<img src="../../source_dev/img/main/-1920x960.jpg" alt="">
+
+background:url($img + 'main/.png') 0 0 no-repeat;
+
+@include bdr ($radius-value : 5px);
+
+@include box-sizing;
+
+border-left:1px solid rgba(255, 255, 255, 0.1);
+
+
+
+## 파일 지우기 (소스맵 지우기)
+rm ../css/layout.css.map
+
+
+
+## 폴더 지우기 (노드모듈 지우기)
+rimraf node_modules

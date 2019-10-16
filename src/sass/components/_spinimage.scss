@@ -1,0 +1,47 @@
+/* 이미지 또는 div 회전
+ *
+ * 4초동안 한바퀴 돌아가는 에니메이션
+ *
+ * 20181129 추가
+ */
+
+.spinimage{
+	-webkit-animation: spin 4s infinite linear;
+	-o-animation: spin 4s infinite linear;
+	-moz-animation: spin 4s infinite linear;
+	animation: spin 4s infinite linear;
+}
+
+@-webkit-keyframes spin {
+	0%  {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spin {
+	0%  {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+@keyframes spin {
+	0%  {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+
+// 회전을 멈출 때
+.stoped{
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
+
+// 멈춘상태에서 최전을 진행하고 싶을 때
+.turned{
+	-webkit-animation-play-state: running;
+	-moz-animation-play-state: running;
+	-ms-animation-play-state: running;
+	-o-animation-play-state: running;
+	animation-play-state: running;
+}

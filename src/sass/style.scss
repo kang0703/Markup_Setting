@@ -13,6 +13,7 @@
 @import "fonts/nanumgothic"; // 나눔고딕(한글 폰트)
 @import "fonts/nanumbarungothic"; // 나눔바른고딕(한글 폰트)
 @import "fonts/nanummyeongjo"; // 나눔명조(한글 폰트)
+@import "fonts/nanumsquareround"; // 나눔 스퀘어 라운드(한글 폰트)
 @import "fonts/interstate"; // 영문 폰트
 @import "fonts/thebodyshop_jung"; // 한글 폰트
 
@@ -28,6 +29,9 @@
 // base
 @import "base/normalize";
 @import "base/base";
+
+// library
+@import "lib/datepicker";
 
 // components
 @import "components/button"; // 완료

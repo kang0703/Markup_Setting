@@ -1,0 +1,157 @@
+.calendar-form{
+	.formcon-area{
+		position: relative;
+	}
+
+	.datepicker{
+		//
+	}
+
+	.fa-calendar-alt{
+		font-size:18px;
+		display:inline-block;
+		position: absolute;
+		top: 8px;
+		right: 12px;
+	}
+}
+
+// 달력영역 커스텀 (default)
+.ui-datepicker{
+	padding: 3px;
+	&.ui-widget.ui-widget-content{
+		border: 1px solid red;
+	}
+
+	.ui-datepicker-header{
+		border: 1px solid blue;
+		background: #e9e9e9;
+		color: #333333;
+		font-weight: bold;
+		.ui-corner-all{
+			top: 2px;
+			width: 1.8em;
+			height: 1.8em;
+
+			// 달력 컨트롤 버튼
+			&.ui-datepicker-prev{
+				left: 2px;
+			}
+			&.ui-datepicker-next{
+				right: 2px;
+			}
+
+			&.ui-state-hover{
+				border: 1px solid red;
+				background: #ededed;
+				font-weight: normal;
+				color: #2b2b2b;
+			}
+
+			// 달력 컨트롤 아이콘
+			.ui-icon{
+				background-image: url(http://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_444444_256x240.png);
+				background-repeat: no-repeat;
+				&.ui-icon-circle-triangle-w{
+					background-position: -80px -192px;
+				}
+				&.ui-icon-circle-triangle-e{
+					background-position: -48px -192px;
+				}
+			}
+		}
+
+		// 년, 월
+		.ui-datepicker-title{
+			font-size: 16px;
+			.ui-datepicker-year{
+				font-size: 16px;
+				color: #333333;
+				font-weight: bold;
+			}
+			.ui-datepicker-month{
+				font-size: 16px;
+				color: #333333;
+				font-weight: bold;
+			}
+		}
+	}
+
+	// 달력화면 table
+	.ui-datepicker-calendar{
+		thead{
+			tr{
+				th{
+					font-weight: bold;
+					padding: .7em .3em;
+					span{
+						font-size: 15px;
+					}
+					&.ui-datepicker-week-end{
+						span{
+							//
+						}
+					}
+				}
+			}
+		}
+		tbody{
+			tr{
+				td{
+					padding: 1px;
+					// 일요일, 토요일
+					&.ui-datepicker-week-end{
+						//
+					}
+					// 일요일
+					&:nth-child(1){
+						&.ui-datepicker-week-end{
+							a{
+								color:#fff;
+								background-color:red;
+							}
+						}
+					}
+					// 토요일
+					&:nth-child(7){
+						&.ui-datepicker-week-end{
+							a{
+								color:#fff;
+								background-color:blue;
+							}
+						}
+					}
+
+					.ui-state-default{
+						text-align: center;
+						font-weight: normal;
+						color: #2b2b2b;
+						transition: .4s;
+
+						// hover
+						&.ui-state-hover{
+							border: 1px solid #cccccc;
+							background: #d4d4d4;
+							font-weight: normal;
+							color: #2b2b2b;
+						}
+
+						// active
+						&.ui-state-active{
+							color:#000 !important;
+							border: 1px solid #bbbb03 !important;
+							background: yellow !important;
+						}
+
+						// today
+						&.ui-state-highlight{
+							border: 1px solid #259bca;
+							background: #65cff9;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
