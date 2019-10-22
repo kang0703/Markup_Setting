@@ -2163,7 +2163,7 @@ html, html a {
 
 body {
 	color: #111;
-	font-family: "Open Sans", "Nanum Barun Gothic", "Nanum Myeongjo", "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "돋움", Dotum, Helvetica, Arial, sans-serif;
+	font-family: "NanumSquareRound", "Noto Sans", "Open Sans", "Nanum Barun Gothic", "Nanum Myeongjo", "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "돋움", Dotum, Helvetica, Arial, sans-serif;
 	line-height: 1.58571;
 	background: transparent;
 	-webkit-text-size-adjust: none;
@@ -2604,7 +2604,7 @@ body {
 		display: inline-block;
 		padding-bottom: 3px;
 		color: inherit;
-		font-family: "Interstate Condensed", "Open Sans", "Nanum Barun Gothic", "Nanum Myeongjo", "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "돋움", Dotum, Helvetica, Arial, sans-serif;
+		font-family: "Interstate Condensed", "NanumSquareRound", "Noto Sans", "Open Sans", "Nanum Barun Gothic", "Nanum Myeongjo", "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "돋움", Dotum, Helvetica, Arial, sans-serif;
 		font-weight: bold;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -2657,7 +2657,7 @@ body {
 		display: inline-block;
 		font-size: 15px;
 		color: #111;
-		font-family: "Interstate Condensed", "Open Sans", "Nanum Barun Gothic", "Nanum Myeongjo", "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "돋움", Dotum, Helvetica, Arial, sans-serif;
+		font-family: "Interstate Condensed", "NanumSquareRound", "Noto Sans", "Open Sans", "Nanum Barun Gothic", "Nanum Myeongjo", "나눔고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "돋움", Dotum, Helvetica, Arial, sans-serif;
 		font-weight: bold;
 	}
 	.gnb-desktop .subcategorys-box .subcategory .subcategory-link:first-child {

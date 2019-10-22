@@ -10,7 +10,6 @@ jQuery.fn.load = $.fn.ready;
 
 (function(exports, $){
 	var exports = exports;
-	var mJson, mIndex = [], mGroup;
 
 
 	$(document).ready(function() {
