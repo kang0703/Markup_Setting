@@ -183,188 +183,190 @@
 				<!-- <h1>Markup List</h1> -->
 				<section class="progress-list" id="progressList">
 					<p class="situation-cate"><strong>진행상황 표현 : </strong>진행, 완료, 수정, 추가, 대기, 미정, 삭제</p>
-					<!-- data-table small -->
-					<table id="depth-cont-fold" class="data-table wsg">
-						<colgroup>
-							<col style="width: 60px;">
-							<col>
-							<col>
-							<col>
-							<col>
-							<col style="width: 60px;">
-							<col style="width: 100px;">
-							<col style="width: 100px;">
-							<col style="width: 60px;">
-						</colgroup>
-						<thead>
-							<tr>
-								<th>
-									번호
-									<button class="tb-open-btn" title="모두 펼치기">All Open</button>
-								</th>
-								<th>1 DEPTH</th>
-								<th>
-									2 DEPTH
-									<button class="tb-toggle-btn" data-depth="2" title="접을수 있어요!">
-										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
-										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
-										<span class="gage"></span>
-									</button>
-								</th>
-								<th>
-									3 DEPTH
-									<button class="tb-toggle-btn" data-depth="3" title="접을수 있어요!">
-										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
-										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
-										<span class="gage"></span>
-									</button>
-								</th>
-								<th>
-									4 DEPTH
-									<button class="tb-toggle-btn" data-depth="4" title="접을수 있어요!">
-										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
-										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
-										<span class="gage"></span>
-									</button>
-								</th>
-								<th>
-									TYPE
-									<button class="tb-toggle-btn" data-depth="5" title="접을수 있어요!">
-										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
-										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
-										<span class="gage"></span>
-									</button>
-								</th>
-								<th>
-									DIRECTORY
-									<button class="tb-toggle-btn" data-depth="6" title="접을수 있어요!">
-										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
-										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
-										<span class="gage"></span>
-									</button>
-								</th>
-								<th>
-									PAGE ID
-									<button class="tb-toggle-btn" data-depth="7" title="접을수 있어요!">
-										<i class="arrow left fas fa-arrow-alt-circle-right"></i>
-										<i class="arrow right fas fa-arrow-alt-circle-left"></i>
-										<span class="gage"></span>
-									</button>
-								</th>
-								<th>코딩</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td></td>
-								<td>Layout</td>
-								<td></td>
-								<td></td>
-								<td><span class="impor">(보충설명 작성)</span></td>
-								<td>front</td>
-								<td>@layout</td>
-								<td>layout</td>
-								<td class="state">진행</td>
-							</tr>
+					<div class="wsg-table-scroll-box">
+						<!-- data-table small -->
+						<table id="depth-cont-fold" class="data-table wsg" style="min-width:780px;">
+							<colgroup>
+								<col style="width: 60px;">
+								<col>
+								<col>
+								<col>
+								<col>
+								<col style="width: 60px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 60px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										번호
+										<button class="tb-open-btn" title="모두 펼치기">All Open</button>
+									</th>
+									<th>1 DEPTH</th>
+									<th>
+										2 DEPTH
+										<button class="tb-toggle-btn" data-depth="2" title="접을수 있어요!">
+											<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+											<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+											<span class="gage"></span>
+										</button>
+									</th>
+									<th>
+										3 DEPTH
+										<button class="tb-toggle-btn" data-depth="3" title="접을수 있어요!">
+											<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+											<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+											<span class="gage"></span>
+										</button>
+									</th>
+									<th>
+										4 DEPTH
+										<button class="tb-toggle-btn" data-depth="4" title="접을수 있어요!">
+											<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+											<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+											<span class="gage"></span>
+										</button>
+									</th>
+									<th>
+										TYPE
+										<button class="tb-toggle-btn" data-depth="5" title="접을수 있어요!">
+											<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+											<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+											<span class="gage"></span>
+										</button>
+									</th>
+									<th>
+										DIRECTORY
+										<button class="tb-toggle-btn" data-depth="6" title="접을수 있어요!">
+											<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+											<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+											<span class="gage"></span>
+										</button>
+									</th>
+									<th>
+										PAGE ID
+										<button class="tb-toggle-btn" data-depth="7" title="접을수 있어요!">
+											<i class="arrow left fas fa-arrow-alt-circle-right"></i>
+											<i class="arrow right fas fa-arrow-alt-circle-left"></i>
+											<span class="gage"></span>
+										</button>
+									</th>
+									<th>코딩</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>Layout</td>
+									<td></td>
+									<td></td>
+									<td><span class="impor">(보충설명 작성)</span></td>
+									<td>front</td>
+									<td>@layout</td>
+									<td>layout</td>
+									<td class="state">진행</td>
+								</tr>
 
-							<tr>
-								<td></td>
-								<td>module-page</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>front</td>
-								<td>@module</td>
-								<td>module</td>
-								<td class="state">진행</td>
-							</tr>
+								<tr>
+									<td></td>
+									<td>module-page</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>front</td>
+									<td>@module</td>
+									<td>module</td>
+									<td class="state">진행</td>
+								</tr>
 
-							<tr>
-								<td></td>
-								<td>test</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>front</td>
-								<td>test</td>
-								<td>test</td>
-								<td class="state">진행</td>
-							</tr>
+								<tr>
+									<td></td>
+									<td>test</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>front</td>
+									<td>test</td>
+									<td>test</td>
+									<td class="state">진행</td>
+								</tr>
 
-							<tr>
-								<td></td>
-								<td>Main</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>front</td>
-								<td>MA</td>
-								<td>MA0100</td>
-								<td class="state">완료</td>
-							</tr>
+								<tr>
+									<td></td>
+									<td>Main</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>front</td>
+									<td>MA</td>
+									<td>MA0100</td>
+									<td class="state">완료</td>
+								</tr>
 
-							<tr>
-								<td></td>
-								<td>Main</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>front</td>
-								<td>MA</td>
-								<td>MA0100</td>
-								<td class="state">수정</td>
-							</tr>
+								<tr>
+									<td></td>
+									<td>Main</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>front</td>
+									<td>MA</td>
+									<td>MA0100</td>
+									<td class="state">수정</td>
+								</tr>
 
-							<tr>
-								<td></td>
-								<td>Main</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>front</td>
-								<td>MA</td>
-								<td>MA0100</td>
-								<td class="state">추가</td>
-							</tr>
+								<tr>
+									<td></td>
+									<td>Main</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>front</td>
+									<td>MA</td>
+									<td>MA0100</td>
+									<td class="state">추가</td>
+								</tr>
 
-							<tr>
-								<td></td>
-								<td>Main</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>front</td>
-								<td>MA</td>
-								<td>MA0100</td>
-								<td class="state">대기</td>
-							</tr>
+								<tr>
+									<td></td>
+									<td>Main</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>front</td>
+									<td>MA</td>
+									<td>MA0100</td>
+									<td class="state">대기</td>
+								</tr>
 
-							<tr>
-								<td></td>
-								<td>Main</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>front</td>
-								<td>MA</td>
-								<td>MA0100</td>
-								<td class="state">미정</td>
-							</tr>
+								<tr>
+									<td></td>
+									<td>Main</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>front</td>
+									<td>MA</td>
+									<td>MA0100</td>
+									<td class="state">미정</td>
+								</tr>
 
-							<tr>
-								<td></td>
-								<td>Main</td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>front</td>
-								<td>MA</td>
-								<td>MA0100</td>
-								<td class="state">삭제</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- //data-table small -->
+								<tr>
+									<td></td>
+									<td>Main</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>front</td>
+									<td>MA</td>
+									<td>MA0100</td>
+									<td class="state">삭제</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- //data-table small -->
+					</div>
 				</section>
 			</section>
 			<!-- //contentPrimary -->

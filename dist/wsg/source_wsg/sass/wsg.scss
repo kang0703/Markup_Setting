@@ -19,6 +19,11 @@
 @import "https://fonts.googleapis.com/earlyaccess/notosanskr.css";
 
 
+/* mediaquery
+ ========================= */
+@import "./mixin/mediaquery_wsg";
+
+
 /* WSG
  ========================= */
 @import "./layout/base_wsg";

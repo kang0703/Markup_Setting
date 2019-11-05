@@ -8,8 +8,7 @@
 6. am chart 숙지하기.
 
 7. 레이어 팝업 dim 눌렀을때도 닫힐 수 있도록 만들기
-8. table 어느정도까지 줄고 그 이하로 줄면 수평 스크롤 생기게 하기.
-9. common-ui.js 도큐먼트 ready, load, scroll 선언 나눠놓은거 찾아 적용하기.
+8. common-ui.js 도큐먼트 ready, load, scroll 선언 나눠놓은거 찾아 적용하기.
 
 
 

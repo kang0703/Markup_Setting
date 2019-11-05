@@ -463,3 +463,8 @@ section .wrap .content {
 	font-weight:500;
 	color:red;
 }
+
+.wsg-table-scroll-box{
+	overflow:hidden;
+	overflow-x:auto;
+}
