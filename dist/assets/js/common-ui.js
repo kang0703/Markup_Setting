@@ -13,48 +13,6 @@ jQuery.fn.load = $.fn.ready;
 
 
 	$(document).ready(function() {
-		/*
-		 * _________form 유효성체크
-		 * 정규식과 keyup 을 이용한 텍스트 박스에 특정 문자만 입력받을 수 있도록 처리
-		 */
-		// 전화번호 체크
-		telNum_check();
-
-		// 영문만 입력 가능
-		eng_check();
-
-		// 한글만 입력 가능 (예 : 이름입력)
-		kor_check();
-
-
-
-
-		/*
-		 * _________UI Script.
-		 */
-		// datepicker JS
-		datepicker_js();
-
-		// select 꾸며주는 JS
-		select_Make_js();
-
-		// radio, checkbox JS
-		formCheck_Modify_js();
-
-		// file_name js
-		file_name_js();
-
-
-
-
-
-
-
-
-
-
-
-
 
 		// GBN json 로드
 		// jsonLoad();
@@ -182,15 +140,6 @@ jQuery.fn.load = $.fn.ready;
 
 		// header 띠배너 수직 슬라이드
 		header_band_banner();
-
-		// 이미지맵 반응형
-		images_MAP_responsive();
-
-		// 제품상세 수량체크
-		// amountCheckPut();
-
-		// 모바일앱에서 검색시 검색창위치 오류 수정
-		mobileSearchFocus();
 	});
 
 
@@ -256,23 +205,39 @@ jQuery.fn.load = $.fn.ready;
 	 * _________UI Script.
 	 */
 	// datepicker JS
+	function images_MAP_responsive () {
+		var mapTag = $("map");
+
+		if( mapTag.length ) {
+			$("map").imageMapWeaver();
+		}
+	}
+
+
+
+
+	/*
+	 * _________UI Script.
+	 */
+	// datepicker JS
 	function datepicker_js() {
-		console.log('asdfasdf');
 		/* 기본 달력 */
-		$( ".datepicker" ).datepicker({
-			dateFormat: 'yy.mm.dd',
-			prevText: '이전 달',
-			nextText: '다음 달',
-			monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-			monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-			dayNames: ['일','월','화','수','목','금','토'],
-			dayNamesShort: ['일','월','화','수','목','금','토'],
-			dayNamesMin: ['일','월','화','수','목','금','토'],
-			showMonthAfterYear: true,
-			changeMonth: false,
-			changeYear: false,
-			yearSuffix: '년'
-		});
+		if($('.datepicker').length) {
+			$( ".datepicker" ).datepicker({
+				dateFormat: 'yy.mm.dd',
+				prevText: '이전 달',
+				nextText: '다음 달',
+				monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+				monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+				dayNames: ['일','월','화','수','목','금','토'],
+				dayNamesShort: ['일','월','화','수','목','금','토'],
+				dayNamesMin: ['일','월','화','수','목','금','토'],
+				showMonthAfterYear: true,
+				changeMonth: false,
+				changeYear: false,
+				yearSuffix: '년'
+			});
+		}
 	}
 
 
@@ -321,6 +286,23 @@ jQuery.fn.load = $.fn.ready;
 			console.log(e.target.files[0].name);
 		});
 	}
+
+	// tab
+	function tab() {
+		$('.js-standard-tab .tab').find('a').on('click', function(e) {
+			var $this = $(this);
+			var $all_tab_nav = $this.parents('.tab').find('li');
+			var $tab_contents = $this.parents('.tabmenu-wrap').find('.con-box');
+			var id = $this.attr('href');
+
+			e.preventDefault();
+			$all_tab_nav.removeClass('on');
+			$this.parent().addClass('on');
+			$tab_contents.hide();
+			$(id).show();
+		});
+	}
+
 
 
 
@@ -1962,156 +1944,73 @@ jQuery.fn.load = $.fn.ready;
 	}
 
 
+	/* Ready */
+	$(document).ready(function() {
+		// document ready 후 실행할 코드 작성
 
-	function jsonLoad (url) {
-		// var json;
-		var url = url ? url : "/app/display/navigator?_format=json";
-		$.getJSON(url, {
-			// format: "json"
-		}).done(function(data) {
-			// mPathPrefix = data.categoryUrlPathPrefix;
-			gnbJson = data.data;
-			mobileGnbRouter();
-		}).fail(function() {
-			// jsonLoad("/gnb.json");
-		});
-	}
+		/*
+		 * _________form 유효성체크
+		 * 정규식과 keyup 을 이용한 텍스트 박스에 특정 문자만 입력받을 수 있도록 처리
+		 */
+		// 전화번호 체크
+		telNum_check();
 
-	function mobileGnbRouter(id, direction, group) {
-		var id = (id) ? id : 0 ;
-		var direction = direction;
-		var data;
-		mGroup = group;
+		// 영문만 입력 가능
+		eng_check();
 
-		if (direction == "up") {
-			mIndex.pop();
-		} else if (direction == "down") {
-			mIndex.push(id);
-		}
-
-		if ( mIndex.length ) {
-			data = gnbJson[mGroup];
-			for ( var i = 0; i < mIndex.length; i++ ) {
-				var tg = mIndex[i];
-				if (i == 0) {
-					data = data[tg];
-				} else {
-					data = data.subList[tg];
-				}
-			}
-			mobileGnbGenerator(data.subList, data);
-		} else {
-			data = gnbJson;
-			mobileGnbGenerator(data);
-		}
-	}
-
-	function mobileGnbGenerator (json, owner) {
-		var json = json;
-		var $wrap = $('.main-navigation-wrap');
-		var $logo = $wrap.find('.logo');
-		var $gnb = $wrap.find('.gnb-wrap');
-		var $gnbInner = $('<div class="gnb-inner"></div>');
-
-		$gnb.children().remove();
-		$gnb.append($gnbInner);
-		$logo.children('.parent-btn').remove();
+		// 한글만 입력 가능 (예 : 이름입력)
+		kor_check();
 
 
-		if (mIndex.length) {
-			var $parent = $('<div class="parent-btn"></div>');
-			var $btn = $('<a><img class="arrow arrow-left" src="/resources/img/svg/icon-arrow-left.svg" alt="&lt;"></a>');
-			$btn.attr( 'href', 'javascript:window.mobileGnbRouter(0, "up", "'+mGroup+'")' );
-			$btn.append('<span>'+owner.label+'</span>');
-			$logo.append( $parent.append($btn) );
 
-			$gnbInner.append( gnbMakeLoop(json, mGroup) );
-		} else {
-			for ( var gp in gnbJson ) {
-				$gnbInner.append( gnbMakeLoop(gnbJson[gp], gp) );
-			}
 
-			// 로그아웃일 경우 로그아웃버튼 추가
-			// exports.c = {"isLogin": true};
-			if ( window.c ) {
-				if (window.c.isLogin == true || window.c.isLogin == "true") {
-					$gnbInner.append( gnbMakeLoop({"item":{"label":"로그아웃", "subList":null, "url":"javascript:window.cl.common.goLogout();"}}, "logout") );
-				}
-			}
-		}
-	}
+		/*
+		 * _________library
+		 */
+		// 이미지맵 반응형
+		images_MAP_responsive();
 
-	function gnbMakeLoop (json, group) {
-		var $ul = $('<ul class="gnb '+group+'-gnb"></ul>');
 
-		$.each(json, function(i, val) {
-			var menu = json[i];
-			$ul.append( mobileGnbItemTemp(menu, i, group) );
-		});
 
-		return $ul;
-	};
 
-	function mobileGnbItemTemp (arg , index, group) {
-		var arg = arg;
-		var index = index;
-		var li;
-		var item;
-		var span;
-		var arrow;
+		/*
+		 * _________UI Script.
+		 */
+		// datepicker JS
+		datepicker_js();
 
-		li = $('<li class="category"></li>');
-		item = $('<a class="category-title" href=""></a>');
+		// select 꾸며주는 JS
+		select_Make_js();
 
-		span = $('<span>'+arg.label+'</span>');
-		item.append(span);
+		// radio, checkbox JS
+		formCheck_Modify_js();
 
-		if (arg.subList && arg.subList.length) {
-			arrow = $('<img class="arrow arrow-right" src="/resources/img/svg/icon-arrow-right.svg" alt="&gt;">');
-			item.append(arrow);
-			item.attr('href', 'javascript:window.mobileGnbRouter('+index+', "down", "'+group+'")');
-		} else {
-			item.attr('href', arg.url);
-			if ( group == "logout" ) item.addClass('logout');
-		}
+		// file_name js
+		file_name_js();
 
-		li.append(item);
-		return li;
-	}
+		// tab
+		tab()
+	});
 
-	function images_MAP_responsive () {
-		var mapTag = $("map");
 
-		if( mapTag.length ) {
-			$("map").imageMapWeaver();
-		}
-	}
+	/* Load */
+	$(window).load(function() {
+		// window load 후 실행할 코드 작성
+	});
 
-	function mobileSearchFocus() {
-		// alert('검색테스트3');
-		var $mSearchInput = $('.header-search-mobile .input-wrapper input');
-		$mSearchInput.on({
-			// 'focus': function() {
-				// console.log('1');
-				// $(document).scrollTop(0);
-				// $(window).scrollTop(0);
-			// }
-		})
-	}
+
+	/* Load */
+	$(window).scroll(function() {
+		// window load 후 실행할 코드 작성
+	});
+
+
 
 
 	exports.amountCheckPut = amountCheckPut;
 	exports.amountCheckMinus = amountCheckMinus;
 	exports.amountCheckPlus = amountCheckPlus;
 	exports.popupBase = popupBase;
-	// exports.submain_customize_selectric = submain_customize_selectric;
-	// exports.uniformInit = uniformInit;
-	// exports.basketSideBox = basketSideBox;
-	// exports.mobileGnbRouter = mobileGnbRouter;
-	// exports.whatsHotMyhomeCarouselDestroy = whatsHotMyhomeCarouselDestroy;
-	// exports.whatsHotMyhomeCarouselRefreash = whatsHotMyhomeCarouselRefreash;
-	// exports.headerNoticeBarFn = headerNoticeBarFn;
-	// exports.noticeEventLayerPopupFn = noticeEventLayerPopupFn;
 
 })(this, this.jQuery);
 

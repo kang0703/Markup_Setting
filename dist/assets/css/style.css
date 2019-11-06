@@ -2147,6 +2147,19 @@ select.select {
 	padding: 15px;
 }
 
+/**********************************************************************************
+ * script
+ * tab 기능구현
+ **********************************************************************************/
+.tabmenu-wrap .tab-con .con-box {
+	height: 200px;
+	display: none;
+	padding: 10px;
+	border: 1px solid #000;
+	background-color: #e8e8e8;
+	box-sizing: border-box;
+}
+
 html {
 	font-size: 14px;
 }
