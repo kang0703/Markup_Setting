@@ -288,7 +288,7 @@ jQuery.fn.load = $.fn.ready;
 	}
 
 	// tab
-	function tab() {
+	function standard_tab() {
 		$('.js-standard-tab .tab').find('a').on('click', function(e) {
 			var $this = $(this);
 			var $all_tab_nav = $this.parents('.tab').find('li');
@@ -1989,7 +1989,7 @@ jQuery.fn.load = $.fn.ready;
 		file_name_js();
 
 		// tab
-		tab()
+		standard_tab()
 	});
 
 

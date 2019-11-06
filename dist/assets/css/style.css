@@ -2093,15 +2093,6 @@ select.select {
 	border-collapse: collapse;
 }
 
-.tab ul:before, .tab ul:after {
-	content: "";
-	display: table;
-}
-
-.tab ul:after {
-	clear: both;
-}
-
 .tab ul li {
 	display: table-cell;
 	border: 1px solid #000;
@@ -2123,7 +2114,7 @@ select.select {
 }
 
 .tab ul li.on a {
-	color: #fff;
+	color: #111;
 	font-weight: bold;
 	background: orange;
 }

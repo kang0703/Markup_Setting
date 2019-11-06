@@ -7,7 +7,6 @@
  **********************************************************************************/
 .tab{
 	ul{
-		@include cf;
 		display:table;
 		table-layout:fixed;
 		width:100%;
@@ -30,7 +29,7 @@
 			}
 			&.on{
 				a{
-					color:#fff;
+					color:#111;
 					font-weight:bold;
 					background:orange;
 				}
