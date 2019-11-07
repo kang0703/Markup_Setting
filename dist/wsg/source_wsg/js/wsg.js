@@ -108,6 +108,18 @@ function keydownESC() {
 	});
 }
 
+// dim 눌렀을때 레이어 메뉴 팝업 닫힘.
+function dimClickOut() {
+	$('.wsg-all-sitemap-wrap').on('click', function(e){
+		var targetDimWrap = $(e.target);
+		var dimClick = targetDimWrap.hasClass('wsg-all-sitemap-wrap');
+
+		if( dimClick === true ) {
+			$('.wsg-all-sitemap-wrap').removeClass('on');
+		}
+	});
+}
+
 // Background 테
 function wsgBgThema() {
 	$('#themaBgBtn').on('click', 'li a',  function(e){
@@ -226,6 +238,7 @@ jQuery(function(){
 	imageList();
 	globalNavigation();
 	keydownESC();
+	dimClickOut();
 	wsgBgThema();
 	aniScrollTop();
 });
