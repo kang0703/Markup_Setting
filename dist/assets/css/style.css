@@ -11,11 +11,9 @@
 
 @font-face { font-family: 'Noto Sans'; font-style: normal; font-weight: 500; src: url(../font/NotoSans/NotoSans-Medium.eot); src: url(../font/NotoSans/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans/NotoSans-Medium.woff2) format("woff2"), url(../font/NotoSans/NotoSans-Medium.woff) format("woff"), url(../font/NotoSans/NotoSans-Medium.ttf) format("truetype"); }
 
-@font-face { font-family: 'Noto Sans'; font-style: normal; font-weight: 600; src: url(../font/NotoSans/NotoSans-Medium.eot); src: url(../font/NotoSans/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans/NotoSans-Medium.woff2) format("woff2"), url(../font/NotoSans/NotoSans-Medium.woff) format("woff"), url(../font/NotoSans/NotoSans-Medium.ttf) format("truetype"); }
+@font-face { font-family: 'Noto Sans'; font-style: normal; font-weight: 600; src: url(../font/NotoSans/NotoSans-Bold.eot); src: url(../font/NotoSans/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans/NotoSans-Bold.woff2) format("woff2"), url(../font/NotoSans/NotoSans-Bold.woff) format("woff"), url(../font/NotoSans/NotoSans-Bold.ttf) format("truetype"); }
 
-@font-face { font-family: 'Noto Sans'; font-style: normal; font-weight: 700; src: url(../font/NotoSans/NotoSans-Medium.eot); src: url(../font/NotoSans/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans/NotoSans-Medium.woff2) format("woff2"), url(../font/NotoSans/NotoSans-Medium.woff) format("woff"), url(../font/NotoSans/NotoSans-Medium.ttf) format("truetype"); }
-
-@font-face { font-family: 'Noto Sans'; font-style: normal; font-weight: 900; src: url(../font/NotoSans/NotoSans-Black.eot); src: url(../font/NotoSans/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans/NotoSans-Black.woff2) format("woff2"), url(../font/NotoSans/NotoSans-Black.woff) format("woff"), url(../font/NotoSans/NotoSans-Black.ttf) format("truetype"); }
+@font-face { font-family: 'Noto Sans'; font-style: normal; font-weight: 700; src: url(../font/NotoSans/NotoSans-Black.eot); src: url(../font/NotoSans/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans/NotoSans-Black.woff2) format("woff2"), url(../font/NotoSans/NotoSans-Black.woff) format("woff"), url(../font/NotoSans/NotoSans-Black.ttf) format("truetype"); }
 
 /* NanumGothic - 20180122 */
 @font-face { font-family: 'Nanum Gothic'; font-style: normal; font-weight: 400; src: url(../font/NanumGothic/NanumGothic-Regular.eot); src: url(../font/NanumGothic/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"), url(../font/NanumGothic/NanumGothic-Regular.woff2) format("woff2"), url(../font/NanumGothic/NanumGothic-Regular.woff) format("woff"), url(../font/NanumGothic/NanumGothic-Regular.ttf) format("truetype"); }
@@ -753,23 +751,23 @@ body { color: #111; font-family: "NanumSquareRound", "Noto Sans", "Open Sans", "
   .header-util .global-wrap .article a span { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; }
   .header-util .global-wrap .article a span.focusable:active, .header-util .global-wrap .article a span.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
   .header-util .global-wrap .article a i { display: inline-block; height: 24px; background-position: center center; background-repeat: no-repeat; }
-  .header-util .global-wrap .article a i.my { width: 24px; background-image: url("../img/svg/body-shop-icons-thick_sign_in.svg"); background-size: auto 24px; }
-  .header-util .global-wrap .article a i.my:hover { background-image: url("../img/svg/body-shop-icons_sign_in_filled.svg"); }
-  .header-util .global-wrap .article a i.view { width: 30px; background-image: url("../img/common/body-shop-icons-thick_view.jpg"); background-size: 30px auto; }
-  .header-util .global-wrap .article a i.view:hover { background-image: url("../img/common/body-shop-icons_view_filled.jpg"); }
-  .header-util .global-wrap .article a i.heart { width: 26px; background-image: url("../img/svg/body-shop-icons-thick_wishlist.svg"); background-size: auto 24px; }
-  .header-util .global-wrap .article a i.heart:hover { background-image: url("../img/svg/body-shop-icons_wishlist_filled.svg"); }
-  .header-util .global-wrap .article a i.cart { width: 19px; background-image: url("../img/svg/body-shop-icons-thick_bag.svg"); background-size: auto 24px; }
-  .header-util .global-wrap .article a i.cart:hover { background-image: url("../img/svg/body-shop-icons_bag_filled.svg"); }
+  .header-util .global-wrap .article a i.my { width: 24px; background-image: url("../images/svg/body-shop-icons-thick_sign_in.svg"); background-size: auto 24px; }
+  .header-util .global-wrap .article a i.my:hover { background-image: url("../images/svg/body-shop-icons_sign_in_filled.svg"); }
+  .header-util .global-wrap .article a i.view { width: 30px; background-image: url("../images/common/body-shop-icons-thick_view.jpg"); background-size: 30px auto; }
+  .header-util .global-wrap .article a i.view:hover { background-image: url("../images/common/body-shop-icons_view_filled.jpg"); }
+  .header-util .global-wrap .article a i.heart { width: 26px; background-image: url("../images/svg/body-shop-icons-thick_wishlist.svg"); background-size: auto 24px; }
+  .header-util .global-wrap .article a i.heart:hover { background-image: url("../images/svg/body-shop-icons_wishlist_filled.svg"); }
+  .header-util .global-wrap .article a i.cart { width: 19px; background-image: url("../images/svg/body-shop-icons-thick_bag.svg"); background-size: auto 24px; }
+  .header-util .global-wrap .article a i.cart:hover { background-image: url("../images/svg/body-shop-icons_bag_filled.svg"); }
   .header-util .etc-wrap { float: left; }
   .header-util .etc-wrap a { text-decoration: none; font-size: 12px; color: #2d2d2d; }
   .header-util .etc-wrap a + a { margin-left: 12px; }
   .header-util .etc-wrap i, .header-util .etc-wrap span { display: inline-block; height: 24px; line-height: 24px; vertical-align: top; }
   .header-util .etc-wrap i { height: 24px; background-position: center center; background-repeat: no-repeat; }
-  .header-util .etc-wrap i.place { width: 17px; background-image: url("../img/svg/body-shop-icons-thick_map.svg"); background-size: auto 24px; }
-  .header-util .etc-wrap i.place:hover { background-image: url("../img/svg/body-shop-icons_map_filled.svg"); }
-  .header-util .etc-wrap i.card { width: 24px; background-image: url("../img/common/body-shop-icons-thick_card.jpg"); background-size: 24px auto; }
-  .header-util .etc-wrap i.card:hover { background-image: url("../img/common/body-shop-icons_card_filled.jpg"); }
+  .header-util .etc-wrap i.place { width: 17px; background-image: url("../images/svg/body-shop-icons-thick_map.svg"); background-size: auto 24px; }
+  .header-util .etc-wrap i.place:hover { background-image: url("../images/svg/body-shop-icons_map_filled.svg"); }
+  .header-util .etc-wrap i.card { width: 24px; background-image: url("../images/common/body-shop-icons-thick_card.jpg"); background-size: 24px auto; }
+  .header-util .etc-wrap i.card:hover { background-image: url("../images/common/body-shop-icons_card_filled.jpg"); }
   .header-util .etc-wrap span { margin-left: 5px; }
   .menu-navigation-bar { position: relative; height: 41px; }
   .menu-navigation-bar:before, .menu-navigation-bar:after { content: ""; display: table; }
@@ -781,9 +779,9 @@ body { color: #111; font-family: "NanumSquareRound", "Noto Sans", "Open Sans", "
   .menu-navigation-bar .search-area .toggle-box:after { clear: both; }
   .menu-navigation-bar .search-area .toggle-box a { display: inline-block; height: inherit; line-height: inherit; text-decoration: none; }
   .menu-navigation-bar .search-area .toggle-box .placeholder { display: inline-block; padding-right: 68px; height: inherit; line-height: inherit; font-size: 12px; color: #b9b9b9; }
-  .menu-navigation-bar .search-area .toggle-box .placeholder-icon { float: right; display: inline-block; width: 18px; height: 18px; background-image: url("../img/svg/icon-search.svg"); background-size: 18px 18px; }
+  .menu-navigation-bar .search-area .toggle-box .placeholder-icon { float: right; display: inline-block; width: 18px; height: 18px; background-image: url("../images/svg/icon-search.svg"); background-size: 18px 18px; }
   .menu-navigation-bar .search-area .search-input-area { display: none; position: absolute; top: 0; right: 0; width: 360px; z-index: 999; }
-  .menu-navigation-bar .search-area .search-input-area .search-icon { position: absolute; top: 12px; left: 12px; width: 18px; height: 18px; background-image: url("../img/svg/icon-search.svg"); background-size: 18px 18px; }
+  .menu-navigation-bar .search-area .search-input-area .search-icon { position: absolute; top: 12px; left: 12px; width: 18px; height: 18px; background-image: url("../images/svg/icon-search.svg"); background-size: 18px 18px; }
   .menu-navigation-bar .search-area .search-input-area input { padding: 5px 36px; width: 100%; height: 41px; border: 2px solid #e1e1e1; background-color: #fff; border-radius: 0; -webkit-appearance: none; }
   .menu-navigation-bar .search-area .search-input-area .search-input-clear { position: absolute; top: 12px; right: 12px; width: 18px; height: 18px; }
   .menu-navigation-bar .search-area .search-input-area .search-input-clear img { display: block; width: 18px; height: auto; }
@@ -837,14 +835,14 @@ body { color: #111; font-family: "NanumSquareRound", "Noto Sans", "Open Sans", "
   .header-global-row .toggler { position: relative; display: inline-block; height: 22px; }
   .header-global-row .toggler .icon { display: inline-block; width: 22px; height: 22px; background-position: center center; background-repeat: no-repeat; }
   .header-global-row .toggler .count { position: absolute; display: block; right: -5px; bottom: -4px; width: 14px; height: 14px; line-height: 14px; font-size: 10px; font-weight: normal; color: #fff; text-align: center; background-color: #000; border: 2px #fff solid; border-radius: 100%; letter-spacing: -0.1em; }
-  .header-global-row .menu-toggler .icon-header-menu { background-image: url("../img/mobile/svg/body-shop-icons-thick_hamburger.svg"); }
-  .header-global-row .search-toggler .icon-header-search { background-image: url("../img/mobile/svg/body-shop-icons-thick_spyglass.svg"); }
-  .header-global-row .view-toggler .icon-header-view { width: 26px; height: 22px; background-image: url("../img/mobile/common/body-shop-icons-thick_view.jpg"); background-size: 26px auto; }
-  .header-global-row .cart-toggler .icon-header-cart { background-image: url("../img/mobile/svg/body-shop-icons-thick_bag.svg"); }
+  .header-global-row .menu-toggler .icon-header-menu { background-image: url("../images/mobile/svg/body-shop-icons-thick_hamburger.svg"); }
+  .header-global-row .search-toggler .icon-header-search { background-image: url("../images/mobile/svg/body-shop-icons-thick_spyglass.svg"); }
+  .header-global-row .view-toggler .icon-header-view { width: 26px; height: 22px; background-image: url("../images/mobile/common/body-shop-icons-thick_view.jpg"); background-size: 26px auto; }
+  .header-global-row .cart-toggler .icon-header-cart { background-image: url("../images/mobile/svg/body-shop-icons-thick_bag.svg"); }
   .header-global-row .logo { text-align: center; }
   .header-global-row .logo img { width: 152px; }
   .header-search-mobile { display: none; position: fixed; padding: 9px 36px; top: 0; left: 0; width: 100%; background-color: #fff; box-sizing: border-box; }
-  .header-search-mobile .input-wrapper .search-icon { position: absolute; top: 20px; left: 48px; width: 18px; height: 18px; background-image: url("../img/svg/icon-search.svg"); background-size: 18px auto; }
+  .header-search-mobile .input-wrapper .search-icon { position: absolute; top: 20px; left: 48px; width: 18px; height: 18px; background-image: url("../images/svg/icon-search.svg"); background-size: 18px auto; }
   .header-search-mobile .input-wrapper input { width: 100%; border: 2px solid #e1e1e1; background: #fff; padding: 5px 36px; height: 41px; -webkit-text-fill-color: none; -webkit-border-radius: 0; border-radius: 0; -moz-appearance: none; -webkit-appearance: none; margin-bottom: 0; font-size: 15px; }
   .header-search-mobile .input-wrapper a { position: absolute; right: 48px; top: 20px; }
   .header-search-mobile .input-wrapper a img { display: block; width: 18px; height: 18px; }
@@ -878,10 +876,10 @@ body { color: #111; font-family: "NanumSquareRound", "Noto Sans", "Open Sans", "
   .main-navigation-mobile .wrapper-mob-nav-sticky-links li + li { border-left: 1px #fff solid; }
   .main-navigation-mobile .wrapper-mob-nav-sticky-links li a { text-decoration: none; }
   .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons { width: 28px; height: 28px; display: inline-block; background-position: center center; background-repeat: no-repeat; background-size: 28px auto; }
-  .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons.my-account { background-image: url("../img/mobile/common/ico-gnb-bottom-1.png"); }
-  .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons.wish-list { background-image: url("../img/mobile/common/ico-gnb-bottom-2.png"); }
-  .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons.store-location { background-image: url("../img/mobile/common/ico-gnb-bottom-3.png"); }
-  .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons.cart { background-image: url("../img/mobile/common/ico-gnb-bottom-4.png"); }
+  .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons.my-account { background-image: url("../images/mobile/common/ico-gnb-bottom-1.png"); }
+  .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons.wish-list { background-image: url("../images/mobile/common/ico-gnb-bottom-2.png"); }
+  .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons.store-location { background-image: url("../images/mobile/common/ico-gnb-bottom-3.png"); }
+  .main-navigation-mobile .wrapper-mob-nav-sticky-links li .icons.cart { background-image: url("../images/mobile/common/ico-gnb-bottom-4.png"); }
   .main-navigation-mobile .wrapper-mob-nav-sticky-links li .accessibility { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; }
   .main-navigation-mobile .wrapper-mob-nav-sticky-links li .accessibility.focusable:active, .main-navigation-mobile .wrapper-mob-nav-sticky-links li .accessibility.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
   .main-navigation-mobile .main-navigation-close { position: absolute; top: 20px; right: 15px; z-index: 10; }
@@ -909,7 +907,7 @@ body { color: #111; font-family: "NanumSquareRound", "Noto Sans", "Open Sans", "
 
 .header-login-notice-bar .control .close { float: right; display: block; position: relative; width: 25px; height: 25px; }
 
-.header-login-notice-bar .control .close .ico { position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%; background: url("../img/svg/icon-close.svg") 0 0 no-repeat; background-size: 100% auto; }
+.header-login-notice-bar .control .close .ico { position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%; background: url("../images/svg/icon-close.svg") 0 0 no-repeat; background-size: 100% auto; }
 
 .header-login-notice-bar .control .today { clear: both; float: right; margin-top: 4px; display: block; font-size: 0.85rem; color: #767676; cursor: pointer; }
 
@@ -972,7 +970,7 @@ body { color: #111; font-family: "NanumSquareRound", "Noto Sans", "Open Sans", "
   .footer-language .selectric { border: none; }
   .footer-language .selectric .label { margin: 0 10px 0 38px; }
   .footer-language .selectric .button { right: auto; left: 0; }
-  .footer-language .selectric .button:after { border: none; width: 16px; height: 16px; top: 50%; left: 50%; margin-top: -8px; margin-left: -8px; background: url("../img/svg/icon-arrow-down.svg") center center no-repeat; background-size: 16px auto; }
+  .footer-language .selectric .button:after { border: none; width: 16px; height: 16px; top: 50%; left: 50%; margin-top: -8px; margin-left: -8px; background: url("../images/svg/icon-arrow-down.svg") center center no-repeat; background-size: 16px auto; }
   .footer-wrapper-mobile { display: none; } }
 
 @media (min-width: 0px) and (max-width: 1079px) { .footer-wrapper-desktop { display: none; }
